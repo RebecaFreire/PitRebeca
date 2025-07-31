@@ -1,86 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio - Rebeca Freire</title>
-  <link rel="stylesheet" href="estilo.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio Rebeca Freire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      background-color: #f9fbfd;
+      color: #333;
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    header img {
+      width: 140px;
+      border-radius: 50%;
+      margin-top: 1rem;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+    }
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.3rem;
+    }
+    .badges img {
+      margin: 0.3rem;
+      height: 28px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1rem;
+      width: 280px;
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+    .card a {
+      text-decoration: none;
+      color: #0055aa;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #eee;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
-
   <header>
-    <h1>👩‍💻 Rebeca Freire</h1>
-    <nav>
-      <ul class="menu">
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <h1>Rebeca Freire</h1>
+    <p>Desenvolvedora | Apaixonada por tecnologia</p>
+    <img src="rebeca.png" alt="Foto de Rebeca Freire" />
   </header>
 
-  <section id="sobre" class="apresentacao">
-    <img src="rebeca.png" alt="Foto de Rebeca" class="perfil" />
-    <h2>Sobre Mim</h2>
-    <p>Sou Técnica em Informática pela ETEC e graduanda em Gestão da Tecnologia da Informação pela FATEC.</p>
-    <p>Tenho afinidade com <strong>desenvolvimento Full Stack</strong>, <strong>análise de dados</strong> e <strong>automação de processos</strong>.</p>
-    <p>Já desenvolvi projetos com <strong>Python</strong>, <strong>Java</strong>, <strong>SQL</strong>, além de construir APIs com <strong>FastAPI</strong> e interfaces web com <strong>HTML, CSS e JavaScript</strong>.</p>
-    <p>Sou movida pela curiosidade e gosto de transformar ideias em soluções que facilitem a vida das pessoas.</p>
-  </section>
+  <main>
+    <section>
+      <h2>Sobre mim</h2>
+      <p>
+        Formada técnica em Informática pela ETEC e graduanda em Gestão da Tecnologia da Informação pela FATEC.  
+        Tenho paixão por desenvolvimento de sistemas, automações e redes — e estou sempre em busca de novos aprendizados e experiências na área de tecnologia.
+      </p>
+    </section>
 
-  <section id="habilidades" class="section">
-    <h2>Habilidades</h2>
-    <div class="skills-grid">
-      <div class="skill-card">💾 SQL</div>
-      <div class="skill-card">☕ Java</div>
-      <div class="skill-card">🐍 Python</div>
-      <div class="skill-card">🖥️ HTML & CSS</div>
-      <div class="skill-card">⚡ JavaScript</div>
-      <div class="skill-card">🚀 FastAPI</div>
-      <div class="skill-card">📊 Análise de Dados</div>
-      <div class="skill-card">🔧 Full Stack</div>
-    </div>
-  </section>
-
-  <section id="projetos" class="section">
-    <h2>Meus Projetos</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="imagens/portfolio.png" alt="Projeto Portfólio" />
-        <h3>Portfólio Profissional</h3>
-        <p>Site criado para apresentar meus principais projetos e habilidades.</p>
-        <a href="https://rebecafreire.github.io/Portfolio-Rebeca" target="_blank">🔗 Ver projeto</a>
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>Python (FastAPI, Pydantic, SQLAlchemy, Uvicorn)</li>
+        <li>MySQL, Excel Avançado, Power BI</li>
+        <li>Git, GitHub, redes, organização e comunicação</li>
+      </ul>
+      <div class="badges">
+        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+        <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"/>
+        <img src="https://img.shields.io/badge/PowerBI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black"/>
+        <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white"/>
       </div>
+    </section>
 
-      <div class="card">
-        <img src="imagens/wod.png" alt="Projeto WOD" />
-        <h3>WOD Backend com FastAPI</h3>
-        <p>API RESTful para gestão de treinos de crossfit.</p>
-        <a href="https://github.com/RebecaFreire/wod-backend-fastAPI" target="_blank">🐙 Ver no GitHub</a>
+    <section>
+      <h2>Projetos em Destaque</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>💰 Sistema Bancário</h3>
+          <p>Simulação bancária com validações e arquitetura modular.</p>
+          <a href="https://github.com/RebecaFreire/Sistema-bancario-atualizado" target="_blank">Ver projeto</a>
+        </div>
+        <div class="card">
+          <h3>🛍️ Store API FastAPI</h3>
+          <p>Backend de e-commerce com rotas protegidas e banco relacional.</p>
+          <a href="https://github.com/RebecaFreire/wod-backend-fastAPI" target="_blank">Ver projeto</a>
+        </div>
+        <div class="card">
+          <h3>💻 Piscine 42 - Imersão C</h3>
+          <p>Projetos em linguagem C desenvolvidos na 42 SP.</p>
+          <a href="https://github.com/RebecaFreire/Piscine_42_C_Rebeca" target="_blank">Ver projeto</a>
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <img src="imagens/banco.png" alt="Sistema Bancário" />
-        <h3>Sistema Bancário</h3>
-        <p>Aplicação Java simulando operações bancárias com foco em orientação a objetos.</p>
-        <a href="https://github.com/RebecaFreire/sistema-bancario" target="_blank">🐙 Ver no GitHub</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato">
-    <h2>Contato</h2>
-    <div class="contact-links">
-      <a href="mailto:rebeca@email.com" class="btn-contato">✉️ Email</a>
-      <a href="https://github.com/RebecaFreire" target="_blank" class="btn-contato">🐙 GitHub</a>
-      <a href="https://www.linkedin.com/in/rebecafreire/" target="_blank" class="btn-contato">💼 LinkedIn</a>
-    </div>
-  </section>
+    <section>
+      <h2>Contato</h2>
+      <p>
+        📧 <a href="mailto:rebs27lima@gmail.com">rebs27lima@gmail.com</a><br/>
+        💼 <a href="https://www.linkedin.com/in/rebeca-freire-1729501a5/">LinkedIn</a><br/>
+        🧠 <a href="https://github.com/RebecaFreire">GitHub</a>
+      </p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Rebeca Freire — Desenvolvido com carinho 💜</p>
+    <p>Obrigada por visitar meu portfólio 💙</p>
   </footer>
-
 </body>
 </html>
