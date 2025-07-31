@@ -1,127 +1,115 @@
 body {
-  body.dark-mode {
-  background-color: #121212;
-  color: #f5f5f5;
-}
-
-.dark-mode .card {
-  background-color: #1e1e1e;
-  box-shadow: 0 0 15px rgba(255,255,255,0.05);
-}
-
-#toggle-dark {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #6a11cb;
-  color: white;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
+  font-family: Arial, sans-serif;
+  background-color: #f4f6fa;
   margin: 0;
-  font-family: 'Raleway', sans-serif;
-  background-color: #0f0f0f;
-  color: #fff;
-  scroll-behavior: smooth;
+  padding: 0;
+  color: #333;
 }
 
-.hero {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+header {
+  background-color: #5c6bc0;
+  color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 20px 0;
 }
 
-.container {
-  max-width: 800px;
-  margin: auto;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
-.foto-perfil {
-  width: 160px;
-  height: 160px;
+.apresentacao {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.perfil {
+  width: 180px;
   border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
 }
 
-.btn {
-  background-color: #fff;
-  color: #2575fc;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
+.skill-card {
+  background-color: #e0e7ff;
+  padding: 12px;
+  border-radius: 8px;
   font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #e0e0e0;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .section {
-  padding: 60px 20px;
-  max-width: 900px;
-  margin: auto;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
 }
 
 .card {
-  background-color: #1c1c1c;
-  border-radius: 10px;
+  background-color: #fefefe;
   padding: 20px;
-  width: 300px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.03);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .card img {
   width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #5c6bc0;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.card a:hover {
+  background-color: #3f51b5;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #111;
+  background-color: #eee;
   font-size: 0.9rem;
-}
-/* 📱 Media Queries — responsividade para telas menores */
-@media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
+  color: #666;
 }
