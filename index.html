@@ -1,99 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio Rebeca Freire</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebeca Freire</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
   <body>
-  <div class="sidebar">
-    <header class="navbar">
-    <h1>Rebeca Freire</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#projetos">Skills</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Sobre Mim</li>
+          <li>Projetos</li>
+          <li>Contato</li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section id="home" class="hero">
-      <h1>Transformando ideias em soluções digitais de impacto 🚀</h1>
-      <p>Curiosidade afiada, código limpo e propósito real. Desenvolvimento com alma tech!</p>
-    </section>
+    <main>
+      <section class="hero">
+        <h1>Transformando ideias em soluções digitais de impacto 🚀</h1>
+        <p>Curiosidade afiada, código limpo e propósito real. Desenvolvimento com alma tech!</p>
+      </section>
 
-    <section id="sobre" class="sobre">
-      <div class="perfil">
-        <img src="imagens/rebeca.png" alt="Foto de Rebeca Freire" />
-      </div>
-      <div class="bio">
-        <h2>Olá! Eu sou <span>Rebeca Freire</span></h2>
-        <p><strong>Técnica em Informática</strong> (ETEC) e <strong>graduanda em Gestão para Tecnologia da Informação</strong> (Fatec).</p>
-        <p>Tenho curiosidade afiada e paixão por construir soluções digitais, transformo desafios em oportunidades.</p>
-        <p>Tenho experiência em aplicações web e mobile, com foco em usabilidade, performance e impacto real.</p>
-        <p>Acredito na tecnologia como ponte entre ideias e pessoas — por isso crio códigos que resolvem, conectam e inspiram.</p>
-        <div class="tags">
-          <span>#FullStack</span><span>#Python</span><span>#SQL</span><span>#Java</span><span>#PowerBI</span>
-          <span>#DataDriven</span><span>#TecnologiaComPropósito</span><span>#AprendizadoContínuo</span><span>#MulheresNaTech</span>
+      <section class="about">
+        <div class="profile">
+          <img src="foto-rebeca.jpg" alt="Foto de Rebeca Freire" />
         </div>
+        <div class="bio">
+          <h2>Olá! Eu sou Rebeca Freire</h2>
+          <p>
+            Técnica em Informática (ETEC) e graduanda em Gestão para Tecnologia da Informação (Fatec).
+            Tenho curiosidade afiada e paixão por construir soluções digitais; transformo desafios em oportunidades.
+            Tenho experiência em aplicações web e mobile, com foco em usabilidade, performance e impacto real.
+            Acredito na tecnologia como ponte entre ideias e pessoas — por isso crio códigos que resolvem, conectam e inspiram.
+          </p>
+          <h1>Skills</h1>
+          <p class="hashtags">#FullStack #Python #SQL #Java #PowerBI #DataDriven #TecnologiaComPropósito #AprendizadoContínuo #MulheresNaTech</p>
+        </div>
+      </section>
+
+      <section class="projects">
+        <h2>Projetos</h2>
+        <div class="project-card">
+          <h3>Projeto WOD</h3>
+          <p>App para acompanhar treinos de crossfit, com autenticação e dashboard.</p>
+          <a href="https://github.com/RebecaFreire/wod-backend-fastAPI" target="_blank">Ver Projeto</a>
+        </div>
+        <div class="project-card">
+          <h3>Projeto Banco</h3>
+          <p>Aplicativo de gestão bancária com login e visualização de extrato.</p>
+          <a href="https://github.com/RebecaFreire/Sistema-bancario-POO" target="_blank">Ver Projeto</a>
+        </div>
+       <div class="project-card"> 
+        <h4>Fat Api</h4>
+           <p>Aplicativo de gestão bancária com login e visualização de extrato.</p>
+          <a href="https://github.com/RebecaFreire/wod-backend-fastAPIO" target="_blank">Ver Projeto</a>
       </div>
-    </section>
+      </section>
 
-<section id="projetos" class="projetos">
-  <h2>Projetos</h2>
-    <div class="card">
-      <a href="https://github.com/rebeca/wod-tracker" target="_blank">
-        <img src="imagens/wod.png" alt="Projeto WOD" />
-        <h3>WOD Tracker</h3>
-        <p>App para acompanhar treinos de crossfit, com autenticação e dashboard.</p>
-      </a>
-    </div>
-    <div class="card">
-      <a href="https://github.com/rebeca/banco-simples" target="_blank">
-        <img src="imagens/banco.png" alt="Projeto Banco" />
-        <h3>Banco Simples</h3>
-        <p>Aplicativo de gestão bancária com login e visualização de extrato.</p>
-      </a>
-    </div>
-    <div class="card">
-      <a href="https://github.com/rebeca/42sp-projects" target="_blank">
-        <img src="imagens/42.png" alt="Projeto 42" />
-        <h3>Projetos 42SP</h3>
-        <p>Repositório com os principais projetos da escola de programação 42 São Paulo.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>Python</li>
-    <li>SQL e Modelagem de Dados</li>
-    <li>Java</li>
-    <li>Power BI</li>
-    <li>Git e GitHub</li>
-    <li>HTML, CSS, JavaScript</li>
-    <li>Figma e UX/UI Básico</li>
-  </ul>
-</section>
-
-
-<section id="contato">
-  <h2>Contato</h2>
-  <p>
-    Quer conversar sobre tecnologia, projetos ou café?  
-    Me chama no <a href="https://www.linkedin.com/in/rebeca-freire" target="_blank">LinkedIn</a>  
-    ou envie um email para  
-    <a href="mailto:rebs27lima@email.com">rebs27lima@email.com</a> 😄
-    meu github <a href="https://github.com/RebecaFreire">GitHub</a>
-  </p>
-</section>
-
-<!-- ...fim do arquivo... -->
+      <section class="contact">
+        <h2>Contato</h2>
+        <p>Quer conversar sobre tecnologia e projetos? Me chama no <a href="https://www.linkedin.com/in/rebeca-freire" target="_blank">LinkedIn</a> ou envie um email para <strong>rebs27lima@email.com</strong>.</p>
+        <p><a href="https://github.com/rebeca" target="_blank">Meu GitHub 😍</a></p>
+      </section>
+    </main>
+  </body>
+</html>
