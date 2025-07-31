@@ -1,126 +1,72 @@
-/* === RESET & BASE === */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #101018;
-  color: #ffffff;
-}
-
-/* === NAVBAR === */
-.navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: #000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  z-index: 1000;
-}
-.navbar ul {
   display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 1em;
-}
-.navbar li {
-  margin: 0 1.5em;
-}
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-.navbar a:hover {
-  color: #6c63ff;
+  background-color: #f7f7f7;
 }
 
-/* === HERO === */
-.hero {
+.sidebar {
+  width: 260px;
+  background-color: #581c87;
+  color: white;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #1c1c2b, #6c63ff);
-  height: 100vh;
-  text-align: center;
-  padding: 0 2rem;
-}
-.hero h1 {
-  font-size: 2.8em;
-  margin-bottom: 20px;
-}
-.hero p {
-  font-size: 1.2em;
-  max-width: 700px;
-  color: #f0f0f0;
 }
 
-/* === SOBRE === */
-.sobre {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 5rem 2rem;
-  background-color: #181828;
-}
-.perfil img {
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 0 16px rgba(0,0,0,0.4);
-  transition: transform 0.3s ease;
-}
-.perfil img:hover {
-  transform: scale(1.05);
-}
-.bio {
-  flex: 1;
-  max-width: 600px;
-}
-.bio h2 {
-  font-size: 2rem;
+.sidebar img {
+  border-radius: 50%;
+  width: 120px;
   margin-bottom: 1rem;
 }
-.bio span {
-  color: #ff6ec7;
-  font-weight: bold;
-}
-.bio strong {
-  color: #ffdd57;
-  font-weight: bold;
+
+.sidebar h1 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
 }
 
-/* === TAGS === */
-.tags {
-  margin-top: 20px;
-}
-.tags span {
-  display: inline-block;
-  background-color: #222;
-  color: #ff6ec7;
-  padding: 0.4rem 1rem;
-  margin: 0.3rem;
-  border-radius: 30px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-.tags span:hover {
-  background-color: #6c63ff;
-  color: #fff;
+.sidebar nav {
+  margin-top: 2rem;
 }
 
-/* === PROJETOS === */
-.projects {
-  padding: 60px 40px;
-  background-color: #151521;
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 0.5rem 0;
 }
-.projects h2 {
-  font-size: 1.8em;
-  margin-bottom: 30px;
-  color: #ffdd57;
+
+main {
+  flex: 1;
+  padding: 2rem;
 }
+
+section {
+  margin-bottom: 3rem;
+}
+
+.projetos {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
 .card {
-  display: flex
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+h2 {
+  color: #581c87;
+}
+
