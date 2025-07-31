@@ -1,73 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Rebeca Freire</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebeca Freire | Desenvolvedora Full Stack</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <img src="imagens/rebeca.png" alt="Foto de Rebeca Freire" class="foto-perfil" />
-    <h1>Rebeca Freire</h1>
-    <p>Desenvolvedora Full Stack | Criando soluções com código e café ☕</p>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="sobre">
-      <h2>Sobre Mim</h2>
-      <p> Formada técnica em Informática pela ETEC e graduanda em Gestão da Tecnologia da Informação pela FATEC. </p>
-      <p></p>Tenho paixão por tecnologia, desenvolvimento de sistemas, automações e redes — e estou sempre em busca de novos aprendizados e experiências na área tech.</p>
-      <p>Estudo desenvolvimento Full Stack, dados e aplico meus conhecimentos em projetos reais.</p>
-    </section>
-
-    <section id="projetos">
-      <h2>Projetos</h2>
-      <div class="card">
-        <h3>Portfólio Profissional</h3>
-        <p>Site criado para apresentar meus principais projetos e habilidades.</p>
-        <a href="https://rebecafreire.github.io/Portfolio-Rebeca" target="_blank">Ver projeto</a>
+  <!-- Seção Apresentação -->
+  <section class="bio-section">
+    <div class="profile-image">
+      <img src="rebecao.png" alt="Foto de Rebeca Freire">
+    </div>
+    <div class="profile-text">
+      <h1>Rebeca Freire</h1>
+      <h2>Desenvolvedora Full Stack</h2>
+      <p>
+        Técnica de informática(ETEC) e graduanda em Gestão para Tecnologia da Informação (Fatec)
+        Tenhocuriosidade afiada e paixão por construir soluções digitais, transformo desafios em oportunidades.
+        Tenho experiência em aplicações web e mobile, com foco em usabilidade, performance e impacto real.
+        Acredito na tecnologia como ponte entre ideias e pessoas — por isso crio códigos que resolvem, conectam e inspiram.
+      </p>
+      <div class="tags">
+        <span>#FullStack</span><span>#Python</span><span>#SQL</span><span>#Java</span><span>#PowerBI</span>
+        <span>#DataDriven</span><span>#TecnologiaComPropósito</span><span>#AprendizadoContínuo</span><span>#MulheresNaTech</span>
       </div>
-      <div class="card">
-        <h3>WOD Backend com FastAPI</h3>
-        <p>API RESTful para gestão de treinos de crossfit.</p>
-        <a href="https://github.com/RebecaFreire/wod-backend-fastAPI" target="_blank">Ver no GitHub</a>
+    </div>
+  </section>
+
+  <!-- Seção Projetos -->
+ <section class="projects">
+  <h2>Projetos</h2>
+
+  <div class="project-card">
+   <div class="card">
+        <h3>Store API FastAPI</h3>
+        <p>Backend de e-commerce com rotas protegidas e banco relacional.</p>
+        <a href="https://github.com/RebecaFreire/store-api-fastapi" target="_blank">🔗 Ver projeto</a>
       </div>
-    </section>
+  </div>
 
-    <section id="habilidades">
-      <h2>Habilidades Técnicas</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Python, FastAPI</li>
-        <li>Git, GitHub</li>
-        <li>POO com C</li>
-        <li>SQL, APIs REST</li>
-      </ul>
-    </section>
+  <div class="project-card">
+            <h3>Sistema Bancário</h3>
+        <p>Simulação bancária com validações e arquitetura modular.</p>
+        <a href="https://github.com/RebecaFreire/sistema-bancario" target="_blank">🔗 Ver projeto</a>
+      </div>
+      <div class="project-card">
+        <h3>Piscine 42 - Imersão C</h3>
+        <p>Projetos em linguagem C desenvolvidos na 42 SP.</p>
+        <a href="https://github.com/RebecaFreire/piscine-42" target="_blank">🔗 Ver projeto</a>
+    </div>
+</section>
 
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Quer conversar sobre oportunidades ou trocar ideias? Me chama! 💬</p>
-      <ul>
-        <li>Email: <a href="mailto:rebs27lima@gmail.com">rebs27limav@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/rebeca-freire" target="_blank">/linkedin/rebeca-freire</a></li>
-        <li>GitHub: <a href="https://github.com/RebecaFreire" target="_blank">/RebecaFreire</a></li>
-      </ul>
-    </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Rebeca Freire. Feito com 💜 e muito estudo.</p>
-  </footer>
+  <!-- Seção Skills -->
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>SQL e Modelagem de Dados</li>
+      <li>Java</li>
+      <li>Power BI</li>
+      <li>Git e GitHub</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Figma e UX/UI Básico</li>
+    </ul>
+  </section>
+
+  <!-- Seção Contato -->
+  <section class="contact">
+    <h2>Contato</h2>
+    <a href="mailto:rebs27lima@gmail.com" class="btn-contato">✉️ Email</a>
+      <a href="https://github.com/RebecaFreire" target="_blank" class="btn-contato">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/rebecafreire/" target="_blank" class="btn-contato">💼 LinkedIn</a>
+  </section>
+
 </body>
 </html>
