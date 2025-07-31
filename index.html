@@ -3,58 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio | Rebeca Freire</title>
+  <title>Rebeca Freire | Desenvolvedora Full Stack</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.png" />
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header class="hero">
-    <img src="imagens/rebeca.jpg" alt="Foto de Rebeca Freire" class="foto-perfil" />
-    <h1>Rebeca Freire</h1>
-    <p>Desenvolvedora Full Stack | Criando soluções com código e café ☕</p>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre Mim</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <img src="imagens/rebeca.jpg" alt="Foto de Rebeca Freire" class="foto-perfil" />
+      <h1>Rebeca Freire</h1>
+      <p>Desenvolvedora Full Stack apaixonada por criar experiências digitais</p>
+      <a href="#projetos" class="btn">Ver Projetos</a>
+    </div>
   </header>
 
   <main>
-    <section id="sobre">
+    <section id="sobre" class="section">
       <h2>Sobre Mim</h2>
       <p>Sou apaixonada por tecnologia, resolução de problemas e aprendizado contínuo. Estudo desenvolvimento Full Stack e aplico meus conhecimentos em projetos reais.</p>
     </section>
 
-    <section id="projetos">
+    <section id="projetos" class="section">
       <h2>Projetos</h2>
-      <div class="card">
-        <h3>Portfólio Profissional</h3>
-        <p>Site criado para apresentar meus principais projetos e habilidades.</p>
-        <a href="https://rebecafreire.github.io/Portfolio-Rebeca" target="_blank">Ver projeto</a>
-      </div>
-      <div class="card">
-        <h3>WOD Backend com FastAPI</h3>
-        <p>API RESTful para gestão de treinos de crossfit.</p>
-        <a href="https://github.com/RebecaFreire/wod-backend-fastAPI" target="_blank">Ver no GitHub</a>
+      <div class="cards">
+        <div class="card">
+          <img src="imagens/portfolio.png" alt="Projeto Portfólio" />
+          <h3>Portfólio Profissional</h3>
+          <p>Site criado para apresentar meus principais projetos e habilidades.</p>
+          <a href="https://rebecafreire.github.io/Portfolio-Rebeca" target="_blank">Ver projeto</a>
+        </div>
+        <div class="card">
+          <img src="imagens/wod.png" alt="Projeto WOD" />
+          <h3>WOD Backend com FastAPI</h3>
+          <p>API RESTful para gestão de treinos de crossfit.</p>
+          <a href="https://github.com/RebecaFreire/wod-backend-fastAPI" target="_blank">Ver no GitHub</a>
+        </div>
       </div>
     </section>
 
-    <section id="habilidades">
-      <h2>Habilidades Técnicas</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Python, FastAPI</li>
-        <li>Git, GitHub</li>
-        <li>POO com C</li>
-        <li>SQL, APIs REST</li>
-      </ul>
-    </section>
-
-    <section id="contato">
+    <section id="contato" class="section">
       <h2>Contato</h2>
       <p>Quer conversar sobre oportunidades ou trocar ideias? Me chama! 💬</p>
       <ul>
