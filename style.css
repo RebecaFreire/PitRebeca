@@ -19,6 +19,10 @@ header h1 {
 }
 
 .apresentacao {
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  color: #444;
   text-align: center;
   padding: 40px 20px;
   background-color: #ffffff;
