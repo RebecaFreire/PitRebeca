@@ -1,3 +1,4 @@
+/* === RESET & BASE === */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -5,14 +6,15 @@ body {
   color: #ffffff;
 }
 
+/* === NAVBAR === */
 .navbar {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: #000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   z-index: 1000;
 }
-
 .navbar ul {
   display: flex;
   justify-content: center;
@@ -20,94 +22,195 @@ body {
   margin: 0;
   padding: 1em;
 }
-
 .navbar li {
   margin: 0 1.5em;
 }
-
 .navbar a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+.navbar a:hover {
+  color: #6c63ff;
 }
 
+/* === HERO / HOME === */
 .hero {
   background: linear-gradient(90deg, #6c63ff, #a55eea);
   padding: 120px 20px 80px;
   text-align: center;
 }
-
 .hero h1 {
   font-size: 2em;
   margin-bottom: 10px;
 }
-
 .hero-content p {
   font-size: 1.2em;
   color: #f0f0f0;
 }
 
+/* === SOBRE MIM === */
 .sobre {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  padding: 80px 40px;
-  gap: 40px;
-  background-color: #1c1c28;
+  gap: 3rem;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #6c63ff, #a55eea);
+  border-radius: 12px;
 }
-
 .perfil img {
-  width: 180px;
-  border-radius: 50%;
-  border: 4px solid #6c63ff;
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
 }
-
+.perfil img:hover {
+  transform: scale(1.05);
+}
+.bio {
+  max-width: 600px;
+}
 .bio h2 {
-  font-size: 1.8em;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
-
 .bio span {
-  color: #a55eea;
+  color: #ff6ec7;
+  font-weight: bold;
+}
+.bio strong {
+  color: #ffdd57;
   font-weight: bold;
 }
 
-.bio strong {
-  color: #6c63ff;
+/* === TAGS === */
+.tags {
+  margin-top: 20px;
+}
+.tags span {
+  display: inline-block;
+  background-color: #222;
+  color: #ff6ec7;
+  padding: 0.4rem 1rem;
+  margin: 0.3rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.tags span:hover {
+  background-color: #6c63ff;
+  color: #fff;
 }
 
-.projects, .skills, .contato {
+/* === PROJETOS === */
+.projects {
   padding: 60px 40px;
   background-color: #151521;
 }
-
-.project-item {
+.projects h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  color: #ffdd57;
+}
+.card {
   background-color: #242434;
   padding: 20px;
+  margin-bottom: 30px;
   border-left: 4px solid #6c63ff;
-  margin-bottom: 20px;
-  border-radius: 5px;
+  border-radius: 8px;
 }
-
-.project-item h3 {
-  color: #a55eea;
+.card img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
-
-.project-item a {
+.card h3 {
+  color: #ff6ec7;
+  margin-bottom: 10px;
+}
+.card p {
+  margin-bottom: 10px;
+}
+.card a {
   color: #6c63ff;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
+}
+.card a:hover {
+  color: #ffdd57;
 }
 
-.skills ul, .contato ul {
+/* === SKILLS === */
+.skills {
+  padding: 60px 40px;
+  background-color: #1b1b29;
+}
+.skills h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #ffdd57;
+}
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skills li {
+  background-color: #242434;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #ff6ec7;
+  font-weight: 500;
+}
+
+/* === CONTATO === */
+.contato {
+  padding: 60px 40px;
+  background-color: #151521;
+}
+.contato h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #ffdd57;
+}
+.contato p {
+  margin-bottom: 10px;
+}
+.contato ul {
   list-style: none;
   padding: 0;
 }
-
-.skills li, .contato li {
-  padding: 8px 0;
-  font-size: 1.1em;
+.contato li {
+  margin-bottom: 10px;
 }
-
 .contato a {
   color: #a55eea;
   text-decoration: none;
+}
+.contato a:hover {
+  color: #ffdd57;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 768px) {
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar ul {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+  .navbar li {
+    margin: 0.5em 0;
+  }
+  .perfil img {
+    width: 180px;
+  }
 }
