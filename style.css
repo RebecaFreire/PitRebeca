@@ -1,4 +1,26 @@
 body {
+  body.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e;
+  box-shadow: 0 0 15px rgba(255,255,255,0.05);
+}
+
+#toggle-dark {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #6a11cb;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
   margin: 0;
   font-family: 'Raleway', sans-serif;
   background-color: #0f0f0f;
