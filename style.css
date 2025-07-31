@@ -35,35 +35,40 @@ body {
   color: #6c63ff;
 }
 
-/* === HERO / HOME === */
+/* === HERO === */
 .hero {
-  background: linear-gradient(90deg, #6c63ff, #a55eea);
-  padding: 120px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1c1c2b, #6c63ff);
+  height: 100vh;
   text-align: center;
+  padding: 0 2rem;
 }
 .hero h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
+  font-size: 2.8em;
+  margin-bottom: 20px;
 }
-.hero-content p {
+.hero p {
   font-size: 1.2em;
+  max-width: 700px;
   color: #f0f0f0;
 }
 
-/* === SOBRE MIM === */
+/* === SOBRE === */
 .sobre {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #6c63ff, #a55eea);
-  border-radius: 12px;
+  background-color: #181828;
 }
 .perfil img {
-  width: 280px;
-  border-radius: 16px;
+  width: 300px;
+  border-radius: 12px;
   box-shadow: 0 0 16px rgba(0,0,0,0.4);
   transition: transform 0.3s ease;
 }
@@ -71,6 +76,7 @@ body {
   transform: scale(1.05);
 }
 .bio {
+  flex: 1;
   max-width: 600px;
 }
 .bio h2 {
@@ -117,100 +123,4 @@ body {
   color: #ffdd57;
 }
 .card {
-  background-color: #242434;
-  padding: 20px;
-  margin-bottom: 30px;
-  border-left: 4px solid #6c63ff;
-  border-radius: 8px;
-}
-.card img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-.card h3 {
-  color: #ff6ec7;
-  margin-bottom: 10px;
-}
-.card p {
-  margin-bottom: 10px;
-}
-.card a {
-  color: #6c63ff;
-  text-decoration: none;
-  font-weight: bold;
-}
-.card a:hover {
-  color: #ffdd57;
-}
-
-/* === SKILLS === */
-.skills {
-  padding: 60px 40px;
-  background-color: #1b1b29;
-}
-.skills h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #ffdd57;
-}
-.skills ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.skills li {
-  background-color: #242434;
-  padding: 10px 20px;
-  border-radius: 20px;
-  color: #ff6ec7;
-  font-weight: 500;
-}
-
-/* === CONTATO === */
-.contato {
-  padding: 60px 40px;
-  background-color: #151521;
-}
-.contato h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  color: #ffdd57;
-}
-.contato p {
-  margin-bottom: 10px;
-}
-.contato ul {
-  list-style: none;
-  padding: 0;
-}
-.contato li {
-  margin-bottom: 10px;
-}
-.contato a {
-  color: #a55eea;
-  text-decoration: none;
-}
-.contato a:hover {
-  color: #ffdd57;
-}
-
-/* === RESPONSIVO === */
-@media (max-width: 768px) {
-  .sobre {
-    flex-direction: column;
-    text-align: center;
-  }
-  .navbar ul {
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-  .navbar li {
-    margin: 0.5em 0;
-  }
-  .perfil img {
-    width: 180px;
-  }
-}
+  display: flex
