@@ -45,27 +45,6 @@ main {
 section {
   margin-bottom: 3rem;
 }
-
-.projetos {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 1rem;
-  border-radius: 8px;
-  width: 250px;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 4px;
-}
-
 section h2 {
   margin-bottom: 1rem;
   color: #581c87;
@@ -80,6 +59,26 @@ ul li {
   margin-bottom: 0.5rem;
   font-weight: 500;
 }
+.projetos {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.card {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  width: 250px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+
 #contato a {
   color: #581c87;
   text-decoration: none;
@@ -89,4 +88,3 @@ ul li {
 #contato a:hover {
   text-decoration: underline;
 }
-
