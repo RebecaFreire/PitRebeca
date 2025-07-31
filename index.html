@@ -1,80 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <button id="toggle-dark">🌙 Modo Escuro</button>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rebeca Freire | Desenvolvedora Full Stack</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Rebeca Freire</title>
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-<img src="rebeca.png" alt="Foto de Rebeca" width="200">
-      <h1>Rebeca Freire</h1>
-      <p>Desenvolvedora Full Stack apaixonada por criar experiências digitais</p>
-      <a href="#projetos" class="btn">Ver Projetos</a>
-    </div>
+
+  <header>
+    <h1>👩‍💻 Rebeca Freire</h1>
   </header>
 
-  <main>
-    <section id="sobre" class="section" data-aos="fade-up">
-      <h2>Sobre Mim</h2>
-      <section id="sobre">
+   <section id="sobre" class="apresentacao">
+    <img src="rebeca.png" alt="Foto de Rebeca" class="perfil">
   <h2>Sobre Mim</h2>
+
   <p>Sou Técnica em Informática pela ETEC e atualmente graduanda em Gestão da Tecnologia da Informação pela FATEC.</p>
 
-  <p>Tenho afinidade com análise de dados e desenvolvimento Full Stack, aplicando meus conhecimentos em projetos reais que unem código, design e funcionalidade.</p>
+  <p>Tenho afinidade com <strong>desenvolvimento Full Stack</strong>, <strong>análise de dados</strong> e <strong>automação de processos</strong>.</p>
 
-  <p>Acredito na força do aprendizado contínuo e gosto de transformar ideias em soluções tecnológicas que geram impacto.</p>
+  <p>Já desenvolvi projetos utilizando <strong>Python</strong>, <strong>Java</strong>, <strong>SQL</strong>, além de construir APIs com <strong>FastAPI</strong> e interfaces web com <strong>HTML, CSS e JavaScript</strong>.</p>
+
+  <p>Sou movida pela curiosidade, gosto de transformar ideias em soluções que facilitem a vida das pessoas — e estou sempre aprendendo algo novo para ir além.</p>
 </section>
 
+    <div class="skills-grid">
+      <div class="skill-card">💾 SQL</div>
+      <div class="skill-card">☕ Java</div>
+      <div class="skill-card">🐍 Python</div>
+      <div class="skill-card">🖥️ HTML & CSS</div>
+      <div class="skill-card">⚡ JavaScript</div>
+      <div class="skill-card">🚀 FastAPI</div>
+      <div class="skill-card">📊 Análise de Dados</div>
+      <div class="skill-card">🔧 Full Stack</div>
+    </div>
+  </section>
 
-    <section id="projetos" class="section">
-      <h2>Projetos</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="imagens/portfolio.png" alt="Projeto Portfólio" />
-          <h3>Portfólio Profissional</h3>
-          <p>Site criado para apresentar meus principais projetos e habilidades.</p>
-          <a href="https://rebecafreire.github.io/Portfolio-Rebeca" target="_blank">Ver projeto</a>
-        </div>
-        <div class="card">
-          <img src="imagens/wod.png" alt="Projeto WOD" />
-          <h3>WOD Backend com FastAPI</h3>
-          <p>API RESTful para gestão de treinos de crossfit.</p>
-          <a href="https://github.com/RebecaFreire/wod-backend-fastAPI" target="_blank">Ver no GitHub</a>
-        </div>
+  <section id="projetos" class="section">
+    <h2>🧪 Projetos</h2>
+    <div class="cards">
+
+      <div class="card">
+        <img src="imagens/portfolio.png" alt="Projeto Portfólio" />
+        <h3>Portfólio Profissional</h3>
+        <p>Site criado para apresentar meus principais projetos e habilidades.</p>
+        <a href="https://rebecafreire.github.io/Portfolio-Rebeca" target="_blank">Ver projeto</a>
       </div>
-    </section>
 
-    <section id="contato" class="section">
-      <h2>Contato</h2>
-      <p>Quer conversar sobre oportunidades ou trocar ideias? Me chama! 💬</p>
-      <ul>
-        <li>Email: <a href="mailto:rebeca.freire.dev@gmail.com">rebeca.freire.dev@gmail.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/rebeca-freire" target="_blank">/in/rebeca-freire</a></li>
-        <li>GitHub: <a href="https://github.com/RebecaFreire" target="_blank">/RebecaFreire</a></li>
-      </ul>
-    </section>
-  </main>
-<script>
-  const toggle = document.getElementById('toggle-dark');
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-  });
-</script>
+      <div class="card">
+        <img src="imagens/wod.png" alt="Projeto WOD" />
+        <h3>WOD Backend com FastAPI</h3>
+        <p>API RESTful para gestão de treinos de crossfit.</p>
+        <a href="https://github.com/RebecaFreire/wod-backend-fastAPI" target="_blank">Ver no GitHub</a>
+      </div>
+
+      <div class="card">
+        <img src="imagens/banco.png" alt="Sistema Bancário" />
+        <h3>Sistema Bancário</h3>
+        <p>Aplicação Java simulando operações bancárias com foco em orientação a objetos.</p>
+        <a href="https://github.com/RebecaFreire/sistema-bancario" target="_blank">Ver no GitHub</a>
+      </div>
+
+    </div>
+  </section>
 
   <footer>
-    <p>© 2025 Rebeca Freire. Feito com 💜 e muito estudo.</p>
+    <p>© 2025 Rebeca Freire — Desenvolvido com carinho ❤️</p>
   </footer>
+
 </body>
 </html>
