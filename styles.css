@@ -1,21 +1,3 @@
-/* BLOCO DESTAQUE - Transformando Ideias */
-#destaque {
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #6b21a8, #c084fc); /* gradiente roxo-lilás */
-  text-align: center;
-  color: #fff;
-}
-
-#destaque h1 {
-  font-size: 2.8em;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-#destaque p {
-  font-size: 1.3em;
-  color: #f3e8ff;
-}
 /* Reset básico */
 * {
   margin: 0;
@@ -51,32 +33,40 @@ nav a {
   font-weight: bold;
 }
 
-/* Seção HERO destacada */
+/* HERO destacada – Transformando Ideias */
 .hero {
-  padding: 80px 30px 60px;
-  background: linear-gradient(to right, #2e026d, #701a75);
+  padding: 100px 30px 80px;
+  background: linear-gradient(135deg, #6b21a8, #c084fc); 
   text-align: center;
-  border-bottom: 2px solid #bb86fc;
-  box-shadow: 0 0 40px rgba(189, 147, 249, 0.3);
+  border-bottom: 3px solid #bb86fc;
+  box-shadow: 0 0 50px rgba(189, 147, 249, 0.35);
+  margin-bottom: 60px;
 }
 
 .hero h1 {
-  font-size: 2.8em;
+  font-size: 3.2em;
+  font-weight: 800;
   margin-bottom: 20px;
   color: #ffffff;
 }
 
 .hero p {
-  font-size: 1.2em;
+  font-size: 1.4em;
   color: #f3e8ff;
-  opacity: 0.95;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.98;
 }
 
 /* SOBRE MIM */
 #sobre-mim {
-  padding: 60px 30px;
+  padding: 80px 30px 60px;
   background-color: #1e293b;
   text-align: center;
+  margin-bottom: 60px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 #sobre-mim h2 {
@@ -90,12 +80,25 @@ nav a {
   color: #e0e0e0;
   max-width: 700px;
   margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* HASHTAGS EM DESTAQUE */
+.tags {
+  margin-top: 25px;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #e0c3ff; 
+  font-weight: bold;
 }
 
 /* PROJETOS */
 #projetos {
-  padding: 60px 30px;
+  padding: 80px 30px;
   background-color: #0f172a;
+  margin-top: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 #projetos h2 {
@@ -118,6 +121,7 @@ nav a {
   margin-bottom: 20px;
 }
 
+/* Rodapé */
 footer {
   text-align: center;
   padding: 20px;
