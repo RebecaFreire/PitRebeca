@@ -1,4 +1,4 @@
-/* Reset e corpo */
+/* Reset e base */
 * {
   margin: 0;
   padding: 0;
@@ -16,28 +16,26 @@ body {
   padding: 100px 30px 80px;
   background: linear-gradient(135deg, #6b21a8, #c084fc);
   text-align: center;
-  border-bottom: 3px solid #bb86fc;
   box-shadow: 0 0 50px rgba(189, 147, 249, 0.35);
   margin-bottom: 80px;
 }
 
 .hero h1 {
-  font-size: 3.2em;
-  font-weight: 800;
+  font-size: 3em;
+  font-weight: bold;
   margin-bottom: 20px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .hero p {
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: #f3e8ff;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  opacity: 0.98;
 }
 
-/* SOBRE MIM em colunas */
+/* SOBRE MIM em duas colunas */
 #sobre-mim {
   padding: 80px 30px;
   background-color: #1e293b;
@@ -53,9 +51,9 @@ body {
 }
 
 .sobre-container img {
-  max-width: 300px;
+  width: 300px;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .sobre-texto {
@@ -63,20 +61,20 @@ body {
 }
 
 .sobre-texto h2 {
-  font-size: 2.4em;
+  font-size: 2em;
   color: #bb86fc;
   margin-bottom: 20px;
 }
 
 .sobre-texto p {
   font-size: 1.1em;
-  color: #e0e0e0;
+  color: #e2e8f0;
   line-height: 1.6;
 }
 
 /* Hashtags */
 .tags {
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -88,10 +86,10 @@ body {
   padding: 6px 12px;
   border-radius: 20px;
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
-/* PROJETOS em grid */
+/* PROJETOS em cards lado a lado */
 #projetos {
   padding: 80px 30px;
   background-color: #0f172a;
@@ -120,7 +118,7 @@ body {
   font-weight: bold;
 }
 
-/* CONTATO e footer */
+/* CONTATO e rodapé */
 #contato {
   padding: 60px 30px;
   background-color: #000;
