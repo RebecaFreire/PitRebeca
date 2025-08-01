@@ -1,3 +1,21 @@
+/* BLOCO DESTAQUE - Transformando Ideias */
+#destaque {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #6b21a8, #c084fc); /* gradiente roxo-lilás */
+  text-align: center;
+  color: #fff;
+}
+
+#destaque h1 {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#destaque p {
+  font-size: 1.3em;
+  color: #f3e8ff;
+}
 /* Reset básico */
 * {
   margin: 0;
