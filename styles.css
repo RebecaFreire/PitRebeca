@@ -77,12 +77,34 @@ nav a:hover {
 /* SOBRE MIM */
 /* Seção Sobre Mim */
 .sobre {
+  position: relative;
+  background-color: #eaecee; /* tom gelo mais neutro */
   padding: 4rem 2rem;
-background-color: #eaecee; /* tom gelo mais neutro */
+  overflow: hidden;
+}
+
+.sobre-fundo {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 400px;
+  opacity: 0.06;
+  filter: brightness(1.05) hue-rotate(220deg) saturate(110%);
+  transition: opacity 0.5s ease, filter 0.5s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sobre:hover .sobre-fundo {
+  opacity: 0.18;
+  filter: hue-rotate(270deg) saturate(160%);
 }
 
 /* Container com imagem + texto */
 .sobre-conteudo {
+    position: relative;
+    Z-index:1;
     display: flex;
     flex-direction: row;
     align-items: center;
