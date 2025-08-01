@@ -83,15 +83,16 @@ nav a:hover {
 
 /* Container com imagem + texto */
 .sobre-conteudo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap; /* permite quebrar linha em telas menores */
-  max-width: 1200px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: nowrap; /* mantém os elementos lado a lado */
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 
 /* Imagem da Rebeca */
 .sobre-conteudo img {
