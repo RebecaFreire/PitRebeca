@@ -82,20 +82,23 @@ nav a:hover {
 
 .sobre-conteudo {
   display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
 }
 
 .sobre img {
   width: 260px;
   border-radius: 10px;
   box-shadow: 0 0 10px #0005;
+  flex-shrink: 0;
 }
 
 .sobre-texto {
   max-width: 600px;
+  flex: 1;
 }
 
 .sobre-texto h3 {
