@@ -125,14 +125,16 @@ background-color: #eaecee; /* tom gelo mais neutro */
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .tags span {
-  background-color: #e0e0e0;
+  background-color: #333;
+  color: var(--rosa-vivo);
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
 
 /* Responsividade para dispositivos menores */
