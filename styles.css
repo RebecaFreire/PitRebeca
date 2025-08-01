@@ -78,7 +78,7 @@ nav a:hover {
 /* Seção Sobre Mim */
 .sobre {
   padding: 4rem 2rem;
-  background-color: #f8f9fa; /* tom suave para destacar a seção */
+background-color: #eaecee; /* tom gelo mais neutro */
 }
 
 /* Container com imagem + texto */
@@ -117,7 +117,7 @@ nav a:hover {
 .sobre-texto p {
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.8rem; /* reduz o espaçamento */
 }
 
 /* Hashtags de tecnologias */
