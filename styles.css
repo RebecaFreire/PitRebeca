@@ -84,24 +84,38 @@ nav a:hover {
 
 /* Container com imagem + texto */
 .sobre-conteudo {
-  position: relative;
-  z-index: 1;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 3rem;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 2.5rem;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
+
 .sobre-conteudo img {
-  width: 280px;
-  max-height: 500px;
+  flex: 1 1 280px;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  aspect-ratio: 3/4;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sobre-conteudo img {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s forwards ease-in-out;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .sobre-texto {
