@@ -81,7 +81,6 @@ nav a:hover {
   padding: 4rem 2rem;
   overflow: hidden;
 }
-
 .sobre-conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -92,7 +91,7 @@ nav a:hover {
   padding: 2rem 0;
 }
 
-/* Imagem à esquerda com altura igual ao texto */
+/* Imagem à esquerda preenchendo altura do texto */
 .sobre-conteudo img {
   width: 100%;
   height: 100%;
@@ -101,16 +100,9 @@ nav a:hover {
   border: 3px solid var(--rosa-vivo);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s forwards ease-in-out;
 }
 
-.sobre-conteudo img:hover {
-  transform: scale(1.03);
-}
-
-/* Texto à direita ocupando toda altura */
+/* Texto à direita com altura igual */
 .sobre-texto {
   display: flex;
   flex-direction: column;
