@@ -82,7 +82,6 @@ nav a:hover {
   overflow: hidden;
 }
 
-/* Container com imagem + texto */
 .sobre-conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -93,7 +92,7 @@ nav a:hover {
   padding: 2rem 0;
 }
 
-/* Imagem à esquerda com altura 100% */
+/* Imagem à esquerda com altura igual ao texto */
 .sobre-conteudo img {
   width: 100%;
   height: 100%;
@@ -140,6 +139,7 @@ nav a:hover {
     max-width: 100%;
   }
 }
+
 
 
 /* Hashtags de tecnologias */
