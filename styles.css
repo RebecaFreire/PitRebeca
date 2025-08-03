@@ -85,18 +85,19 @@ nav a:hover {
 /* Container com imagem + texto */
 .sobre-conteudo {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch; /* garante que imagem e texto fiquem com mesma altura */
   gap: 3rem;
   max-width: 1000px;
   margin: 0 auto;
   padding: 2rem 0;
 }
 
+
 /* Imagem com borda destacada e efeito hover */
 .sobre-conteudo img {
   width: 100%;
-  height: auto;
+  height: 100%; /* ocupa toda a altura do container */
   object-fit: cover;
   border-radius: 12px;
   border: 3px solid var(--rosa-vivo);
@@ -107,6 +108,7 @@ nav a:hover {
   animation: fadeUp 0.8s forwards ease-in-out;
 }
 
+
 .sobre-conteudo img:hover {
   transform: scale(1.05);
 }
@@ -116,8 +118,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 380px;
-  max-width: 580px;
+  height: 100%; /* mesma altura da imagem */
 }
 
 /* Responsivo */
