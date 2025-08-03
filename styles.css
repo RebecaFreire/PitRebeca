@@ -84,44 +84,59 @@ nav a:hover {
 
 /* Container com imagem + texto */
 .sobre-conteudo {
-  display: flex;
+  display: grid;
+  grid-template-columns: 280px 1fr;
   align-items: center;
-  justify-content: center;
   gap: 3rem;
-  flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 2rem 0;
 }
 
-
+/* Imagem com borda destacada e efeito hover */
 .sobre-conteudo img {
   width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 12px;
+  border: 3px solid var(--rosa-vivo);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s forwards ease-in-out;
 }
 
+.sobre-conteudo img:hover {
+  transform: scale(1.05);
+}
+
+/* Texto alinhado verticalmente */
 .sobre-texto {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 380px; /* ajustável conforme imagem */
+  min-height: 380px;
+  max-width: 580px;
 }
 
-.sobre-texto h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #37474F;
-}
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre-conteudo {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-.sobre-texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 0.8rem;
+  .sobre-conteudo img {
+    margin: 0 auto 2rem;
+    max-width: 200px;
+  }
+
+  .sobre-texto {
+    max-width: 100%;
+    min-height: auto;
+  }
+
 }
 
 /* Hashtags de tecnologias */
