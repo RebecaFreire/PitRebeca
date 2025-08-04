@@ -1,23 +1,119 @@
+:root {
+  --roxo-deep: #1a1a40;
+  --roxo-medium: #330066;
+  --rosa-vivo: #ff80ab;
+  --preto: #000;
+  --texto-claro: #f5f5f5;
+  --vidro-bg: rgba(255, 255, 255, 0.05);
+  --vidro-borda: rgba(255, 255, 255, 0.2);
+  --fonte: 'Sora', sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BASE */
 body {
-  background-color: #121212;
-  color: #f5f5f5;
-  font-family: 'Sora', sans-serif;
-  padding: 2rem;
+  background-color: var(--preto);
+  color: var(--texto-claro);
+  font-family: var(--fonte);
 }
 
-h1 {
-  color: #ff80ab;
-  font-size: 2rem;
-  text-align: center;
+/* NAV */
+nav {
+  background-color: var(--preto);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(255, 128, 171, 0.2);
 }
 
-a {
-  color: #ff80ab;
+nav h1 {
+  font-size: 1.8rem;
+  color: var(--rosa-vivo);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: var(--texto-claro);
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-.hero {
-  text-align: center;
-  margin-top: 4rem;
+nav a:hover {
+  color: var(--rosa-vivo);
 }
+
+/* HERO */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 2rem 3rem;
+  background: linear-gradient(120deg, #020024, #090979, var(--roxo-medium));
+}
+
+.hero h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #dcdcdc;
+}
+
+/* BOTÃO CTA */
+.cta {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--rosa-vivo);
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255, 128, 171, 0.4);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta:hover {
+  transform: scale(1.05);
+  background-color: #ff9dc1;
+}
+
+/* SOBRE */
+.sobre {
+  background-color: #eaecee;
+  padding: 4rem 2rem;
+}
+
+.sobre-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.sobre-conteudo img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover
