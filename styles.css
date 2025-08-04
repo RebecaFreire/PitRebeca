@@ -104,13 +104,14 @@ nav a:hover {
 
 /* Texto à direita com altura igual */
 .sobre-texto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
   max-width: 100%;
+  height: auto;
+  color: #222;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  font-size: 1.05rem;
 }
-
 @media (max-width: 768px) {
   .sobre-conteudo {
     display: flex;
@@ -129,15 +130,7 @@ nav a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
-.sobre-texto {
-  max-width: 100%;
-  height: auto;
-  color: #222;
-  font-family: 'Poppins', 'Segoe UI', sans-serif;
-  font-weight: 500;
-  line-height: 1.6;
-  font-size: 1.05rem;
-}
+
 
 
 
