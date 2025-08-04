@@ -84,7 +84,7 @@ nav a:hover {
 .sobre-conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: stretch;
+  align-items: center;
   gap: 3rem;
   max-width: 1000px;
   margin: 0 auto;
