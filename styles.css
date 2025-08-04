@@ -7,10 +7,17 @@ body {
 
 h1 {
   color: #ff80ab;
+  font-size: 2rem;
+  text-align: center;
 }
 
 a {
   color: #ff80ab;
   text-decoration: none;
+  font-weight: bold;
 }
 
+.hero {
+  text-align: center;
+  margin-top: 4rem;
+}
