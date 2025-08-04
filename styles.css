@@ -116,9 +116,10 @@ nav a:hover {
 }
 
 .sobre-conteudo img {
-  width: 180px;
-  height: 180px;
+  width: 220px;
+  height: 220px;
   object-fit: cover;
+  object-position: top; /* ou center, bottom, left, right */
   border-radius: 12px;
   border: 3px solid var(--rosa-vivo);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
