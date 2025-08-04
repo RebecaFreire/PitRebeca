@@ -93,8 +93,8 @@ nav a:hover {
 
 /* Imagem à esquerda preenchendo altura do texto */
 .sobre-conteudo img {
-  width: 100%;
-  height: 100%;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 12px;
   border: 3px solid var(--rosa-vivo);
@@ -111,7 +111,6 @@ nav a:hover {
   max-width: 100%;
 }
 
-
 @media (max-width: 768px) {
   .sobre-conteudo {
     display: flex;
@@ -121,15 +120,23 @@ nav a:hover {
   }
 
   .sobre-conteudo img {
-    height: auto;
-    max-width: 280px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     margin-bottom: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--rosa-vivo);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 
-  .sobre-texto {
-    height: auto;
-    max-width: 100%;
-  }
+.sobre-texto {
+  max-width: 100%;
+  height: auto;
+  color: #222;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  font-size: 1.05rem;
 }
 
 
