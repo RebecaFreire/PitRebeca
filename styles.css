@@ -1,3 +1,143 @@
+/* Fonte base */
+body {
+  margin: 0;
+  font-family: 'Sora', sans-serif;
+  background: linear-gradient(to bottom right, #0a1f44, #1e90ff);
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #0a1f44;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #1e90ff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Seções */
+section {
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+/* Sobre Mim */
+.sobre-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.sobre-conteudo img {
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+.sobre-texto {
+  flex: 1;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tags span {
+  display: inline-block;
+  background-color: #e0e0e0;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Projetos */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #f0f4ff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.card h4 {
+  margin-top: 0;
+  color: #0a1f44;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Carrossel */
 .carousel {
   position: relative;
   overflow: hidden;
@@ -8,7 +148,7 @@
 .slides {
   display: flex;
   transition: transform 0.6s ease-in-out;
-  width: calc(100% * 5); /* 5 imagens */
+  width: calc(100% * 5);
 }
 
 .slides figure {
@@ -33,7 +173,7 @@
 .slides figcaption {
   margin-top: 8px;
   font-size: 0.95rem;
-  color: #eee;
+  color: #333;
 }
 
 .carousel button {
@@ -58,6 +198,15 @@
   right: 10px;
 }
 
+/* Fit Cultural + Mural */
+#fit-cultural {
+  background-color: #f0f4ff;
+  color: #333;
+  border-left: 5px solid #1e90ff;
+  padding: 40px 20px;
+  margin-top: 20px;
+}
+
 .mural-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -80,19 +229,47 @@
 
 .mural-item img {
   width: 100%;
-  max-height: 200px;
+  max-width: 280px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 .mural-item h5 {
-  margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
   color: #0a1f44;
+  margin-bottom: 8px;
 }
 
 .mural-item p {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+@media (max-width: 600px) {
+  .mural-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contato */
+.contato a {
+  display: block;
+  margin: 5px 0;
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+  background-color: #0a1f44;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
 }
