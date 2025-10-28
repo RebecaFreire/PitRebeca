@@ -15,7 +15,7 @@ Olá! Sou Rebeca, futura profissional de tecnologia com paixão por desenvolvime
 Mostrar minha evolução como desenvolvedora, atrair oportunidades de estágio e conectar com a comunidade tech.
 
 ---
-✨ Visite minha página publicada: [Portfólio no ar](https://github.com/RebecaFreire/PitRebeca)
+✨ Visite minha página publicada: [Portfólio no ar](https://rebecafreire.github.io/PitRebeca/)
 =======
 # PitRebeca
 Apresentação pessoal e técnica desenvolvida para o processo seletivo. 
