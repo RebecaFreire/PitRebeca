@@ -4,101 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfólio Rebeca Freire</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <!-- SOBRE MIM -->
-  <section id="sobre">
-    <div class="sobre-container">
-      <div class="sobre-foto">
-        <img src="rebeca.png" alt="Foto de Rebeca Freire" />
+  <section id="sobre" class="container py-5">
+    <h2 class="text-center mb-4">Sobre mim</h2>
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="rebeca.png" class="img-fluid rounded shadow" alt="Foto de Rebeca Freire">
       </div>
-      <div class="sobre-texto">
-        <h3>Sobre mim</h3>
-        <p>Meu nome é Rebeca Freire, sou estudante da FATEC Guaratinguetá e apaixonada por tecnologia e impacto social. Minha trajetória começou na ETEC, passou pela UNESP com projetos em saúde e pesquisa, e hoje se fortalece na FATEC com foco em inovação.</p>
-        <p>Escolhi tecnologia porque acredito no poder da transformação digital para melhorar vidas. Sempre fui curiosa, determinada e movida por desafios que envolvem lógica, criatividade e colaboração.</p>
-        <p>No meu tempo livre, gosto de explorar novas ferramentas, estudar programação e participar de comunidades como #MulheresEmTech 👩‍💻.</p>
+      <div class="col-md-8">
+        <h3>Biografia</h3>
+        <p>Meu nome é Rebeca Freire, sou estudante da FATEC Guaratinguetá e apaixonada por tecnologia e impacto social. Minha trajetória começou na ETEC, passou pela UNESP com projetos em saúde pública, e me trouxe até a FATEC com foco em inovação.</p>
+        <h3>Por que escolhi tecnologia?</h3>
+        <p>No ensino técnico, tive oportunidade de vivenciar a transformação digital da minha realidade. Sempre fui curiosa, determinada e movida por desafios que, inicialmente, eu não sabia como resolver. </p> 
+        <p>Escolhi tecnologia porque acredito no poder da inovação para melhorar vidas.</p>
+        <h3>No meu tempo livre</h3>
+        <p>Gosto de me movimentar! Adoro praticar esportes ao ar livre - corrida, pedal. E também, é claro, adoro assistir séries e filmes. Tento vê-los e ouvi-los em ingles para treinar o idioma.</p>
       </div>
     </div>
   </section>
+<!-- EXPERIÊNCIAS -->
+  <section id="experiencias" class="container py-5 text-center">
+    <h2 class="mb-4">Minhas Experiências</h2>
+    <div id="carouselExperiencias" class="carousel slide mb-4" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="projetopunesp.jpg" class="d-block w-100 rounded shadow" alt="Projeto UNESP">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Projeto de pesquisa na UNESP – mobilização articular</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="larpermanencia.jpg" class="d-block w-100 rounded shadow" alt="Casa de longa permanência">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Atuação em saúde na UNESP – casa de longa permanência</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="cicunesp.jpg" class="d-block w-100 rounded shadow" alt="Congresso UNESP">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Congresso de Iniciação Científica – UNESP</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="fatec1.jpg" class="d-block w-100 rounded shadow" alt="FATEC 2023">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Semana de Tecnologia – FATEC Guaratinguetá (2023)</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="fatec2.jpeg" class="d-block w-100 rounded shadow" alt="FATEC 2025">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Semana de Tecnologia – FATEC Guaratinguetá (2025)</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExperiencias" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExperiencias" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+    <p class="lead">Minha trajetória acadêmica começou na ETEC, passou pela UNESP — onde participei de projetos de pesquisa, ações em saúde e congressos científicos — e hoje se fortalece na FATEC, com foco em tecnologia, inovação e impacto social.</p>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="container py-5 text-center">
+    <h2 class="mb-3">Minhas Habilidades</h2>
+    <p class="fs-5 text-primary">#DataScience 🧠 #PowerBI 📊 #Python 🐍 #MySql 🐬 #JavaScript 📜 #FullStack 🧑‍💻 #MulheresEmTech 👩‍💻</p>
+  </section>
 
   <!-- VALORES EMBRAER -->
-  <section id="valores">
-    <h3>Meus Valores em Ação</h3>
-    <img src="mural-valores-embraer.png" alt="Mural ilustrativo dos valores Embraer" />
-    <blockquote>
-      <p>Uma Embraer. Um só time</p>
-      <p>Escolhi este pilar porque acredito profundamente na força do trabalho em equipe. Em projetos acadêmicos e sociais, aprendi que resultados extraordinários só acontecem quando há ação, empatia e responsabilidade compartilhada.</p>
+  <section id="valores" class="container py-5 bg-light text-center">
+    <h2 class="mb-4">Meus Valores em Ação</h2>
+    <img src="mural-valores-embraer.png" class="img-fluid rounded shadow mb-4" alt="Mural ilustrativo dos valores Embraer" />
+    <blockquote class="blockquote px-3">
+      <p class="mb-2"><strong>Uma Embraer. Um só time</strong></p>
+      <p>Acredito profundamente na força do trabalho em equipe. Resultados extraordinários só acontecem com colaboração, empatia e responsabilidade.</p>
       <p>Na UNESP e FATEC, vivenciei o que significa agir com generosidade, escutar com atenção e empoderar o outro — valores que fazem parte da cultura da Embraer e que levo comigo em cada desafio.</p>
     </blockquote>
   </section>
 
-  <!-- EXPERIÊNCIAS -->
-  <section id="experiencias">
-    <h3>Minhas Experiências</h3>
-    <div class="carousel">
-      <button class="prev">🛩️</button>
-      <div class="slides">
-        <figure>
-          <img src="projetopunesp.jpg" alt="Projeto de pesquisa na UNESP sobre mobilização articular" />
-          <figcaption>Projeto de pesquisa na UNESP – mobilização articular e educação postural</figcaption>
-        </figure>
-        <figure>
-          <img src="larpermanencia.jpg" alt="Atuação em casa de longa permanência na UNESP" />
-          <figcaption>Atuação em saúde na UNESP – casa de longa permanência</figcaption>
-        </figure>
-        <figure>
-          <img src="cicunesp.jpg" alt="Congresso de Iniciação Científica na UNESP" />
-          <figcaption>Congresso de Iniciação Científica – UNESP</figcaption>
-        </figure>
-        <figure>
-          <img src="fatec1.jpg" alt="Semana de Tecnologia FATEC 2023" />
-          <figcaption>Semana de Tecnologia – FATEC Guaratinguetá (2023)</figcaption>
-        </figure>
-        <figure>
-          <img src="fatec2.jpeg" alt="Semana de Tecnologia FATEC 2025" />
-          <figcaption>Semana de Tecnologia – FATEC Guaratinguetá (2025)</figcaption>
-        </figure>
-      </div>
-      <button class="next">🛩️</button>
-    </div>
-    <p>Minha trajetória acadêmica começou na ETEC, passou pela UNESP — onde participei de projetos de pesquisa, ações em saúde e congressos científicos — e hoje se fortalece na FATEC, com foco em tecnologia, inovação e impacto social.</p>
-  </section>
-
-  <!-- HABILIDADES -->
-  <section id="habilidades">
-    <h3>Minhas Habilidades</h3>
-    <p>#DataScience 🧠 #PowerBI 📊 #Python 🐍 #MySql 🐬 #JavaScript 📜 #FullStack 🧑‍💻 #MulheresEmTech 👩‍💻</p>
-  </section>
-
   <!-- CONTATO -->
-  <section id="contato">
-    <h3>Vamos conversar?</h3>
-    <p>Me mande uma mensagem e vamos criar algo incrível.</p>
-    <div class="contato-links">
-      <a href="mailto:rebecahfreirejh@hotmail.com" target="_blank">📧 Email</a>
-      <a href="https://www.linkedin.com/in/rebeca-freire" target="_blank">💼 LinkedIn</a>
+  <section id="contato" class="container py-5 text-center bg-light">
+    <h2 class="mb-3">Vamos conversar?</h2>
+    <p class="mb-4">Me mande uma mensagem e vamos criar algo incrível.</p>
+    <div class="d-flex justify-content-center gap-3 flex-wrap">
+      <a href="mailto:rebecahfreirejh@hotmail.com" class="btn btn-outline-primary">📧 Email</a>
+      <a href="https://www.linkedin.com/in/rebeca-freire" class="btn btn-outline-primary" target="_blank">💼 LinkedIn</a>
     </div>
   </section>
 
-  <!-- SCRIPT DO CARROSSEL -->
-  <script>
-    const slides = document.querySelector('.slides');
-    const prevBtn = document.querySelector('.prev');
-    const nextBtn = document.querySelector('.next');
-    let index = 0;
-
-    prevBtn.addEventListener('click', () => {
-      index = (index > 0) ? index - 1 : slides.children.length - 1;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    });
-
-    nextBtn.addEventListener('click', () => {
-      index = (index < slides.children.length - 1) ? index + 1 : 0;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    });
-  </script>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
