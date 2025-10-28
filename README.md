@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # 📂 Portfolio Rebeca
 
@@ -15,3 +16,7 @@ Mostrar minha evolução como desenvolvedora, atrair oportunidades de estágio e
 
 ---
 ✨ Visite minha página publicada: [Portfólio no ar](https://rebecafreire.github.io/Portfolio-Rebeca/)
+=======
+# PitRebeca
+Apresentação pessoal e técnica desenvolvida para o processo seletivo. 
+>>>>>>> be22402d2d0722ef35b29e6557aeb3bcb1a84635
