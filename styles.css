@@ -1,3 +1,4 @@
+/* Base geral */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
@@ -5,19 +6,31 @@ body {
   line-height: 1.6;
 }
 
+/* Títulos */
 h2 {
   color: #003366;
+  font-weight: 600;
 }
 
 h3 {
   color: #0077b6;
   margin-top: 20px;
+  font-weight: 500;
 }
 
+/* Imagens */
 img {
   object-fit: cover;
 }
 
+/* Imagem de perfil */
+#sobre img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Carrossel */
 .carousel-caption p {
   background-color: rgba(255,255,255,0.85);
   color: #003366;
@@ -26,13 +39,69 @@ img {
   font-size: 1rem;
 }
 
-blockquote {
+/* Card de valores */
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.card-text {
   font-size: 1rem;
   color: #444;
-  background-color: #ffffff;
-  border-left: 4px solid #0077b6;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  max-width: 800px;
-  margin: 0 auto;
+}
+
+.card-img-top {
+  max-height: 400px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Seção habilidades */
+#habilidades p {
+  font-size: 1.1rem;
+  color: #0077b6;
+  line-height: 1.8;
+}
+
+/* Contato */
+#contato a {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#contato a:hover {
+  background-color: #d0eaff;
+}
+
+/* Navbar */
+.navbar-brand {
+  font-size: 1.4rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: #003366 !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  #sobre .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-img-top {
+    max-height: 250px;
+  }
 }

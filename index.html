@@ -11,6 +11,25 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">Rebeca Freire</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiencias">Experiências</a></li>
+          <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="#valores">Valores</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <!-- SOBRE MIM -->
   <section id="sobre" class="container py-5">
     <h2 class="text-center mb-4">Sobre mim</h2>
@@ -19,17 +38,19 @@
         <img src="rebeca.png" class="img-fluid rounded shadow" alt="Foto de Rebeca Freire">
       </div>
       <div class="col-md-8">
-        <h3>Biografia</h3>
-        <p>Meu nome é Rebeca Freire, sou estudante da FATEC Guaratinguetá e apaixonada por tecnologia e impacto social. Minha trajetória começou na ETEC, passou pela UNESP com projetos em saúde pública, e me trouxe até a FATEC com foco em inovação.</p>
-        <h3>Por que escolhi tecnologia?</h3>
-        <p>No ensino técnico, tive oportunidade de vivenciar a transformação digital da minha realidade. Sempre fui curiosa, determinada e movida por desafios que, inicialmente, eu não sabia como resolver. </p> 
-        <p>Escolhi tecnologia porque acredito no poder da inovação para melhorar vidas.</p>
-        <h3>No meu tempo livre</h3>
-        <p>Gosto de me movimentar! Adoro praticar esportes ao ar livre - corrida, pedal. E também, é claro, adoro assistir séries e filmes. Tento vê-los e ouvi-los em ingles para treinar o idioma.</p>
+        <h3 class="mb-3 text-primary">Biografia</h3>
+        <p>Meu nome é Rebeca Freire, nascida em São Paulo e moradora de Guaratinguetá/SP. Sou estudante de Gestão em Tecnologia da Informação, FATEC Guaratinguetá, apaixonada por tecnologia e impacto social. Minha trajetória começou na ETEC, passou pela UNESP com projetos em saúde pública e pesquisa, e hoje se fortalece na FATEC com foco em inovação e transformação digital.</p>
+
+        <h3 class="mb-3 text-primary">Por que escolhi tecnologia</h3>
+        <p>Desde cedo fui movida por curiosidade e desafios. A tecnologia apareceu como uma ferramenta poderosa para transformar realidades — inclusive a minha. Escolhi essa área porque acredito no poder da inovação para melhorar vidas, promover inclusão e criar soluções que realmente importam.</p>
+
+        <h3 class="mb-3 text-primary">No meu tempo livre</h3>
+        <p>Gosto de me exercitar ao ar livre, pratico corrida e ciclismo. Além disso, sou amante de filmes e séries sobre ficção científica e comédia - é claro! Busco vê-los e ouvi-los em ingles, para treinar o idioma</p>
       </div>
     </div>
   </section>
-<!-- EXPERIÊNCIAS -->
+
+  <!-- EXPERIÊNCIAS -->
   <section id="experiencias" class="container py-5 text-center">
     <h2 class="mb-4">Minhas Experiências</h2>
     <div id="carouselExperiencias" class="carousel slide mb-4" data-bs-ride="carousel">
@@ -82,18 +103,23 @@
   </section>
 
   <!-- VALORES EMBRAER -->
-  <section id="valores" class="container py-5 bg-light text-center">
+  <section id="valores" class="container py-5 text-center">
     <h2 class="mb-4">Meus Valores em Ação</h2>
-    <img src="mural-valores-embraer.png" class="img-fluid rounded shadow mb-4" alt="Mural ilustrativo dos valores Embraer" />
-    <blockquote class="blockquote px-3">
-      <p class="mb-2"><strong>Uma Embraer. Um só time</strong></p>
-      <p>Acredito profundamente na força do trabalho em equipe. Resultados extraordinários só acontecem com colaboração, empatia e responsabilidade.</p>
-      <p>Na UNESP e FATEC, vivenciei o que significa agir com generosidade, escutar com atenção e empoderar o outro — valores que fazem parte da cultura da Embraer e que levo comigo em cada desafio.</p>
-    </blockquote>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow border-0">
+          <img src="mural-valores-embraer.png" class="card-img-top rounded-top" alt="Mural ilustrativo dos valores Embraer">
+          <div class="card-body">
+            <h5 class="card-title text-primary">Uma Embraer. Um só time</h5>
+            <p class="card-text">Acredito profundamente na força do trabalho em equipe. Resultados extraordinários só acontecem com colaboração, empatia e responsabilidade. Na UNESP e FATEC, vivenciei o que significa agir com generosidade, escutar com atenção e empoderar o outro — valores que fazem parte da cultura da Embraer e que levo comigo em cada desafio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- CONTATO -->
-  <section id="contato" class="container py-5 text-center bg-light">
+  <section id="contato" class="container py-5 text-center bg-white">
     <h2 class="mb-3">Vamos conversar?</h2>
     <p class="mb-4">Me mande uma mensagem e vamos criar algo incrível.</p>
     <div class="d-flex justify-content-center gap-3 flex-wrap">
