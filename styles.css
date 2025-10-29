@@ -193,110 +193,61 @@ section .lead{ font-size:1.12rem; color:rgba(13,59,102,.75); }
   font-size:clamp(1.05rem,.7rem + 1.1vw,1.65rem);
   margin-bottom:1rem;
 }
-/* Modo destaque do banner (pill grande) */
-.values-banner--hero{
+/* Banner de destaque acima do texto */
+.values-banner--hero {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   text-align: center;
 
-  padding: 0.9rem 1.6rem;             /* mais alto/largo que o banner comum */
-  margin-top: .5rem;
+  padding: 1rem 1.6rem;
+  margin-bottom: 1rem;
   border-radius: 999px;
   background: linear-gradient(180deg, #e9f2ff 0%, #dfeaff 100%);
   border: 1px solid rgba(31,111,235,.28);
   box-shadow:
     0 10px 26px rgba(13,59,102,.08) inset,
     0 10px 22px rgba(13,59,102,.12),
-    0 2px 0 rgba(255,255,255,.7) inset;  /* glow igual/mais forte */
+    0 2px 0 rgba(255,255,255,.7) inset;
 
   color: #0d3b66;
   font-weight: 800;
   letter-spacing: .16em;
   text-transform: uppercase;
-  font-size: clamp(1.15rem, .6rem + 1.4vw, 1.9rem);
+  font-size: clamp(1.2rem, .6rem + 1.4vw, 2rem);
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-/* Espaço entre a intro e o banner */
-.values-intro p + .values-banner--hero{
-  margin-top: .75rem;
+/* Ajuste das imagens — mostrar mais conteúdo sem cortar */
+.values-card-media img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;          /* altura maior, mas segura o layout */
+  object-fit: cover;
+  object-position: center top;
+  border-bottom: 1px solid rgba(255,255,255,.12);
 }
 
-/* Em telas pequenas, permite quebrar em 2 linhas mantendo o pill bonito */
-@media (max-width: 420px){
-  .values-banner--hero{
+/* Ajuste do grid — espaçamento e proporção */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* um pouco mais largo */
+  gap: 1.75rem;
+}
+
+/* Em telas menores */
+@media (max-width: 768px) {
+  .values-banner--hero {
+    font-size: 1.2rem;
     white-space: normal;
-    line-height: 1.25;
-    padding: .85rem 1rem;
+    line-height: 1.3;
+  }
+  .values-card-media img {
+    max-height: 320px;
   }
 }
 
-.values-intro p{ color:rgba(13,59,102,.88); font-size:1.04rem; }
-
-/* Trilhas de voo */
-.values-trails{ position:absolute; inset:0; pointer-events:none; opacity:.5; }
-.values-trails .trail{
-  position:absolute; height:3px; width:65%;
-  background:linear-gradient(90deg,rgba(31,111,235,0) 0%, rgba(31,111,235,.55) 60%, rgba(31,111,235,0) 100%);
-  border-radius:999px; filter:drop-shadow(0 0 10px rgba(31,111,235,.25));
-}
-.values-trails .t1{ top:18%; left:-10%; transform:rotate(6deg); }
-.values-trails .t2{ bottom:16%; right:-12%; transform:rotate(-8deg); width:58%; }
-.values-trails .plane{
-  position:absolute; font-size:1.1rem; text-shadow:0 6px 12px rgba(13,59,102,.20); opacity:.65;
-}
-.values-trails .p1{ top:16%; left:52%; transform:rotate(8deg); }
-.values-trails .p2{ bottom:14%; right:22%; transform:rotate(-8deg); }
-
-/* Cards de valores — legibilidade e imagens maiores */
-.values-grid{
-  display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1.5rem;
-}
-.values-card{
-  display:flex; flex-direction:column;
-  background:linear-gradient(160deg,#1a2d64 0%,#27499b 100%);
-  border-radius:22px; overflow:hidden;
-  border:1px solid rgba(255,255,255,.18);
-  box-shadow:0 18px 42px rgba(15,35,95,.2);
-  transition:transform .3s, box-shadow .3s;
-  min-height:100%;
-}
-.values-card:hover{ transform:translate3d(4px,-6px,0); box-shadow:0 24px 56px rgba(15,35,95,.26); }
-.values-card-media{ position:relative; overflow:hidden; }
-.values-card-media img{
-  width:100%;
-  height:clamp(200px, 24vw, 260px); /* maior para visualizar melhor */
-  object-fit:cover; display:block; filter:saturate(1.05);
-}
-.values-card-body{
-  padding:1.6rem 1.5rem 1.8rem; display:flex; flex-direction:column; gap:.6rem;
-  color:rgba(255,255,255,.96);
-}
-.values-card-title{
-  font-size:1.15rem; font-weight:700; color:#fff; margin-bottom:.35rem;
-}
-.values-card-body p{
-  font-size:1.02rem; line-height:1.6; margin-bottom:0;
-  color:rgba(255,255,255,.95);
-  text-shadow:0 1px 0 rgba(0,0,0,.18);
-}
-
-/* Runway decoration */
-.section-runway{ position:relative; overflow:hidden; }
-.section-runway::before,
-.section-runway::after{ content:''; position:absolute; pointer-events:none; border-radius:999px; }
-.section-runway::before{
-  top:25px; right:-120px; width:280px; height:4px;
-  background:linear-gradient(90deg,rgba(31,111,235,0),rgba(31,111,235,.6)); opacity:.45;
-}
-.section-runway::after{
-  bottom:30px; left:-140px; width:340px; height:4px;
-  background:linear-gradient(90deg,rgba(13,59,102,.15),rgba(13,59,102,0)); opacity:.35;
-}
 
 /* Contato & botões */
 .contact-card{
