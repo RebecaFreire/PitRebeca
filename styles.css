@@ -229,8 +229,10 @@ section .lead {
 
 .experience-img {
   width: 100%;
-  height: clamp(220px, 22vw, 270px);
+  height: clamp(230px, 23vw, 300px);
+  object-fit: cover;
   object-position: center;
+  border-bottom: 1px solid rgba(13, 59, 102, 0.06);
 }
 
 .experience-content {
@@ -384,15 +386,21 @@ section .lead {
 }
 
 .experience-img.fatec-img {
+  height: auto !important;
+  max-height: 340px;
+  object-fit: contain;
   object-position: top center;
-  height: clamp(240px, 24vw, 300px);
+  background: linear-gradient(135deg, rgba(31, 111, 235, 0.06), rgba(13, 59, 102, 0.02));
+  padding: clamp(0.9rem, 1.4vw, 1.6rem);
 }
 
 .experience-img.aspire-img {
+  height: auto !important;
+  max-height: 340px;
   object-fit: contain;
-  background: linear-gradient(135deg, rgba(31, 111, 235, 0.08), rgba(13, 59, 102, 0.03));
-  padding: clamp(1rem, 1.5vw, 1.75rem);
-  border-bottom: 1px solid rgba(13, 59, 102, 0.06);
+  object-position: center;
+  background: linear-gradient(135deg, rgba(31, 111, 235, 0.1), rgba(13, 59, 102, 0.05));
+  padding: clamp(0.9rem, 1.4vw, 1.6rem);
 }
 
 .contact-card {
@@ -494,11 +502,10 @@ section .lead {
     height: 210px;
   }
 
-  .experience-img.fatec-img {
-    height: 240px;
-  }
-
+  .experience-img.fatec-img,
   .experience-img.aspire-img {
+    height: auto !important;
+    max-height: 280px;
     padding: 1rem;
   }
 
