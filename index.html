@@ -58,8 +58,14 @@
           </div>
         </div>
         <div class="col-lg-5 ms-lg-auto text-center">
-          <div class="hero-card shadow-lg rounded-4 p-4 bg-white">
-            <img src="fatec.jpg" class="img-fluid rounded-4 mb-3" alt="Foto de Rebeca Freire">
+          <div class="hero-card shadow-lg rounded-4 hero-card--portrait">
+            <!-- Substitua presidencia.jpg pelo arquivo desejado; caso não esteja disponível, a imagem volta para rebs.png -->
+            <div class="hero-photo-frame">
+              <img src="fatec.jpg"
+                   class="hero-photo hero-photo--portrait"
+                   alt="Retrato profissional de Rebeca Freire"
+                   onerror="this.onerror=null; this.src='rebs.png'; this.classList.remove('hero-photo--portrait');">
+            </div>
             <p class="fw-semibold text-primary mb-1">Gestão em Tecnologia da Informação</p>
             <p class="text-muted mb-0">FATEC Guaratinguetá • Apaixonada por inovação e impacto social</p>
           </div>
@@ -141,7 +147,7 @@
       <div class="row g-4">
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img src="projetopunesp.jpg" class="experience-img" alt="Projeto UNESP">
+            <img src="projetopunesp.jpg" class="experience-img" alt="Projeto UNESP" loading="lazy">
             <div class="experience-content">
               <h3 class="h5">Projeto de pesquisa – UNESP</h3>
               <p class="mb-0">Mobilização articular com foco em impacto social e inovação em saúde.</p>
@@ -150,7 +156,7 @@
         </div>
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img src="larpermanencia.jpg" class="experience-img" alt="Casa de longa permanência">
+            <img src="larpermanencia.jpg" class="experience-img" alt="Casa de longa permanência" loading="lazy">
             <div class="experience-content">
               <h3 class="h5">Atuação em saúde – UNESP</h3>
               <p class="mb-0">Experiência prática em casa de longa permanência com foco em cuidado humanizado.</p>
@@ -159,7 +165,7 @@
         </div>
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img src="cicunesp.jpg" class="experience-img" alt="Congresso UNESP">
+            <img src="cicunesp.jpg" class="experience-img" alt="Congresso UNESP" loading="lazy">
             <div class="experience-content">
               <h3 class="h5">Congresso de Iniciação Científica</h3>
               <p class="mb-0">Apresentação de resultados e networking acadêmico na UNESP.</p>
@@ -168,7 +174,7 @@
         </div>
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img src="fatec1.jpg" class="experience-img fatec-img" alt="Semana de Tecnologia FATEC 2025">
+            <img src="fatec1.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
             <div class="experience-content">
               <h3 class="h5">Semana de Tecnologia 2025</h3>
               <p class="mb-0">Participação ativa na FATEC Guaratinguetá explorando tendências em TI e protagonizando oficinas práticas.</p>
@@ -177,7 +183,7 @@
         </div>
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img src="fatec2.jpg" class="experience-img fatec-img" alt="Semana de Tecnologia FATEC 2025">
+            <img src="fatec2.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
             <div class="experience-content">
               <h3 class="h5">Semana de Tecnologia 2025</h3>
               <p class="mb-0">Networking com especialistas e participação em painéis sobre inovação, liderança e transformação digital.</p>
@@ -186,7 +192,11 @@
         </div>
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img src="aspire-2025.jpg" class="experience-img aspire-img" alt="Aspire Leaders Program 2025">
+            <img src="aspire.jpg"
+                 class="experience-img experience-img--aspire"
+                 alt="Aspire Leaders Program 2025"
+                 loading="lazy"
+                 onerror="this.onerror=null; this.src='aspire-leaders-program.svg'; this.classList.remove('experience-img--aspire');">
             <div class="experience-content">
               <h3 class="h5">Aspire Leaders Program 2025</h3>
               <p class="mb-0">Programa global criado por professores da Harvard Business School que oferece formação em liderança, impacto social e desenvolvimento pessoal.</p>
@@ -224,7 +234,7 @@
         </div>
         <div class="col-md-6 col-lg-4">
           <a class="project-card h-100" href="https://github.com/RebecaFreire/Sistema-bancario-atualizado" target="_blank" rel="noopener">
-            <div class="project-icon" aria-hidden,="true">🏦</div>
+            <div class="project-icon" aria-hidden="true">🏦</div>
             <div class="project-copy">
               <h3 class="h5 mb-2">Sistema Bancário</h3>
               <p class="mb-0">Aplicação full stack com foco em segurança de dados e experiência fluida para clientes.</p>
@@ -254,7 +264,7 @@
         <div class="col-lg-8">
           <div class="value-card">
             <div class="value-image-wrapper">
-              <img src="mural-valores-embraer.png" class="value-image" alt="Mural ilustrativo dos valores Embraer">
+              <img src="mural-valores-embraer.png" class="value-image" alt="Mural ilustrativo dos valores Embraer" loading="lazy">
             </div>
             <div class="value-content">
               <h3 class="h4 text-primary">Uma Embraer. Uma equipe só</h3>
