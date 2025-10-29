@@ -193,6 +193,47 @@ section .lead{ font-size:1.12rem; color:rgba(13,59,102,.75); }
   font-size:clamp(1.05rem,.7rem + 1.1vw,1.65rem);
   margin-bottom:1rem;
 }
+/* Modo destaque do banner (pill grande) */
+.values-banner--hero{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+
+  padding: 0.9rem 1.6rem;             /* mais alto/largo que o banner comum */
+  margin-top: .5rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #e9f2ff 0%, #dfeaff 100%);
+  border: 1px solid rgba(31,111,235,.28);
+  box-shadow:
+    0 10px 26px rgba(13,59,102,.08) inset,
+    0 10px 22px rgba(13,59,102,.12),
+    0 2px 0 rgba(255,255,255,.7) inset;  /* glow igual/mais forte */
+
+  color: #0d3b66;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  font-size: clamp(1.15rem, .6rem + 1.4vw, 1.9rem);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Espaço entre a intro e o banner */
+.values-intro p + .values-banner--hero{
+  margin-top: .75rem;
+}
+
+/* Em telas pequenas, permite quebrar em 2 linhas mantendo o pill bonito */
+@media (max-width: 420px){
+  .values-banner--hero{
+    white-space: normal;
+    line-height: 1.25;
+    padding: .85rem 1rem;
+  }
+}
 
 .values-intro p{ color:rgba(13,59,102,.88); font-size:1.04rem; }
 
