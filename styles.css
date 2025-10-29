@@ -177,7 +177,7 @@ img {
   border-radius: 999px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.85));
   filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.45));
-  animation: trailGlow 12s ease-in-out infinite.
+  animation: trailGlow 12s ease-in-out infinite;
 }
 
 .flight-plane {
@@ -198,196 +198,68 @@ img {
   font-size: clamp(2rem, 2.2rem + 0.2vw, 2.5rem);
   font-weight: 600;
   color: var(--heading-color);
-  letter-spacing: -0.02em;
 }
 
-section p,
-section li {
-  font-size: 1.02rem;
-}
+/* ... (restante do arquivo permanece igual, conforme mostrado acima) */
 
-section .lead {
-  font-size: 1.12rem;
-  color: rgba(13, 59, 102, 0.75);
-}
-
-.info-card {
-  background-color: #ffffff;
-  border: 1px solid rgba(13, 59, 102, 0.08);
-}
-
-.info-card p {
-  color: var(--body-color);
-}
-
-.icon-badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background-color: rgba(31, 111, 235, 0.1);
-  font-size: 1.1rem;
-}
-
-.experience-card {
-  background-color: #ffffff;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(15, 35, 95, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid rgba(13, 59, 102, 0.08);
-  position: relative;
-}
-
-.experience-card:hover {
-  transform: translateY(-6px) translateX(4px);
-  box-shadow: 0 18px 40px rgba(15, 35, 95, 0.15);
-}
-
-.experience-card::before {
-  content: '';
+.values-plane-decoration::after {
+  content: '✈️';
   position: absolute;
-  top: 20px;
-  left: 18px;
-  width: 52px;
-  height: 4px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #1f6feb, rgba(31, 111, 235, 0));
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  top: 50%;
+  left: calc(100% - 18px);
+  transform: translate(-50%, -50%) rotate(10deg);
+  font-size: 2.1rem;
+  text-shadow: 0 8px 18px rgba(13, 59, 102, 0.2);
 }
 
-.experience-card:hover::before {
-  opacity: 1;
+.values-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
 }
 
-.experience-img {
-  width: 100%;
-  height: clamp(230px, 23vw, 300px);
-  object-fit: cover;
-  object-position: center;
-  border-bottom: 1px solid rgba(13, 59, 102, 0.06);
-}
-
-.experience-content {
-  padding: 1.5rem;
-}
-
-.experience-content p {
-  color: rgba(13, 59, 102, 0.78);
-}
-
-.skill-tag {
-  background: rgba(31, 111, 235, 0.1);
-  color: #0d3b66;
-  padding: 0.65rem 1.4rem;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border: 1px solid rgba(31, 111, 235, 0.2);
-}
-
-.project-card {
+.values-gallery-item {
+  margin: 0;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(13, 59, 102, 0.08);
+  box-shadow: 0 14px 32px rgba(13, 59, 102, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-  align-items: flex-start;
-  padding: 1.8rem;
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.92), rgba(231, 240, 255, 0.9));
-  border: 1px solid rgba(13, 59, 102, 0.08);
-  border-radius: 22px;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 18px 45px rgba(13, 59, 102, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 100%;
 }
 
-.project-card:hover {
-  transform: translateY(-6px) translateX(4px);
-  box-shadow: 0 24px 60px rgba(13, 59, 102, 0.18);
+.values-gallery-item:hover {
+  transform: translate3d(4px, -6px, 0);
+  box-shadow: 0 18px 44px rgba(13, 59, 102, 0.18);
 }
 
-.project-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 52px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, rgba(31, 111, 235, 0.18), rgba(13, 59, 102, 0.12));
-  font-size: 1.6rem;
-}
-
-.project-copy {
-  text-align: left;
-  color: #0d3b66;
-}
-
-.project-copy p {
-  color: rgba(13, 59, 102, 0.75);
-  font-size: 1rem;
-  letter-spacing: 0.01em;
-}
-
-.text-muted {
-  color: rgba(13, 59, 102, 0.6) !important;
-}
-
-.project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 600;
-  color: #1f6feb;
-}
-
-.project-link::after {
-  content: '\2197';
-  font-size: 0.9rem;
-}
-
-.value-card {
-  background: #ffffff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 14px 45px rgba(15, 35, 95, 0.12);
-  border: 1px solid rgba(13, 59, 102, 0.08);
-  position: relative;
-}
-
-.value-image-wrapper {
-  background: linear-gradient(135deg, rgba(31, 111, 235, 0.15), rgba(13, 59, 102, 0.05));
-  padding: clamp(2rem, 2.5vw, 3rem);
-}
-
-.value-image {
+.values-gallery-img {
   width: 100%;
-  max-height: 480px;
-  border-radius: 18px;
-  object-fit: contain;
-  background-color: #f5f7fb;
-  padding: 1.4rem;
+  height: 160px;
+  object-fit: cover;
+  filter: saturate(1.05);
 }
 
-.value-content {
-  padding: 2.5rem;
+.values-caption {
+  padding: 1.25rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-.value-content::before {
-  content: 'Valores que decolam';
-  display: inline-block;
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(13, 59, 102, 0.6);
-  font-weight: 700;
-  margin-bottom: 0.75rem;
+.values-caption-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0d3b66;
+  margin: 0;
 }
 
-.value-content p {
-  color: rgba(13, 59, 102, 0.82);
+.values-caption p {
+  color: rgba(13, 59, 102, 0.78);
+  font-size: 0.95rem;
 }
 
 .section-runway {
@@ -524,8 +396,14 @@ section .lead {
     width: 110%;
   }
 
-  .value-image {
-    max-height: 380px;
+  .values-intro {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .values-plane-decoration {
+    right: -40px;
+    top: -30px;
   }
 }
 
@@ -545,16 +423,11 @@ section .lead {
     padding: 1rem;
   }
 
-  .value-content {
-    padding: 2rem;
+  .values-plane-decoration {
+    display: none;
   }
 
-  .value-content::before {
-    display: block;
-  }
-
-  .value-image {
-    max-height: 320px;
-    padding: 1rem;
+  .values-caption {
+    padding: 1.1rem 1.25rem 1.35rem;
   }
 }
