@@ -1,13 +1,43 @@
 /* Base geral */
+:root {
+  --font-family-base: 'Inter', 'Segoe UI', sans-serif;
+  --heading-color: #0d3b66;
+  --body-color: rgba(13, 59, 102, 0.82);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--font-family-base);
   background: linear-gradient(180deg, #e7f0ff 0%, #ffffff 55%, #f5f7fb 100%);
-  color: #2b2b2b;
+  color: var(--body-color);
   line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-base);
+  color: var(--heading-color);
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+p,
+li {
+  color: var(--body-color);
+  font-family: var(--font-family-base);
+  letter-spacing: 0.005em;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 img {
@@ -47,6 +77,15 @@ img {
   background: linear-gradient(160deg, rgba(13, 59, 102, 0.88), rgba(31, 111, 235, 0.9)),
               radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2), transparent 55%);
   color: #fff;
+}
+
+.hero p {
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.01em;
+}
+
+.hero .lead {
+  font-size: 1.12rem;
 }
 
 .hero-card {
@@ -120,14 +159,29 @@ img {
 }
 
 .section-title {
-  font-size: 2.2rem;
+  font-size: clamp(2rem, 2.2rem + 0.2vw, 2.5rem);
   font-weight: 600;
-  color: #0d3b66;
+  color: var(--heading-color);
+  letter-spacing: -0.02em;
+}
+
+section p,
+section li {
+  font-size: 1.02rem;
+}
+
+section .lead {
+  font-size: 1.12rem;
+  color: rgba(13, 59, 102, 0.75);
 }
 
 .info-card {
   background-color: #ffffff;
   border: 1px solid rgba(13, 59, 102, 0.08);
+}
+
+.info-card p {
+  color: var(--body-color);
 }
 
 .icon-badge {
@@ -183,6 +237,10 @@ img {
   padding: 1.5rem;
 }
 
+.experience-content p {
+  color: rgba(13, 59, 102, 0.78);
+}
+
 .skill-tag {
   background: rgba(31, 111, 235, 0.1);
   color: #0d3b66;
@@ -231,6 +289,12 @@ img {
 
 .project-copy p {
   color: rgba(13, 59, 102, 0.75);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+}
+
+.text-muted {
+  color: rgba(13, 59, 102, 0.6) !important;
 }
 
 .project-link {
@@ -257,16 +321,16 @@ img {
 
 .value-image-wrapper {
   background: linear-gradient(135deg, rgba(31, 111, 235, 0.15), rgba(13, 59, 102, 0.05));
-  padding: 1.5rem;
+  padding: clamp(2rem, 2.5vw, 3rem);
 }
 
 .value-image {
   width: 100%;
-  max-height: 320px;
+  max-height: 480px;
   border-radius: 18px;
   object-fit: contain;
   background-color: #f5f7fb;
-  padding: 0.5rem;
+  padding: 1.4rem;
 }
 
 .value-content {
@@ -282,6 +346,10 @@ img {
   color: rgba(13, 59, 102, 0.6);
   font-weight: 700;
   margin-bottom: 0.75rem;
+}
+
+.value-content p {
+  color: rgba(13, 59, 102, 0.82);
 }
 
 .section-runway {
@@ -313,6 +381,11 @@ img {
   height: 4px;
   background: linear-gradient(90deg, rgba(13, 59, 102, 0.15), rgba(13, 59, 102, 0));
   opacity: 0.35;
+}
+
+.experience-img.fatec-img {
+  object-position: center 20%;
+  height: 240px;
 }
 
 .contact-card {
@@ -399,6 +472,10 @@ img {
     left: -35%;
     width: 110%;
   }
+
+  .value-image {
+    max-height: 380px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -410,11 +487,20 @@ img {
     height: 200px;
   }
 
+  .experience-img.fatec-img {
+    height: 220px;
+  }
+
   .value-content {
     padding: 2rem;
   }
 
   .value-content::before {
     display: block;
+  }
+
+  .value-image {
+    max-height: 320px;
+    padding: 1rem;
   }
 }
