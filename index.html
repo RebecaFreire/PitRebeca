@@ -12,9 +12,12 @@
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#">Rebeca Freire</a>
+      <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" href="#">
+        <span class="brand-icon" aria-hidden="true">✈️</span>
+        <span>Rebeca Freire</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,88 +33,214 @@
     </div>
   </nav>
 
-  <!-- SOBRE MIM -->
-  <section id="sobre" class="container py-5">
-    <h2 class="text-center mb-4">Sobre mim</h2>
-    <div class="row align-items-center">
-      <div class="col-md-4 text-center">
-        <img src="rebeca.png" class="img-fluid rounded shadow" alt="Foto de Rebeca Freire">
+  <!-- HERO -->
+  <header class="hero py-5">
+    <div class="flight-decoration" aria-hidden="true">
+      <span class="flight-trail"></span>
+      <span class="flight-plane" aria-hidden="true">✈️</span>
+    </div>
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <span class="badge rounded-pill text-bg-light mb-3">Tecnologia • Dados • Impacto social</span>
+          <h1 class="display-5 fw-semibold mb-3">Transformando histórias com tecnologia e empatia</h1>
+          <p class="lead mb-4">Sou Rebeca Freire, estudante de Gestão em Tecnologia da Informação na FATEC Guaratinguetá. Crio soluções que unem inovação, dados e pessoas para gerar impacto real.</p>
+          <div class="hero-badges d-flex flex-wrap gap-2 mb-4">
+            <span class="hero-pill">Pronta para decolar com a Embraer</span>
+            <span class="hero-pill">Experiência em projetos colaborativos</span>
+          </div>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#contato" class="btn btn-primary btn-lg">Vamos conversar</a>
+            <a href="#sobre" class="btn btn-outline-light btn-lg">Conheça minha jornada</a>
+          </div>
+        </div>
+        <div class="col-lg-5 ms-lg-auto text-center">
+          <div class="hero-card shadow-lg rounded-4 p-4 bg-white">
+            <img src="rebs.png" class="img-fluid rounded-4 mb-3" alt="Foto de Rebeca Freire">
+            <p class="fw-semibold text-primary mb-1">Gestão em Tecnologia da Informação</p>
+            <p class="text-muted mb-0">FATEC Guaratinguetá • Apaixonada por inovação e impacto social</p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-8">
-        <h3 class="mb-3 text-primary">Biografia</h3>
-        <p>Meu nome é Rebeca Freire, nascida em São Paulo e moradora de Guaratinguetá/SP. Sou estudante de Gestão em Tecnologia da Informação, FATEC Guaratinguetá, apaixonada por tecnologia e impacto social. Minha trajetória começou na ETEC, passou pela UNESP com projetos em saúde pública e pesquisa, e hoje se fortalece na FATEC com foco em inovação e transformação digital.</p>
+    </div>
+  </header>
 
-        <h3 class="mb-3 text-primary">Por que escolhi tecnologia</h3>
-        <p>Desde cedo fui movida por curiosidade e desafios. A tecnologia apareceu como uma ferramenta poderosa para transformar realidades — inclusive a minha. Escolhi essa área porque acredito no poder da inovação para melhorar vidas, promover inclusão e criar soluções que realmente importam.</p>
-
-        <h3 class="mb-3 text-primary">No meu tempo livre</h3>
-        <p>Gosto de me exercitar ao ar livre, pratico corrida e ciclismo. Além disso, sou amante de filmes e séries sobre ficção científica e comédia - é claro! Busco vê-los e ouvi-los em ingles, para treinar o idioma</p>
+  <!-- SOBRE MIM -->
+  <section id="sobre" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h2 class="section-title">Sobre mim</h2>
+          <p class="mb-4">Meu nome é Rebeca Freire, nascida em São Paulo e moradora de Guaratinguetá/SP. Sou estudante de Gestão em Tecnologia da Informação na FATEC Guaratinguetá, apaixonada por tecnologia e impacto social. Minha trajetória começou na ETEC, passou pela UNESP com projetos em saúde pública e pesquisa, e hoje se fortalece na FATEC com foco em inovação e transformação digital.</p>
+          <div class="d-grid gap-4">
+            <div>
+              <h3 class="h5 text-primary mb-2">Por que escolhi tecnologia</h3>
+              <p class="mb-0">Desde cedo fui movida por curiosidade e desafios. A tecnologia apareceu como uma ferramenta poderosa para transformar realidades — inclusive a minha. Escolhi essa área porque acredito no poder da inovação para melhorar vidas, promover inclusão e criar soluções que realmente importam.</p>
+            </div>
+            <div>
+              <h3 class="h5 text-primary mb-2">No meu tempo livre</h3>
+              <p class="mb-0">Gosto de me exercitar ao ar livre, pratico corrida e ciclismo. Além disso, sou amante de filmes e séries sobre ficção científica e comédia (é claro!). Busco vê-los e ouvi-los em inglês para treinar o idioma.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 ms-lg-auto">
+          <div class="info-card shadow-sm rounded-4 p-4">
+            <h3 class="h5 text-primary">Minha essência</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <span class="icon-badge">🎯</span>
+                <div>
+                  <h4 class="h6 mb-1">Foco em impacto</h4>
+                  <p class="mb-0">Uso dados e tecnologia para criar soluções que transformam realidades.</p>
+                </div>
+              </li>
+              <li class="d-flex align-items-start gap-3 mb-3">
+                <span class="icon-badge">🤝</span>
+                <div>
+                  <h4 class="h6 mb-1">Trabalho em equipe</h4>
+                  <p class="mb-0">Colaboração e empatia conduzem minhas entregas e projetos.</p>
+                </div>
+              </li>
+              <li class="d-flex align-items-start gap-3">
+                <span a class="icon-badge">🚀</span>
+                <div>
+                  <h4 class="h6 mb-1">Aprendizado contínuo</h4>
+                  <p class="mb-0">Estou sempre explorando novas tecnologias e metodologias.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- EXPERIÊNCIAS -->
-  <section id="experiencias" class="container py-5 text-center">
-    <h2 class="mb-4">Minhas Experiências</h2>
-    <div id="carouselExperiencias" class="carousel slide mb-4" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="projetopunesp.jpg" class="d-block w-100 rounded shadow" alt="Projeto UNESP">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Projeto de pesquisa na UNESP – mobilização articular</p>
+  <section id="experiencias" class="section-padding bg-light section-runway">
+    <div class="container">
+      <div class="row justify-content-between align-items-center mb-4">
+        <div class="col-lg-7">
+          <h2 class="section-title">Minhas experiências</h2>
+          <p class="mb-0">Minha trajetória acadêmica começou na ETEC, passou pela UNESP — onde participei de projetos de pesquisa, ações em saúde e congressos científicos — e hoje se fortalece na FATEC, com foco em tecnologia, inovação e impacto social.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+          <span class="badge rounded-pill text-bg-primary">Destaques recentes</span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="projetopunesp.jpg" class="experience-img" alt="Projeto UNESP">
+            <div class="experience-content">
+              <h3 class="h5">Projeto de pesquisa – UNESP</h3>
+              <p class="mb-0">Mobilização articular com foco em impacto social e inovação em saúde.</p>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="larpermanencia.jpg" class="d-block w-100 rounded shadow" alt="Casa de longa permanência">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Atuação em saúde na UNESP – casa de longa permanência</p>
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="larpermanencia.jpg" class="experience-img" alt="Casa de longa permanência">
+            <div class="experience-content">
+              <h3 class="h5">Atuação em saúde – UNESP</h3>
+              <p class="mb-0">Experiência prática em casa de longa permanência com foco em cuidado humanizado.</p>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="cicunesp.jpg" class="d-block w-100 rounded shadow" alt="Congresso UNESP">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Congresso de Iniciação Científica – UNESP</p>
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="cicunesp.jpg" class="experience-img" alt="Congresso UNESP">
+            <div class="experience-content">
+              <h3 class="h5">Congresso de Iniciação Científica</h3>
+              <p class="mb-0">Apresentação de resultados e networking acadêmico na UNESP.</p>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="fatec1.jpg" class="d-block w-100 rounded shadow" alt="FATEC 2023">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Semana de Tecnologia – FATEC Guaratinguetá (2023)</p>
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="fatec1.jpg" class="experience-img" alt="FATEC 2023">
+            <div class="experience-content">
+              <h3 class="h5">Semana de Tecnologia 2023</h3>
+              <p class="mb-0">Participação ativa na FATEC Guaratinguetá explorando tendências em TI.</p>
+            </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <img src="fatec2.jpeg" class="d-block w-100 rounded shadow" alt="FATEC 2025">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Semana de Tecnologia – FATEC Guaratinguetá (2025)</p>
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="fatec2.jpg" class="experience-img" alt="FATEC 2025">
+            <div class="experience-content">
+              <h3 class="h5">Semana de Tecnologia 2025</h3>
+              <p class="mb-0">Construindo projetos colaborativos e soluções digitais com foco no usuário.</p>
+            </div>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExperiencias" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExperiencias" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
     </div>
-    <p class="lead">Minha trajetória acadêmica começou na ETEC, passou pela UNESP — onde participei de projetos de pesquisa, ações em saúde e congressos científicos — e hoje se fortalece na FATEC, com foco em tecnologia, inovação e impacto social.</p>
   </section>
 
   <!-- HABILIDADES -->
-  <section id="habilidades" class="container py-5 text-center">
-    <h2 class="mb-3">Minhas Habilidades</h2>
-    <p class="fs-5 text-primary">#DataScience 🧠 #PowerBI 📊 #Python 🐍 #MySql 🐬 #JavaScript 📜 #FullStack 🧑‍💻 #MulheresEmTech 👩‍💻</p>
+  <section id="habilidades" class="section-padding">
+    <div class="container text-center">
+      <h2 class="section-title mb-4">Minhas habilidades</h2>
+      <p class="text-muted mb-4">Ferramentas e competências que uso para entregar resultados consistentes.</p>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <span class="skill-tag">Data Science 🧠</span>
+        <span class="skill-tag">Power BI 📊</span>
+        <span class="skill-tag">Python 🐍</span>
+        <span class="skill-tag">MySQL 🐬</span>
+        <span class="skill-tag">JavaScript 📜</span>
+        <span class="skill-tag">Desenvolvimento Full Stack 🧑‍💻</span>
+        <span class="skill-tag">Mulheres na Tecnologia 👩‍💻</span>
+      </div>
+      <div class="row g-4 justify-content-center mt-4">
+        <div class="col-md-6 col-lg-4">
+          <a class="project-card h-100" href="https://github.com/RebecaFreire/sistema-rh" target="_blank" rel="noopener">
+            <div class="project-icon" aria-hidden="true">🧾</div>
+            <div class="project-copy">
+              <h3 class="h5 mb-2">Sistema RH</h3>
+              <p class="mb-0">Dashboard de gestão de pessoas com métricas e indicadores para apoiar decisões ágeis.</p>
+              <span class="project-link">Ver no GitHub</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="project-card h-100" href="https://github.com/RebecaFreire/Sistema-bancario-atualizado" target="_blank" rel="noopener">
+            <div class="project-icon" aria-hidden="true">🏦</div>
+            <div class="project-copy">
+              <h3 class="h5 mb-2">Sistema Bancário</h3>
+              <p class="mb-0">Aplicação full stack com foco em segurança de dados e experiência fluida para clientes.</p>
+              <span class="project-link">Ver no GitHub</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="project-card h-100" href="https://github.com/RebecaFreire/Piscine_42_C_Rebeca" target="_blank" rel="noopener">
+            <div class="project-icon" aria-hidden="true">🧠</div>
+            <div class="project-copy">
+              <h3 class="h5 mb-2">Piscine 42 C</h3>
+              <p class="mb-0">Desafios intensivos em linguagem C que reforçam lógica, autonomia e colaboração.</p>
+              <span class="project-link">Ver no GitHub</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- VALORES EMBRAER -->
-  <section id="valores" class="container py-5 text-center">
-    <h2 class="mb-4">Meus Valores em Ação</h2>
-    <div class="row justify-content-center">
-      <div class="col-md-8">
-        <div class="card shadow border-0">
-          <img src="mural-valores-embraer.png" class="card-img-top rounded-top" alt="Mural ilustrativo dos valores Embraer">
-          <div class="card-body">
-            <h5 class="card-title text-primary">Uma Embraer. Um só time</h5>
-            <p class="card-text">Acredito profundamente na força do trabalho em equipe. Resultados extraordinários só acontecem com colaboração, empatia e responsabilidade. Na UNESP e FATEC, vivenciei o que significa agir com generosidade, escutar com atenção e empoderar o outro — valores que fazem parte da cultura da Embraer e que levo comigo em cada desafio.</p>
+  <section id="valores" class="section-padding text-center">
+    <div class="container">
+      <h2 class="section-title mb-5">Meus valores em ação</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="value-card">
+            <div class="value-image-wrapper">
+              <img src="mural-valores-embraer.png" class="value-image" alt="Mural ilustrativo dos valores Embraer">
+            </div>
+            <div class="value-content">
+              <h3 class="h4 text-primary">Uma Embraer. Uma equipe só</h3>
+              <p class="mb-0">Acredito profundamente na força do trabalho em equipe. Resultados extraordinários só acontecem com colaboração, empatia e responsabilidade. Na UNESP e FATEC, vivenciei o que significa agir com generosidade, escutar com atenção e empoderar o outro — valores que fazem parte da cultura da Embraer e que levo comigo em cada desafio.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -119,12 +248,20 @@
   </section>
 
   <!-- CONTATO -->
-  <section id="contato" class="container py-5 text-center bg-white">
-    <h2 class="mb-3">Vamos conversar?</h2>
-    <p class="mb-4">Me mande uma mensagem e vamos criar algo incrível.</p>
-    <div class="d-flex justify-content-center gap-3 flex-wrap">
-      <a href="mailto:rebecahfreirejh@hotmail.com" class="btn btn-outline-primary">📧 Email</a>
-      <a href="https://www.linkedin.com/in/rebeca-freire" class="btn btn-outline-primary" target="_blank">💼 LinkedIn</a>
+  <section id="contato" class="section-padding bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="contact-card text-center p-5">
+            <h2 class="section-title mb-3">Vamos conversar?</h2>
+            <p class="mb-4">Estou pronta para colaborar em projetos que unam tecnologia, empatia e resultados. Me envie uma mensagem e vamos criar algo incrível.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+              <a href="mailto:rebecahfreirejh@hotmail.com" class="btn btn-primary">📧 Email</a>
+              <a href="https://www.linkedin.com/in/rebeca-freire" class="btn btn-outline-primary" target="_blank">💼 LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
