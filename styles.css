@@ -177,7 +177,7 @@ img {
   border-radius: 999px;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.85));
   filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.45));
-  animation: trailGlow 12s ease-in-out infinite.
+  animation: trailGlow 12s ease-in-out infinite;
 }
 
 .flight-plane {
@@ -348,46 +348,131 @@ section .lead {
   font-size: 0.9rem;
 }
 
-.value-card {
-  background: #ffffff;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 14px 45px rgba(15, 35, 95, 0.12);
-  border: 1px solid rgba(13, 59, 102, 0.08);
+.values-section {
   position: relative;
 }
 
-.value-image-wrapper {
-  background: linear-gradient(135deg, rgba(31, 111, 235, 0.15), rgba(13, 59, 102, 0.05));
-  padding: clamp(2rem, 2.5vw, 3rem);
+.values-intro {
+  position: relative;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(231, 240, 255, 0.9));
+  border: 1px solid rgba(13, 59, 102, 0.08);
+  border-radius: 26px;
+  padding: clamp(2rem, 2.5vw, 2.8rem);
+  box-shadow: 0 18px 40px rgba(13, 59, 102, 0.12);
+  overflow: hidden;
 }
 
-.value-image {
-  width: 100%;
-  max-height: 480px;
-  border-radius: 18px;
-  object-fit: contain;
-  background-color: #f5f7fb;
-  padding: 1.4rem;
-}
-
-.value-content {
-  padding: 2.5rem;
-}
-
-.value-content::before {
-  content: 'Valores que decolam';
-  display: inline-block;
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
+.values-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 999px;
+  background-color: rgba(31, 111, 235, 0.12);
+  color: #0d3b66;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(13, 59, 102, 0.6);
-  font-weight: 700;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
-.value-content p {
-  color: rgba(13, 59, 102, 0.82);
+.values-intro p {
+  color: rgba(13, 59, 102, 0.78);
+  font-size: 1.02rem;
+}
+
+.values-plane-decoration {
+  position: absolute;
+  top: -40px;
+  right: -80px;
+  width: 220px;
+  height: 160px;
+  pointer-events: none;
+}
+
+.values-plane-decoration::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(31, 111, 235, 0.1) 0 12px,
+    rgba(31, 111, 235, 0.6) 12px 24px
+  );
+  filter: drop-shadow(0 0 14px rgba(31, 111, 235, 0.25));
+}
+
+.values-plane-decoration::after {
+  content: '✈️';
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 18px);
+  transform: translate(-50%, -50%) rotate(10deg);
+  font-size: 2.1rem;
+  text-shadow: 0 8px 18px rgba(13, 59, 102, 0.2);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.values-card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, #1a2d64 0%, #27499b 100%);
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 42px rgba(15, 35, 95, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 100%;
+}
+
+.values-card:hover {
+  transform: translate3d(4px, -6px, 0);
+  box-shadow: 0 24px 56px rgba(15, 35, 95, 0.26);
+}
+
+.values-card-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.values-card-media img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05);
+}
+
+.values-card-body {
+  padding: 1.6rem 1.5rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.values-card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.2rem;
+}
+
+.values-card-body p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .section-runway {
@@ -524,8 +609,14 @@ section .lead {
     width: 110%;
   }
 
-  .value-image {
-    max-height: 380px;
+  .values-intro {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .values-plane-decoration {
+    right: -40px;
+    top: -30px;
   }
 }
 
@@ -540,21 +631,20 @@ section .lead {
 
   .experience-img--fatec,
   .experience-img--aspire {
-    height: auto !important;
+    height: auto !重要;
     max-height: 280px;
     padding: 1rem;
   }
 
-  .value-content {
-    padding: 2rem;
+  .values-plane-decoration {
+    display: none;
   }
 
-  .value-content::before {
-    display: block;
+  .values-grid {
+    gap: 1.25rem;
   }
 
-  .value-image {
-    max-height: 320px;
-    padding: 1rem;
+  .values-card-body {
+    padding: 1.4rem 1.3rem 1.6rem;
   }
 }
