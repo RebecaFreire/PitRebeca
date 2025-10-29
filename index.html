@@ -2,10 +2,10 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio Rebeca Freire</title>
 
-  <!-- Bootstrap CSS -->
+  <!-- Fonts & Bootstrap -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,11 +17,12 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" href="#">
+      <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" href="#topo">
         <span class="brand-icon" aria-hidden="true">✈️</span>
         <span>Rebeca Freire</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -37,7 +38,7 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero py-5">
+  <header id="topo" class="hero py-5">
     <div class="flight-decoration" aria-hidden="true">
       <span class="flight-trail"></span>
       <span class="flight-plane" aria-hidden="true">✈️</span>
@@ -60,9 +61,7 @@
         <div class="col-lg-5 ms-lg-auto text-center">
           <div class="hero-card shadow-lg rounded-4">
             <div class="hero-photo-frame">
-              <img src="fatec.png"
-                   class="hero-photo"
-                   alt="Foto de Rebeca Freire">
+              <img src="fatec.png" class="hero-photo" alt="Foto de Rebeca Freire">
             </div>
             <p class="fw-semibold text-primary mb-1">Gestão em Tecnologia da Informação</p>
             <p class="text-muted mb-0">FATEC Guaratinguetá • Apaixonada por inovação e impacto social</p>
@@ -101,21 +100,21 @@
             <h3 class="h5 text-primary">Minha essência</h3>
             <ul class="list-unstyled mb-0">
               <li class="d-flex align-items-start gap-3 mb-3">
-                <span class="icon-badge">🎯</span>
+                <span class="icon-badge" aria-hidden="true">🎯</span>
                 <div>
                   <h4 class="h6 mb-1">Foco em impacto</h4>
                   <p class="mb-0">Uso dados e tecnologia para criar soluções que transformam realidades.</p>
                 </div>
               </li>
               <li class="d-flex align-items-start gap-3 mb-3">
-                <span class="icon-badge">🤝</span>
+                <span class="icon-badge" aria-hidden="true">🤝</span>
                 <div>
                   <h4 class="h6 mb-1">Trabalho em equipe</h4>
                   <p class="mb-0">Colaboração e empatia conduzem minhas entregas e projetos.</p>
                 </div>
               </li>
               <li class="d-flex align-items-start gap-3">
-                <span class="icon-badge">🚀</span>
+                <span class="icon-badge" aria-hidden="true">🚀</span>
                 <div>
                   <h4 class="h6 mb-1">Aprendizado contínuo</h4>
                   <p class="mb-0">Estou sempre explorando novas tecnologias e metodologias.</p>
@@ -152,15 +151,17 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img src="larpermanencia.jpg" class="experience-img" alt="Casa de longa permanência" loading="lazy">
+            <img src="larlongapermanencia.jpg" class="experience-img" alt="Casa de longa permanência" loading="lazy">
             <div class="experience-content">
               <h3 class="h5">Atuação em saúde – UNESP</h3>
               <p class="mb-0">Experiência prática em casa de longa permanência com foco em cuidado humanizado.</p>
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
             <img src="cicunesp.jpg" class="experience-img" alt="Congresso UNESP" loading="lazy">
@@ -170,6 +171,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
             <img src="fatec1.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
@@ -179,6 +181,7 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
             <img src="fatec2.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
@@ -188,19 +191,21 @@
             </div>
           </div>
         </div>
+
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
             <img src="aspire.jpg"
                  class="experience-img experience-img--aspire"
                  alt="Aspire Leaders Program 2025"
                  loading="lazy"
-                 onerror="this.onerror=null; this.src='aspire-leaders-program.svg'; this.classList.remove('experience-img--aspire');"/>
+                 onerror="this.onerror=null; this.src='aspire-leaders-program.svg'; this.classList.remove('experience-img--aspire');">
             <div class="experience-content">
               <h3 class="h5">Aspire Leaders Program 2025</h3>
               <p class="mb-0">Programa global criado por professores da Harvard Business School que oferece formação em liderança, impacto social e desenvolvimento pessoal.</p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -219,6 +224,7 @@
         <span class="skill-tag">Desenvolvimento Full Stack 🧑‍💻</span>
         <span class="skill-tag">Mulheres na Tecnologia 👩‍💻</span>
       </div>
+
       <div class="row g-4 justify-content-center mt-4">
         <div class="col-md-6 col-lg-4">
           <a class="project-card h-100" href="https://github.com/RebecaFreire/sistema-rh" target="_blank" rel="noopener">
@@ -230,6 +236,7 @@
             </div>
           </a>
         </div>
+
         <div class="col-md-6 col-lg-4">
           <a class="project-card h-100" href="https://github.com/RebecaFreire/Sistema-bancario-atualizado" target="_blank" rel="noopener">
             <div class="project-icon" aria-hidden="true">🏦</div>
@@ -240,6 +247,7 @@
             </div>
           </a>
         </div>
+
         <div class="col-md-6 col-lg-4">
           <a class="project-card h-100" href="https://github.com/RebecaFreire/Piscine_42_C_Rebeca" target="_blank" rel="noopener">
             <div class="project-icon" aria-hidden="true">🧠</div>
@@ -260,8 +268,9 @@
       <div class="row g-5 align-items-center">
         <div class="col-lg-5">
           <div class="values-intro">
-            <span class="values-tag">Uma EMBRAER. Um só TIME.</span>
-            <h2 class="section-title mb-3">Meus valores em ação</h2>
+            <h2 class="section-title mb-3">
+              <span class="values-tag">Uma EMBRAER. Um só TIME.</span>
+            </h2>
             <p>Resultados extraordinários nascem quando colaboramos com generosidade, empatia e responsabilidade compartilhada.</p>
             <p class="mb-0">Da ETEC à FATEC e UNESP, vivi experiências que me mostraram que a cultura da Embraer — de aprender juntos e construir impacto — já faz parte do meu dia a dia.</p>
             <div class="values-plane-decoration" aria-hidden="true"></div>
@@ -271,37 +280,34 @@
           <div class="values-grid">
             <article class="values-card">
               <div class="values-card-media">
-                <img src="presidencia.jpg"
-                     alt="Equipe do grêmio estudantil durante a campanha do agasalho"
-                     loading="lazy">
+                <img src="etec.png" alt="Equipe do grêmio estudantil durante a campanha do agasalho" loading="lazy">
               </div>
               <div class="values-card-body">
                 <h3 class="values-card-title">Colaboração &amp; Impacto Social</h3>
                 <p class="mb-0">Mobilização na ETEC liderando campanhas solidárias que conectam pessoas e ampliam resultados.</p>
               </div>
             </article>
+
             <article class="values-card">
               <div class="values-card-media">
-                <img src="cafisio.jpeg"
-                     alt="Feed de publicações do projeto Cafisio no Instagram"
-                     loading="lazy">
+                <img src="cafisio.jpeg" alt="Feed de publicações do projeto Cafisio no Instagram" loading="lazy">
               </div>
               <div class="values-card-body">
                 <h3 class="values-card-title">Inovação digital &amp; Saúde</h3>
                 <p class="mb-0">Projeto Cafisio UNESP integrando comunicação digital e tecnologia a serviços de cuidado.</p>
               </div>
             </article>
+
             <article class="values-card">
               <div class="values-card-media">
-                <img src="rebs.png"
-                     alt="Equipe reunida durante encontro profissional em São Paulo"
-                     loading="lazy">
+                <img src="42.jpg" alt="Equipe reunida durante encontro profissional em São Paulo" loading="lazy">
               </div>
               <div class="values-card-body">
                 <h3 class="values-card-title">Aprendizado contínuo em equipe</h3>
                 <p class="mb-0">Evolução conjunta com times multidisciplinares que aprendem, iteram e decolam juntas.</p>
               </div>
             </article>
+
           </div>
         </div>
       </div>
@@ -318,7 +324,7 @@
             <p class="mb-4">Estou pronta para colaborar em projetos que unam tecnologia, empatia e resultados. Me envie uma mensagem e vamos criar algo incrível.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
               <a href="mailto:rebecahfreirejh@hotmail.com" class="btn btn-primary">📧 Email</a>
-              <a href="https://www.linkedin.com/in/rebeca-freire" class="btn btn-outline-primary" target="_blank">💼 LinkedIn</a>
+              <a href="https://www.linkedin.com/in/rebeca-freire" class="btn btn-outline-primary" target="_blank" rel="noopener">💼 LinkedIn</a>
             </div>
           </div>
         </div>
