@@ -297,3 +297,57 @@ section .lead{ font-size:1.12rem; color:rgba(13,59,102,.75); }
 @media (max-width: 480px){
   .values-banner--hero{ white-space: normal; line-height: 1.25; }
 }
+
+/* ==== FIX VALORES: não cortar o banner e manter acima ==== */
+
+/* 1) O container não pode esconder o banner */
+.values-intro{
+  position: relative !important;
+  overflow: visible !important;          /* em vez de hidden */
+  padding-bottom: 1.25rem;
+}
+
+/* 2) Banner responsivo e sem corte */
+.values-banner--hero{
+  position: relative;
+  z-index: 1;
+  display: block !important;             /* em vez de inline-flex */
+  width: 100%;
+  box-sizing: border-box;                /* padding conta dentro dos 100% */
+  padding: 1rem 1.2rem;
+  margin: 0 auto 1rem;
+  white-space: normal !important;        /* permite quebrar em 2 linhas */
+  line-height: 1.25;
+  letter-spacing: .12em;                 /* um pouco menor para caber melhor */
+  font-size: clamp(1.15rem, 0.8rem + 1.2vw, 1.9rem);
+  text-align: center;
+}
+
+/* trilhas sempre por trás do conteúdo */
+.values-trails{ z-index: 0; }
+
+/* 3) Imagens dos cards de Valores: não cortar (mostrar tudo) */
+.values-card-media img{
+  width: 100%;
+  height: auto !important;
+  max-height: 420px;                     /* pode ajustar 360–480px conforme gosto */
+  object-fit: contain !important;        /* NÃO corta */
+  object-position: center center !important;
+  background: linear-gradient(135deg, rgba(31,111,235,.06), rgba(13,59,102,.02)); /* “letterbox” suave */
+  border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+/* 4) Grid um tiquinho mais folgado para caber melhor sem cortar */
+.values-grid{
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  gap: 1.75rem;
+}
+
+/* 5) Mobile: mantém legível e sem corte */
+@media (max-width: 576px){
+  .values-banner--hero{
+    padding: .9rem 1rem;
+    font-size: 1.05rem;
+  }
+  .values-card-media img{ max-height: 340px; }
+}
