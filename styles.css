@@ -287,3 +287,13 @@ section .lead{ font-size:1.12rem; color:rgba(13,59,102,.75); }
   .values-grid{ gap:1.25rem; }
   .values-card-body{ padding:1.4rem 1.3rem 1.6rem; }
 }
+
+/* garante que o banner fique acima das trilhas e não seja “comido” pela borda */
+.values-intro{ overflow:hidden; padding-bottom: 1.25rem; position: relative; }
+.values-trails{ z-index: 0; }
+.values-banner--hero{ position: relative; z-index: 1; }
+
+/* se a tela for muito estreita, deixa quebrar em 2 linhas */
+@media (max-width: 480px){
+  .values-banner--hero{ white-space: normal; line-height: 1.25; }
+}
