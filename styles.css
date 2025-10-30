@@ -1,16 +1,11 @@
-/* =========================
-   Base / Tokens
-========================= */
+/* ================== Base ================== */
 :root{
-  --font-family-base: 'Inter','Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  --font-family-base: 'Inter','Segoe UI',sans-serif;
   --heading-color:#0d3b66;
   --body-color:rgba(13,59,102,.82);
-  --primary:#1f6feb;
-  --soft:#e7f0ff;
 }
 
 html{ scroll-behavior:smooth; }
-*{ box-sizing:border-box; }
 
 body{
   font-family:var(--font-family-base);
@@ -18,8 +13,6 @@ body{
   color:var(--body-color);
   line-height:1.7;
   letter-spacing:.01em;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -27,16 +20,18 @@ h1,h2,h3,h4,h5,h6{
   color:var(--heading-color);
   letter-spacing:-.015em;
   font-weight:600;
-  margin:0 0 .6rem 0;
+}
+p,li{ color:var(--body-color); letter-spacing:.005em; }
+img{ object-fit:cover; border-radius:16px; }
+.section-padding{ padding:5rem 0; }
+.section-title{
+  font-size:clamp(2rem,2.2rem + .2vw,2.5rem);
+  font-weight:700;
+  color:var(--heading-color);
+  letter-spacing:-.02em;
 }
 
-p,li{ color:var(--body-color); letter-spacing:.005em; }
-p{ margin:0 0 1rem 0; }
-img{ object-fit:cover; border-radius:16px; display:block; max-width:100%; }
-
-/* =========================
-   Navbar
-========================= */
+/* ================== Navbar ================== */
 .navbar-brand{ font-size:1.4rem; }
 .brand-icon{
   display:inline-flex; align-items:center; justify-content:center;
@@ -46,20 +41,17 @@ img{ object-fit:cover; border-radius:16px; display:block; max-width:100%; }
   font-size:1.1rem;
 }
 .nav-link{ font-weight:500; color:#0d3b66 !important; transition:color .3s; }
-.nav-link:hover{ color:var(--primary) !important; }
+.nav-link:hover{ color:#1f6feb !important; }
 
-/* =========================
-   Hero
-========================= */
+/* ================== Hero ================== */
 .hero{
   position:relative; overflow:hidden; color:#fff;
   background:
     linear-gradient(160deg,rgba(13,59,102,.88),rgba(31,111,235,.9)),
     radial-gradient(circle at 20% 20%,rgba(255,255,255,.2),transparent 55%);
 }
-.hero p{ color:rgba(255,255,255,.88); letter-spacing:.01em; }
+.hero p{ color:rgba(255,255,255,.88); }
 .hero .lead{ font-size:1.12rem; }
-
 .hero-card{
   border:1px solid rgba(255,255,255,.4);
   animation:float 7s ease-in-out infinite;
@@ -80,10 +72,7 @@ img{ object-fit:cover; border-radius:16px; display:block; max-width:100%; }
   content:''; position:absolute; inset:0; border-radius:26px; pointer-events:none;
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.65);
 }
-.hero-photo{
-  width:100%; height:100%; object-fit:contain; object-position:center;
-  border-radius:20px; background:#fff; box-shadow:0 12px 25px rgba(14,42,90,.12);
-}
+.hero-photo{ width:100%; height:100%; object-fit:contain; object-position:center; border-radius:20px; background:#fff; box-shadow:0 12px 25px rgba(14,42,90,.12); }
 .hero .btn-outline-light{ border-color:rgba(255,255,255,.65); color:#fff; }
 .hero .btn-outline-light:hover{ background-color:rgba(255,255,255,.12); }
 .hero-badges{ color:#0d3b66; }
@@ -95,7 +84,7 @@ img{ object-fit:cover; border-radius:16px; display:block; max-width:100%; }
   border:1px solid rgba(255,255,255,.6);
 }
 
-/* trilha do avião (hero) */
+/* animated trail */
 .flight-decoration{ position:absolute; top:15%; left:-20%; width:70%; height:140px; pointer-events:none; }
 .flight-trail{
   position:absolute; top:50%; left:0; width:100%; height:4px; border-radius:999px;
@@ -109,30 +98,33 @@ img{ object-fit:cover; border-radius:16px; display:block; max-width:100%; }
   text-shadow:0 12px 18px rgba(0,0,0,.2);
 }
 
-/* =========================
-   Sections
-========================= */
-.section-padding{ padding:5rem 0; }
-.section-title{
-  font-size:clamp(2rem,2.2rem + .2vw,2.5rem);
-  font-weight:600; color:var(--heading-color); letter-spacing:-.02em;
-  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+/* ================== Sobre mim (compacto) ================== */
+.about-compact{ padding-top:3.5rem; padding-bottom:3.5rem; }
+.about-compact .section-title{ margin-bottom:.75rem; }
+.about-compact p{ margin-bottom:.75rem; }
+.about-q{ margin-top:.5rem; }
+.about-card{
+  background:#ffffff; border:1px solid rgba(13,59,102,.08);
 }
-section p, section li{ font-size:1.02rem; }
-section .lead{ font-size:1.12rem; color:rgba(13,59,102,.75); }
+.text-muted-90{ color:rgba(13,59,102,.75); }
 
-.info-card{ background:#fff; border:1px solid rgba(13,59,102,.08); border-radius:16px; }
-.info-card p{ color:var(--body-color); }
-
-.icon-badge{
-  display:inline-flex; align-items:center; justify-content:center;
-  width:40px; height:40px; border-radius:12px; background:rgba(31,111,235,.1);
-  font-size:1.1rem;
+/* ================== Experiências ================== */
+.section-runway{ position:relative; overflow:hidden; }
+.section-runway::before,
+.section-runway::after{
+  content:''; position:absolute; pointer-events:none; border-radius:999px;
+}
+.section-runway::before{
+  top:25px; right:-120px; width:280px; height:4px;
+  background:linear-gradient(90deg, rgba(31,111,235,0), rgba(31,111,235,.6));
+  opacity:.45;
+}
+.section-runway::after{
+  bottom:30px; left:-140px; width:340px; height:4px;
+  background:linear-gradient(90deg, rgba(13,59,102,.15), rgba(13,59,102,0));
+  opacity:.35;
 }
 
-/* =========================
-   Experiências
-========================= */
 .experience-card{
   background:#fff; border-radius:18px; overflow:hidden;
   box-shadow:0 12px 30px rgba(15,35,95,.1);
@@ -142,155 +134,70 @@ section .lead{ font-size:1.12rem; color:rgba(13,59,102,.75); }
 .experience-card:hover{ transform:translateY(-6px) translateX(4px); box-shadow:0 18px 40px rgba(15,35,95,.15); }
 .experience-card::before{
   content:''; position:absolute; top:20px; left:18px; width:52px; height:4px; border-radius:999px;
-  background:linear-gradient(90deg,var(--primary),rgba(31,111,235,0)); opacity:0; transition:opacity .3s;
+  background:linear-gradient(90deg,#1f6feb,rgba(31,111,235,0)); opacity:0; transition:opacity .3s;
 }
 .experience-card:hover::before{ opacity:1; }
-.experience-img{
-  width:100%;
-  height:clamp(260px, 26vw, 340px);
-  object-fit:cover; object-position:center;
-  border-bottom:1px solid rgba(13,59,102,.06);
-}
+.experience-img{ width:100%; height:clamp(260px, 26vw, 340px); object-fit:cover; object-position:center; border-bottom:1px solid rgba(13,59,102,.06); }
 .experience-content{ padding:1.5rem; }
 .experience-content p{ color:rgba(13,59,102,.78); }
+.experience-img--fatec,
+.experience-img--aspire{ height:auto !important; max-height:340px; object-fit:contain; background:linear-gradient(135deg, rgba(31,111,235,.06), rgba(13,59,102,.02)); padding:clamp(.9rem,1.4vw,1.2rem); }
 
-/* =========================
-   Habilidades (tags)
-========================= */
-.skill-tag{
-  background:rgba(31,111,235,.1); color:#0d3b66;
-  padding:.65rem 1.4rem; border-radius:999px; font-weight:600; font-size:.95rem;
-  border:1px solid rgba(31,111,235,.2);
+/* ================== Habilidades ================== */
+.skills-cloud{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+.skill-chip{
+  padding:.55rem 1.1rem; border-radius:999px;
+  background:#fff; border:1px dashed rgba(31,111,235,.35); font-weight:600;
+  color:#0d3b66; box-shadow:0 4px 14px rgba(13,59,102,.08);
+}
+.skill-hash{
+  padding:.45rem .9rem; border-radius:999px;
+  background:rgba(31,111,235,.08); border:1px solid rgba(31,111,235,.22);
+  font-weight:700; color:#1f6feb;
 }
 
-/* =========================
-   Projetos no GitHub (dentro de Habilidades)
-========================= */
-.soft-sep{
-  border:0; border-top:1px dashed rgba(31,111,235,.25);
-  max-width:720px; margin:2rem auto 1.5rem;
+/* Projetos */
+.project-card{
+  display:flex; flex-direction:column; gap:1rem; align-items:flex-start;
+  padding:1.6rem;
+  background:linear-gradient(160deg,rgba(255,255,255,.92),rgba(231,240,255,.9));
+  border:1px solid rgba(13,59,102,.08);
+  border-radius:22px; text-decoration:none; color:inherit;
+  box-shadow:0 18px 45px rgba(13,59,102,.12);
+  transition:transform .3s, box-shadow .3s;
 }
-.projects-header h5, .projects-header .h5 { color:#0d3b66; }
+.project-card:hover{ transform:translateY(-6px) translateX(4px); box-shadow:0 24px 60px rgba(13,59,102,.18); }
+.project-icon{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:52px; height:52px; border-radius:18px;
+  background:linear-gradient(135deg,rgba(31,111,235,.18),rgba(13,59,102,.12));
+  font-size:1.6rem;
+}
+.project-copy{ text-align:left; color:#0d3b66; }
+.project-copy p{ color:rgba(13,59,102,.75); font-size:1rem; }
+.project-link{ display:inline-flex; align-items:center; gap:.4rem; font-weight:700; color:#1f6feb; }
+.project-link::after{ content:'\2197'; font-size:.9rem; }
 
-.proj-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-  gap:1rem;
-}
-.proj-card{
-  display:flex; flex-direction:column; gap:.5rem;
-  padding:1.1rem 1.15rem 1.05rem;
-  text-decoration:none;
-  color:#0d3b66;
-  background:linear-gradient(160deg, rgba(255,255,255,.96), rgba(231,240,255,.92));
-  border:1px solid rgba(13,59,102,.10);
-  border-radius:16px;
-  box-shadow:0 10px 26px rgba(13,59,102,.10);
-  transition:transform .25s, box-shadow .25s, border-color .25s;
-}
-.proj-card:hover{
-  transform:translateY(-4px);
-  box-shadow:0 18px 40px rgba(13,59,102,.16);
-  border-color:rgba(31,111,235,.35);
-}
-.proj-badge{
-  align-self:flex-start;
-  padding:.25rem .6rem;
-  border-radius:999px;
-  font-size:.8rem; font-weight:700;
-  color:#0a2f58;
-  background:rgba(31,111,235,.12);
-  border:1px solid rgba(31,111,235,.25);
-}
-.proj-title{ font-size:1.05rem; font-weight:800; margin:0; }
-.proj-desc{ margin:0; color:rgba(13,59,102,.78); font-size:.95rem; line-height:1.45; }
-.proj-link{ margin-top:.25rem; font-weight:700; font-size:.92rem; color:var(--primary); }
+/* ================== Valores ================== */
 
-/* =========================
-   Valores (com aviões + banner + cards)
-========================= */
+/* fundo com aviões */
 .values-section{ position:relative; }
-
-/* fundo sutil com aviões – deixei mais visíveis */
 .values-section::after{
-  content:"";
-  position:absolute; inset:0;
-  background-image:url("data:image/svg+xml;utf8,\
-  <svg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'>\
-    <text x='20' y='40' font-size='22' opacity='.12'>✈️</text>\
-    <text x='150' y='80' font-size='20' opacity='.10'>✈️</text>\
-    <text x='80' y='160' font-size='24' opacity='.10'>✈️</text>\
-    <text x='180' y='200' font-size='18' opacity='.10'>✈️</text>\
-  </svg>");
-  background-repeat:repeat;
-  pointer-events:none;
-  z-index:0;
+  content:""; position:absolute; inset:0;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'><text x='22' y='40' font-size='20' opacity='.06'>✈️</text><text x='150' y='80' font-size='18' opacity='.05'>✈️</text><text x='80' y='160' font-size='22' opacity='.05'>✈️</text><text x='190' y='210' font-size='16' opacity='.05'>✈️</text></svg>");
+  background-repeat:repeat; pointer-events:none; z-index:0;
 }
 .values-section .container{ position:relative; z-index:1; }
-.values-highlights{
-  margin: .25rem 0 1.1rem;
-  padding: 1rem 1.15rem;
-  border-radius: 18px;
-  background: linear-gradient(180deg, rgba(233,242,255,.75), rgba(223,234,255,.6));
-  border: 1px solid rgba(31,111,235,.22);
-  box-shadow:
-    0 10px 22px rgba(13,59,102,.08),
-    inset 0 2px 0 rgba(255,255,255,.7);
-}
 
-.values-highlights ul{
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: .6rem;
-}
-
-.values-highlights li{
-  position: relative;
-  padding-left: 1.9rem;
-  color: rgba(13,59,102,.92);
-  line-height: 1.45;
-}
-
-.values-highlights li::before{
-  content: "✈️";
-  position: absolute;
-  left: .2rem;
-  top: .05rem;
-  font-size: 1.05rem;
-  opacity: .9;
-}
-
-.values-highlights strong{
-  color: #0d3b66;            /* reforça o título de cada item */
-  font-weight: 800;
-}
-
-/* Ajuste mobile */
-@media (max-width: 576px){
-  .values-highlights{
-    padding: .9rem .95rem;
-    border-radius: 16px;
-  }
-  .values-highlights li{
-    padding-left: 1.7rem;
-  }
-  .values-highlights li::before{
-    left: .1rem;
-  }
-}
+/* bloco de introdução */
 .values-intro{
-  position:relative;
-  overflow:visible;
+  position:relative; overflow:visible;
   padding:clamp(1.6rem,2vw,2rem);
   border-radius:26px;
-  background:linear-gradient(160deg,rgba(255,255,255,.96),rgba(231,240,255,.92));
-  border:1px solid rgba(13,59,102,.10);
+  background:linear-gradient(160deg, rgba(255,255,255,.95), rgba(231,240,255,.9));
+  border:1px solid rgba(13,59,102,.08);
   box-shadow:0 18px 40px rgba(13,59,102,.12);
 }
-
-/* banner “UMA EMBRAER. UM SÓ TIME.” */
 .values-banner--hero{
   display:block; width:100%; box-sizing:border-box;
   padding:.9rem 1.2rem; margin:0 0 1rem 0;
@@ -299,65 +206,47 @@ section .lead{ font-size:1.12rem; color:rgba(13,59,102,.75); }
   border:1px solid rgba(31,111,235,.28);
   box-shadow:0 10px 26px rgba(13,59,102,.08) inset, 0 10px 22px rgba(13,59,102,.12), 0 2px 0 rgba(255,255,255,.7) inset;
   color:#0d3b66; font-weight:800; text-transform:uppercase;
-  letter-spacing:.14em; font-size:clamp(1.05rem,.7rem + 1.1vw,1.6rem);
+  letter-spacing:.14em; font-size:clamp(1.05rem, .7rem + 1.1vw, 1.6rem);
   line-height:1.25; text-align:left;
 }
+.values-bullets{ margin:0 0 1rem 0; padding-left:1.1rem; }
+.values-bullets li{ margin:.35rem 0; }
 
-/* grid dos três cards */
-.values-grid{
-  display:grid; gap:1.6rem;
-}
-@media (min-width:992px){ .values-grid{ grid-template-columns:repeat(3, 1fr); } }
-@media (max-width:991.98px){ .values-grid{ grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); } }
+/* cards à direita */
+.values-grid{ display:grid; gap:1.6rem; }
+@media (min-width:992px){ .values-grid{ grid-template-columns:repeat(3,1fr); } }
+@media (max-width:991.98px){ .values-grid{ grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); } }
 
-/* card */
 .values-card{
-  display:flex; flex-direction:column; min-height:100%;
+  display:flex; flex-direction:column;
   background:linear-gradient(160deg,#1a2d64 0%, #27499b 100%);
   border-radius:22px; overflow:hidden;
   border:1px solid rgba(255,255,255,.18);
   box-shadow:0 18px 42px rgba(15,35,95,.20);
-  transition:transform .25s, box-shadow .25s;
 }
-.values-card:hover{ transform:translate3d(4px,-6px,0); box-shadow:0 24px 56px rgba(15,35,95,.26); }
-
-/* mídia do card + legibilidade */
 .values-card-media{ height:240px; overflow:hidden; }
-.values-card-media img{
-  width:100%; height:100%; object-fit:cover; object-position:center top; display:block;
-}
+.values-card-media img{ width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+.values-card-body{ padding:1.4rem 1.3rem 1.6rem; color:rgba(255,255,255,.96); }
+.values-card-title{ font-size:1.08rem; font-weight:700; color:#fff; margin-bottom:.35rem; }
 
-/* texto do card — mais contraste para leitura */
-.values-card-body{
-  padding:1.4rem 1.3rem 1.6rem;
-  color:rgba(255,255,255,.95);
-}
-.values-card-title{
-  font-size:1.08rem; font-weight:800; color:#fff; margin:0 0 .35rem 0;
-}
-.values-card-body p{ color:rgba(255,255,255,.92); }
-
-/* =========================
-   Contato / Botões
-========================= */
+/* ================== Contato ================== */
 .contact-card{
   background:#fff; border-radius:24px;
   box-shadow:0 16px 40px rgba(15,35,95,.12);
   border:1px solid rgba(13,59,102,.08);
 }
-#contato .btn{ font-size:1.1rem; padding:.75rem 1.8rem; }
-.btn-primary{ background:var(--primary); border-color:var(--primary); }
+#contato .btn{ font-size:1.05rem; padding:.75rem 1.6rem; }
+.btn-primary{ background:#1f6feb; border-color:#1f6feb; }
 .btn-primary:hover{ background:#1454b8; border-color:#1454b8; }
-.btn-outline-primary{ color:var(--primary); border-color:rgba(31,111,235,.6); }
+.btn-outline-primary{ color:#1f6feb; border-color:rgba(31,111,235,.6); }
 .btn-outline-primary:hover{ background:rgba(31,111,235,.1); }
 
-/* =========================
-   Animations
-========================= */
+/* ================== Animations ================== */
 @keyframes float{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
 @keyframes flyAcross{
   0%{ transform:translateX(0) rotate(6deg); opacity:0; }
-  10%{ opacity:1; } 80%{ opacity:1; }
+  10%{ opacity:1; }
+  80%{ opacity:1; }
   100%{ transform:translateX(130%) rotate(6deg); opacity:0; }
 }
 @keyframes trailGlow{
@@ -365,19 +254,14 @@ section .lead{ font-size:1.12rem; color:rgba(13,59,102,.75); }
   50%{ opacity:1; filter:drop-shadow(0 0 18px rgba(255,255,255,.6)); }
 }
 
-/* =========================
-   Responsivo
-========================= */
+/* ================== Responsivo ================== */
 @media (max-width:992px){
   .hero{ text-align:center; }
   .hero-card{ margin:0 auto; }
   .flight-decoration{ top:12%; left:-35%; width:110%; }
-  .values-intro{ text-align:center; padding:2rem; }
+  .values-intro{ text-align:left; }
 }
 @media (max-width:768px){
   .hero{ padding:3rem 0; }
   .experience-img{ height:240px; }
-  .values-grid{ gap:1.25rem; }
-  .values-card-body{ padding:1.4rem 1.3rem 1.6rem; }
-  .values-banner--hero{ text-align:center; }
 }

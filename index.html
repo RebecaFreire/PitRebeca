@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-BR" id="topo">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfólio Rebeca Freire</title>
 
-  <!-- Fonts + Bootstrap -->
+  <!-- Google Fonts + Bootstrap -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
 
-  <!-- Seu CSS (case-sensitive) -->
+  <!-- Seu CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -26,7 +26,8 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div id="navbarNav" class="collapse navbar-collapse justify-content-end">
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre mim</a></li>
           <li class="nav-item"><a class="nav-link" href="#experiencias">Experiências</a></li>
@@ -38,36 +39,32 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero py-5">
+  <!-- HERO (igual ao anterior) -->
+  <header id="topo" class="hero py-5">
     <div class="flight-decoration" aria-hidden="true">
       <span class="flight-trail"></span>
       <span class="flight-plane" aria-hidden="true">✈️</span>
     </div>
-
     <div class="container py-5">
       <div class="row align-items-center g-4">
         <div class="col-lg-6">
           <span class="badge rounded-pill text-bg-light mb-3">Tecnologia • Dados • Impacto social</span>
           <h1 class="display-5 fw-semibold mb-3">Transformando histórias com tecnologia e empatia</h1>
-          <p class="lead mb-4">
-            Sou Rebeca Freire, estudante de Gestão em Tecnologia da Informação na FATEC Guaratinguetá.
-            Crio soluções que unem inovação, dados e pessoas para gerar impacto real.
-          </p>
+          <p class="lead mb-4">Sou Rebeca Freire, estudante de Gestão em Tecnologia da Informação na FATEC Guaratinguetá. Crio soluções que unem inovação, dados e pessoas para gerar impacto real.</p>
           <div class="hero-badges d-flex flex-wrap gap-2 mb-4">
             <span class="hero-pill">Pronta para decolar com a Embraer</span>
             <span class="hero-pill">Experiência em projetos colaborativos</span>
           </div>
           <div class="d-flex flex-wrap gap-3">
-            <a class="btn btn-primary btn-lg" href="#contato">Vamos conversar</a>
-            <a class="btn btn-outline-light btn-lg" href="#sobre">Conheça minha jornada</a>
+            <a href="#contato" class="btn btn-primary btn-lg">Vamos conversar</a>
+            <a href="#sobre" class="btn btn-outline-light btn-lg">Conheça minha jornada</a>
           </div>
         </div>
 
         <div class="col-lg-5 ms-lg-auto text-center">
           <div class="hero-card shadow-lg rounded-4">
             <div class="hero-photo-frame">
-              <img src="fatec.png" class="hero-photo" alt="Foto de Rebeca Freire">
+              <img src="fatec.png" class="hero-photo" alt="Foto de Rebeca Freire"/>
             </div>
             <p class="fw-semibold text-primary mb-1">Gestão em Tecnologia da Informação</p>
             <p class="text-muted mb-0">FATEC Guaratinguetá • Apaixonada por inovação e impacto social</p>
@@ -77,69 +74,63 @@
     </div>
   </header>
 
-  <!-- SOBRE MIM -->
-  <section id="sobre" class="section-padding">
+  <!-- SOBRE MIM (COMPACTO) -->
+  <section id="sobre" class="section-padding about-compact">
     <div class="container">
-      <div class="row align-items-center g-5">
+      <div class="row g-4 align-items-stretch">
         <div class="col-lg-6">
-          <h2 class="section-title">Sobre mim</h2>
-          <p class="mb-4">Meu nome é Rebeca Freire, nascida em São Paulo e moradora de Guaratinguetá/SP.</p>
-          <p class="mb-4">Sou estudante de Gestão em Tecnologia da Informação na FATEC Guaratinguetá, apaixonada por tecnologia e impacto social.</p>
-          <p class="mb-4">Minha trajetória começou na ETEC, passou pela UNESP com projetos em saúde pública e pesquisa, e hoje se fortalece na FATEC com foco em inovação e transformação digital.</p>
+          <h2 class="section-title mb-3">Sobre mim</h2>
 
-          <div class="d-grid gap-4">
-            <div>
-              <h3 class="h5 text-primary mb-2">Por que escolhi tecnologia?</h3>
-              <p class="mb-0">Desde cedo fui movida por curiosidade e desafios. A tecnologia apareceu como uma ferramenta poderosa para transformar realidades — inclusive a minha. Escolhi essa área porque acredito no poder da inovação para melhorar vidas, promover inclusão e criar soluções digitais para problemas reais.</p>
-            </div>
-            <div>
-              <h3 class="h5 text-primary mb-2">No meu tempo livre</h3>
-              <p class="mb-0">Gosto de me exercitar ao ar livre, pratico corrida e ciclismo. Sou fã de ficção científica e comédias — e sempre que posso, assisto em inglês para treinar o idioma.</p>
-            </div>
-          </div>
+          <p class="mb-3">Sou de São Paulo e moro em Guaratinguetá/SP. Estudo Gestão em TI na FATEC. Minha trajetória começou na ETEC, passou pela UNESP com projetos em saúde pública e hoje se consolida na FATEC com foco em transformação digital.</p>
+
+          <h3 class="about-q h6 text-primary mt-3">Por que tecnologia?</h3>
+          <p class="mb-3">Porque muda vidas: inclusão, eficiência e soluções para problemas reais.</p>
+
+          <h3 class="about-q h6 text-primary">No tempo livre</h3>
+          <p class="mb-4">Corrida, bike e inglês com filmes/séries.</p>
+
+          <a class="btn btn-primary btn-sm" href="#contato">Fale comigo</a>
         </div>
 
-        <div class="col-lg-5 ms-lg-auto">
-          <div class="info-card shadow-sm rounded-4 p-4">
-            <h3 class="h5 text-primary">Minha essência</h3>
-            <ul class="list-unstyled mb-0">
-              <li class="d-flex align-items-start gap-3 mb-3">
+        <div class="col-lg-6">
+          <div class="about-card shadow-sm rounded-4 p-4 h-100">
+            <h3 class="h6 text-primary mb-3">Minha essência</h3>
+            <ul class="about-list list-unstyled mb-0">
+              <li class="d-flex gap-3 mb-3">
                 <span class="icon-badge">🎯</span>
                 <div>
-                  <h4 class="h6 mb-1">Foco em impacto</h4>
-                  <p class="mb-0">Uso dados e tecnologia para criar soluções que transformam realidades.</p>
+                  <strong>Foco em impacto</strong>
+                  <div class="text-muted-90">Dados e tecnologia para transformar realidades.</div>
                 </div>
               </li>
-              <li class="d-flex align-items-start gap-3 mb-3">
+              <li class="d-flex gap-3 mb-3">
                 <span class="icon-badge">🤝</span>
                 <div>
-                  <h4 class="h6 mb-1">Trabalho em equipe</h4>
-                  <p class="mb-0">Colaboração e empatia conduzem minhas entregas e projetos.</p>
+                  <strong>Trabalho em equipe</strong>
+                  <div class="text-muted-90">Colaboração e empatia em cada entrega.</div>
                 </div>
               </li>
-              <li class="d-flex align-items-start gap-3">
+              <li class="d-flex gap-3">
                 <span class="icon-badge">🚀</span>
                 <div>
-                  <h4 class="h6 mb-1">Aprendizado contínuo</h4>
-                  <p class="mb-0">Estou sempre explorando novas tecnologias e metodologias.</p>
+                  <strong>Aprendizado contínuo</strong>
+                  <div class="text-muted-90">Sempre explorando novas tecnologias.</div>
                 </div>
               </li>
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- EXPERIÊNCIAS -->
+  <!-- EXPERIÊNCIAS (mantém seus cards) -->
   <section id="experiencias" class="section-padding bg-light section-runway">
     <div class="container">
-
       <div class="row justify-content-between align-items-center mb-4">
         <div class="col-lg-7">
           <h2 class="section-title">Minhas experiências</h2>
-          <p class="mb-0">Minha trajetória acadêmica começou na ETEC, passou pela UNESP — onde participei de projetos de pesquisa, ações em saúde e congressos científicos — e hoje se fortalece na <strong>FATEC</strong>, com foco em tecnologia, inovação e impacto social.</p>
+          <p class="mb-0">Minha trajetória acadêmica começou na ETEC, passou pela UNESP — onde participei de projetos de pesquisa e ações em saúde. Hoje se fortalece na <strong>FATEC</strong> com foco em tecnologia e inovação.</p>
         </div>
         <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
           <span class="badge rounded-pill text-bg-primary">Destaques recentes</span>
@@ -147,7 +138,6 @@
       </div>
 
       <div class="row g-4">
-        <!-- UNESP 1 -->
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
             <img src="projetopunesp.jpg" class="experience-img" alt="Projeto UNESP" loading="lazy">
@@ -157,17 +147,17 @@
             </div>
           </div>
         </div>
-        <!-- UNESP 2 -->
+
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
             <img src="larlongapermanencia.jpg" class="experience-img" alt="Casa de longa permanência" loading="lazy">
             <div class="experience-content">
               <h3 class="h5">Atuação em saúde – UNESP</h3>
-              <p class="mb-0">Experiência prática em casa de longa permanência com foco em cuidado humanizado.</p>
+              <p class="mb-0">Experiência prática em casa de longa permanência com cuidado humanizado.</p>
             </div>
           </div>
         </div>
-        <!-- UNESP 3 -->
+
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
             <img src="cicunesp.jpg" class="experience-img" alt="Congresso UNESP" loading="lazy">
@@ -178,147 +168,138 @@
           </div>
         </div>
 
-        <!-- FATEC 1 -->
+        <!-- Semana de Tecnologia FATEC (2) -->
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img src="fatec1.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025 (1)" loading="lazy">
+            <img src="fatec1.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
             <div class="experience-content">
               <h3 class="h5">Semana de Tecnologia 2025</h3>
-              <p class="mb-0">Participação ativa na FATEC Guaratinguetá explorando tendências em TI e oficinas práticas.</p>
+              <p class="mb-0">Participação ativa explorando tendências em TI e oficinas práticas.</p>
             </div>
           </div>
         </div>
-        <!-- FATEC 2 -->
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img src="fatec2.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025 (2)" loading="lazy">
+            <img src="fatec2.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
             <div class="experience-content">
               <h3 class="h5">Semana de Tecnologia 2025</h3>
-              <p class="mb-0">Networking com especialistas e participação em painéis sobre inovação, liderança e transformação digital.</p>
+              <p class="mb-0">Painéis sobre inovação, liderança e transformação digital.</p>
             </div>
           </div>
         </div>
-        <!-- Aspire -->
+
+        <!-- Aspire Leaders -->
         <div class="col-md-6 col-xl-4">
           <div class="experience-card h-100">
-            <img
-              src="aspire.jpg"
-              class="experience-img experience-img--aspire"
-              alt="Aspire Leaders Program 2025"
-              loading="lazy"
-              onerror="this.onerror=null; this.src='aspire-leaders-program.svg'; this.classList.remove('experience-img--aspire');"
-            />
+            <img src="aspire.jpg" class="experience-img experience-img--aspire" alt="Aspire Leaders Program 2025" loading="lazy"
+                 onerror="this.onerror=null; this.src='aspire-leaders-program.svg'; this.classList.remove('experience-img--aspire');"/>
             <div class="experience-content">
               <h3 class="h5">Aspire Leaders Program 2025</h3>
-              <p class="mb-0">Programa global criado por professores da Harvard Business School com formação em liderança e impacto social.</p>
+              <p class="mb-0">Formação global em liderança, impacto social e desenvolvimento pessoal.</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- HABILIDADES + PROJETOS GITHUB -->
+  <!-- HABILIDADES (mantendo formato de chips) -->
   <section id="habilidades" class="section-padding">
     <div class="container text-center">
-      <h2 class="section-title mb-4">Minhas habilidades</h2>
+      <h2 class="section-title mb-2">Minhas habilidades</h2>
       <p class="text-muted mb-4">Stack técnico e temas que me movem.</p>
 
-      <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Power BI</span>
-        <span class="skill-tag">SQL / MySQL</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">HTML &amp; CSS</span>
-        <span class="skill-tag">Git &amp; GitHub</span>
-        <span class="skill-tag">Dashboards</span>
-        <span class="skill-tag">#DataScience</span>
-        <span class="skill-tag">#PowerBI</span>
-        <span class="skill-tag">#AnáliseDeDados</span>
-        <span class="skill-tag">#FullStack</span>
-        <span class="skill-tag">#MulheresNaTecnologia</span>
-        <span class="skill-tag">#TrabalhoEmEquipe</span>
-        <span class="skill-tag">#Comunicação</span>
-        <span class="skill-tag">#Agile</span>
+      <div class="skills-cloud">
+        <span class="skill-chip">Python</span>
+        <span class="skill-chip">Power BI</span>
+        <span class="skill-chip">SQL / MySQL</span>
+        <span class="skill-chip">JavaScript</span>
+        <span class="skill-chip">HTML &amp; CSS</span>
+        <span class="skill-chip">Git &amp; GitHub</span>
+        <span class="skill-chip">Dashboards</span>
+
+        <span class="skill-hash">#DataScience</span>
+        <span class="skill-hash">#PowerBI</span>
+        <span class="skill-hash">#AnáliseDeDados</span>
+        <span class="skill-hash">#FullStack</span>
+        <span class="skill-hash">#MulheresNaTecnologia</span>
+        <span class="skill-hash">#TrabalhoEmEquipe</span>
+        <span class="skill-hash">#Comunicação</span>
+        <span class="skill-hash">#Agile</span>
       </div>
 
-      <hr class="soft-sep">
+      <!-- Seus 3 projetos (links corrigidos) -->
+      <div class="row g-4 justify-content-center mt-4">
+        <div class="col-md-6 col-lg-4">
+          <a class="project-card h-100" href="https://github.com/RebecaFreire/sistema-rh" target="_blank" rel="noopener">
+            <div class="project-icon" aria-hidden="true">🧾</div>
+            <div class="project-copy">
+              <h3 class="h5 mb-2">Sistema RH</h3>
+              <p class="mb-0">CRUD e indicadores de pessoas para decisões ágeis.</p>
+              <span class="project-link">Ver no GitHub</span>
+            </div>
+          </a>
+        </div>
 
-      <div class="projects-header mb-3">
-        <h3 class="h5 d-inline-flex align-items-center gap-2">
-          <span aria-hidden="true">🐙</span> Projetos no GitHub
-        </h3>
-      </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="project-card h-100" href="https://github.com/RebecaFreire/Sistema-bancario-atualizado" target="_blank" rel="noopener">
+            <div class="project-icon" aria-hidden="true">🏦</div>
+            <div class="project-copy">
+              <h3 class="h5 mb-2">Sistema Bancário</h3>
+              <p class="mb-0">Contas, saques, depósitos e segurança dos dados.</p>
+              <span class="project-link">Ver no GitHub</span>
+            </div>
+          </a>
+        </div>
 
-      <div class="proj-grid">
-        <a class="proj-card" href="https://github.com/RebecaFreire/sistema-rh" target="_blank" rel="noopener">
-          <span class="proj-badge">Python • Flask • SQL</span>
-          <h4 class="proj-title">Sistema RH</h4>
-          <p class="proj-desc">CRUD de colaboradores, autenticação e relatórios gerenciais.</p>
-          <span class="proj-link">Ver no GitHub ↗</span>
-        </a>
-
-        <a class="proj-card" href="https://github.com/RebecaFreire/Sistema-bancario-atualizado" target="_blank" rel="noopener">
-          <span class="proj-badge">Python • Regras de negócio</span>
-          <h4 class="proj-title">Sistema Bancário</h4>
-          <p class="proj-desc">Contas, saques, depósitos, extrato e validações de segurança.</p>
-          <span class="proj-link">Ver no GitHub ↗</span>
-        </a>
-
-        <a class="proj-card" href="https://github.com/RebecaFreire/Piscine_42_C_Rebeca" target="_blank" rel="noopener">
-          <span class="proj-badge">C • Algoritmos</span>
-          <h4 class="proj-title">42SP</h4>
-          <p class="proj-desc">Exercícios da 42 focados em lógica, ponteiros e memória.</p>
-          <span class="proj-link">Ver no GitHub ↗</span>
-        </a>
+        <div class="col-md-6 col-lg-4">
+          <a class="project-card h-100" href="https://github.com/RebecaFreire/Piscine_42_C_Rebeca" target="_blank" rel="noopener">
+            <div class="project-icon" aria-hidden="true">🧠</div>
+            <div class="project-copy">
+              <h3 class="h5 mb-2">Piscine 42 C</h3>
+              <p class="mb-0">Desafios em C (lógica, ponteiros, memória).</p>
+              <span class="project-link">Ver no GitHub</span>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- VALORES -->
+  <!-- VALORES (com banner + lista + cards) -->
   <section id="valores" class="section-padding values-section">
     <div class="container">
       <h2 class="section-title mb-4">Valores</h2>
 
-      <div class="row g-5 align-items-start">
-        <!-- Coluna esquerda: intro + banner -->
+      <div class="row g-4 align-items-start">
+        <!-- Coluna esquerda -->
         <div class="col-lg-5">
           <div class="values-intro">
             <div class="values-banner--hero" role="heading" aria-level="3">
-              Uma EMBRAER, UM SÓ TIME.
+              UMA EMBRAER, UM SÓ TIME.
             </div>
-            <div class="values-highlights" aria-label="Princípios de trabalho em equipe">
-  <ul>
-    <li>
-      <strong>Sempre aja com generosidade.</strong>
-      Faça o que for melhor para a empresa e seus stakeholders.
-    </li>
-    <li>
-      <strong>Empodere o time</strong>
-      para que trabalhem com sucesso, delegue com responsabilidade e ofereça apoio.
-    </li>
-    <li>
-      <strong>Seja confiável</strong>,
-      coerente em suas ações e confie nas pessoas.
-    </li>
-  </ul>
-</div>
+
+            <ul class="values-bullets">
+              <li><strong>Sempre aja com generosidade.</strong> Faça o que for melhor para a empresa e seus stakeholders.</li>
+              <li><strong>Empodere o time</strong> para que trabalhem com sucesso, delegue com responsabilidade e ofereça apoio.</li>
+              <li><strong>Seja confiável</strong>, coerente em suas ações e confie nas pessoas.</li>
+            </ul>
+
             <p>Resultados extraordinários nascem quando colaboramos com generosidade, empatia e responsabilidade compartilhada.</p>
             <p class="mb-0">Da ETEC à FATEC e UNESP, vivi experiências que me mostraram que a cultura da Embraer — de aprender juntos e construir impacto — já faz parte do meu dia a dia.</p>
           </div>
         </div>
 
-        <!-- Coluna direita: 3 cards -->
+        <!-- Coluna direita -->
         <div class="col-lg-7">
           <div class="values-grid">
             <article class="values-card">
               <div class="values-card-media">
-                <img src="etec.png" alt="Campanha do agasalho com o grêmio estudantil" loading="lazy">
+                <img src="etec.png" alt="Campanhas solidárias na ETEC" loading="lazy">
               </div>
               <div class="values-card-body">
                 <h3 class="values-card-title">Colaboração &amp; Impacto Social</h3>
-                <p class="mb-0">Mobilização na ETEC liderando campanhas solidárias que conectam pessoas e ampliam resultados.</p>
+                <p class="mb-0">Mobilização na ETEC liderando campanhas que conectam pessoas e ampliam resultados.</p>
               </div>
             </article>
 
@@ -328,22 +309,21 @@
               </div>
               <div class="values-card-body">
                 <h3 class="values-card-title">Inovação digital &amp; Saúde</h3>
-                <p class="mb-0">Projeto Cafisio UNESP integrando comunicação digital e tecnologia a serviços de cuidado.</p>
+                <p class="mb-0">Comunicação digital integrada a serviços de cuidado na UNESP.</p>
               </div>
             </article>
 
             <article class="values-card">
               <div class="values-card-media">
-                <img src="42.jpg" alt="Equipe reunida em encontro profissional" loading="lazy">
+                <img src="42.jpg" alt="Equipe em encontro profissional em SP" loading="lazy">
               </div>
               <div class="values-card-body">
                 <h3 class="values-card-title">Aprendizado contínuo em equipe</h3>
-                <p class="mb-0">Evolução conjunta com times multidisciplinares que aprendem, iteram e decolam juntas.</p>
+                <p class="mb-0">Evolução conjunta com times multidisciplinares que iteram e decolam juntas.</p>
               </div>
             </article>
           </div>
         </div>
-
       </div>
     </div>
   </section>
@@ -357,8 +337,8 @@
             <h2 class="section-title mb-3">Vamos conversar?</h2>
             <p class="mb-4">Estou pronta para colaborar em projetos que unam tecnologia, empatia e resultados. Me envie uma mensagem e vamos criar algo incrível.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
-              <a class="btn btn-primary" href="mailto:rebecahfreirejh@hotmail.com">📧 Email</a>
-              <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/rebeca-freire" target="_blank" rel="noopener">💼 LinkedIn</a>
+              <a href="mailto:rebecahfreirejh@hotmail.com" class="btn btn-primary">📧 Email</a>
+              <a href="https://www.linkedin.com/in/rebeca-freire" class="btn btn-outline-primary" target="_blank" rel="noopener">💼 LinkedIn</a>
             </div>
           </div>
         </div>
@@ -367,6 +347,6 @@
   </section>
 
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
