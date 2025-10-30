@@ -227,7 +227,59 @@ section .lead{ font-size:1.12rem; color:rgba(13,59,102,.75); }
   z-index:0;
 }
 .values-section .container{ position:relative; z-index:1; }
+.values-highlights{
+  margin: .25rem 0 1.1rem;
+  padding: 1rem 1.15rem;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(233,242,255,.75), rgba(223,234,255,.6));
+  border: 1px solid rgba(31,111,235,.22);
+  box-shadow:
+    0 10px 22px rgba(13,59,102,.08),
+    inset 0 2px 0 rgba(255,255,255,.7);
+}
 
+.values-highlights ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: .6rem;
+}
+
+.values-highlights li{
+  position: relative;
+  padding-left: 1.9rem;
+  color: rgba(13,59,102,.92);
+  line-height: 1.45;
+}
+
+.values-highlights li::before{
+  content: "✈️";
+  position: absolute;
+  left: .2rem;
+  top: .05rem;
+  font-size: 1.05rem;
+  opacity: .9;
+}
+
+.values-highlights strong{
+  color: #0d3b66;            /* reforça o título de cada item */
+  font-weight: 800;
+}
+
+/* Ajuste mobile */
+@media (max-width: 576px){
+  .values-highlights{
+    padding: .9rem .95rem;
+    border-radius: 16px;
+  }
+  .values-highlights li{
+    padding-left: 1.7rem;
+  }
+  .values-highlights li::before{
+    left: .1rem;
+  }
+}
 .values-intro{
   position:relative;
   overflow:visible;
