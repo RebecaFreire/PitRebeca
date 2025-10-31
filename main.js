@@ -1,20 +1,234 @@
-(function(){
-  document.addEventListener('DOMContentLoaded', function(){
-    const slider = document.querySelector('.kpi-slider');
-    if (!slider) {
-      return;
-    }
-
-    const track = slider.querySelector('.kpi-track');
-    const slides = Array.from(slider.querySelectorAll('.kpi-slide'));
-    const prevBtn = slider.querySelector('.kpi-control--prev');
-    const nextBtn = slider.querySelector('.kpi-control--next');
-    const dotsContainer = slider.querySelector('.kpi-dots');
+  (function(){
+  document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    let activeIndex = 0;
-    let autoRotateId = null;
-    const autoRotateDelay = Number(slider.dataset.interval || 8000);
+    function initSlider(slider){
+      const track = slider.querySelector('[data-slider-track]');
+      if (!track) {
+        return null;
+      }
+      const slides = Array.from(track.children);
+      if (!slides.length) {
+        return null;
+      }
+
+      const prevBtn = slider.querySelector('[data-slider-prev]');
+      const nextBtn = slider.querySelector('[data-slider-next]');
+      const dotsContainer = slider.querySelector('[data-slider-dots]');
+      const autoRotate = slider.dataset.autoplay === 'true';
+      const autoRotateDelay = Number(slider.dataset.interval || 8000);
+      const loop = slider.dataset.loop !== 'false';
+      const dotClass = slider.dataset.dotClass || 'slider-dot';
+
+      let activePage = 0;
+      let slidesPerView = 1;
+      let pageCount = 1;
+      let autoRotateId = null;
+
+      function getSlidesPerView(){
+        const styleValue = window.getComputedStyle(slider).getPropertyValue('--slides-per-view');
+        const numeric = parseFloat(styleValue);
+        if (!Number.isNaN(numeric) && numeric > 0) {
+          return numeric;
+        }
+        const datasetValue = parseFloat(slider.dataset.perView || '1');
+        return Number.isNaN(datasetValue) || datasetValue <= 0 ? 1 : datasetValue;
+      }
+
+      function updateMetrics(){
+        slidesPerView = Math.max(1, Math.round(getSlidesPerView()));
+        pageCount = Math.max(1, Math.ceil(slides.length / slidesPerView));
+      }
+
+      function getState(){
+        return { index: activePage, slidesPerView, pageCount };
+      }
+
+      function renderDots(){
+        if (!dotsContainer) {
+          return;
+        }
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < pageCount; i += 1) {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = dotClass;
+          dot.setAttribute('role', 'tab');
+          dot.setAttribute('aria-label', `Ir para slide ${i + 1}`);
+          dot.addEventListener('click', () => goToSlide(i));
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function updateDots(){
+        if (!dotsContainer) {
+          return;
+        }
+        const dots = Array.from(dotsContainer.children);
+        dots.forEach((dot, idx) => {
+          const isActive = idx === activePage;
+          dot.classList.toggle('is-active', isActive);
+          dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+          dot.setAttribute('tabindex', isActive ? '0' : '-1');
+        });
+      }
+
+      function emitChange(){
+        slider.dispatchEvent(new CustomEvent('sliderChange', {
+          detail: getState()
+        }));
+      }
+
+      function updateSlideVisibility(){
+        const start = activePage * slidesPerView;
+        const end = start + slidesPerView;
+        slides.forEach((slide, index) => {
+          const hidden = index < start || index >= end;
+          slide.setAttribute('aria-hidden', hidden ? 'true' : 'false');
+        });
+      }
+
+      function goToSlide(targetPage, { auto = false } = {}){
+        updateMetrics();
+        if (loop) {
+          if (targetPage < 0) {
+            targetPage = pageCount - 1;
+          }
+          if (targetPage >= pageCount) {
+            targetPage = 0;
+          }
+        } else {
+          targetPage = Math.max(0, Math.min(targetPage, pageCount - 1));
+        }
+        activePage = targetPage;
+        const offset = -100 * activePage;
+        track.style.transform = `translateX(${offset}%)`;
+        updateDots();
+        updateSlideVisibility();
+        emitChange();
+        if (autoRotate && !auto) {
+          restartAutoRotate();
+        }
+      }
+
+      function goToNext(auto = false){
+        goToSlide(activePage + 1, { auto });
+      }
+
+      function goToPrev(auto = false){
+        goToSlide(activePage - 1, { auto });
+      }
+
+      function stopAutoRotate(){
+        if (autoRotateId) {
+          window.clearInterval(autoRotateId);
+          autoRotateId = null;
+        }
+      }
+
+      function startAutoRotate(){
+        if (!autoRotate || prefersReducedMotion) {
+          return;
+        }
+        updateMetrics();
+        if (pageCount <= 1) {
+          stopAutoRotate();
+          return;
+        }
+        stopAutoRotate();
+        autoRotateId = window.setInterval(() => goToNext(true), autoRotateDelay);
+      }
+
+      function restartAutoRotate(){
+        stopAutoRotate();
+        startAutoRotate();
+      }
+
+      function bindControls(){
+        if (prevBtn) {
+          prevBtn.addEventListener('click', () => goToPrev());
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener('click', () => goToNext());
+        }
+        slider.addEventListener('keydown', (event) => {
+          if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            goToPrev();
+          }
+          if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            goToNext();
+          }
+        });
+        slider.addEventListener('mouseenter', stopAutoRotate);
+        slider.addEventListener('mouseleave', startAutoRotate);
+        slider.addEventListener('focusin', stopAutoRotate);
+        slider.addEventListener('focusout', startAutoRotate);
+      }
+
+      function handleResize(){
+        const previousPageCount = pageCount;
+        const previousSlidesPerView = slidesPerView;
+        updateMetrics();
+        if (pageCount !== previousPageCount) {
+          renderDots();
+        }
+        if (activePage > pageCount - 1) {
+          activePage = pageCount - 1;
+        }
+        if (activePage < 0) {
+          activePage = 0;
+        }
+        const offset = -100 * activePage;
+        track.style.transform = `translateX(${offset}%)`;
+        updateDots();
+        updateSlideVisibility();
+        emitChange();
+        if (autoRotate) {
+          if (prefersReducedMotion || pageCount <= 1) {
+            stopAutoRotate();
+          } else if (previousSlidesPerView !== slidesPerView) {
+            restartAutoRotate();
+          } else if (!autoRotateId) {
+            startAutoRotate();
+          }
+        }
+      }
+
+      function init(){
+        if (!slider.hasAttribute('role')) {
+          slider.setAttribute('role', 'region');
+        }
+        slider.setAttribute('aria-live', slider.getAttribute('aria-live') || 'polite');
+        updateMetrics();
+        renderDots();
+        updateDots();
+        track.style.transform = 'translateX(0)';
+        updateSlideVisibility();
+        bindControls();
+        emitChange();
+        startAutoRotate();
+        window.addEventListener('resize', handleResize);
+      }
+
+      init();
+
+      return {
+        goToSlide,
+        goToNext,
+        goToPrev,
+        stopAutoRotate,
+        startAutoRotate,
+        restartAutoRotate,
+        getState,
+        destroy(){
+          stopAutoRotate();
+          window.removeEventListener('resize', handleResize);
+        },
+        slides
+      };
+    }
 
     function formatValue(value, decimals){
       const factor = Math.pow(10, decimals);
@@ -65,149 +279,73 @@
       window.requestAnimationFrame(step);
     }
 
-    function animateSlideCounters(index){
-      const slide = slides[index];
-      if (!slide) {
-        return;
-      }
-      slide.querySelectorAll('.kpi-value').forEach(animateCounter);
-    }
+    const kpiSlider = document.querySelector('.kpi-slider');
+    if (kpiSlider) {
+      const sliderApi = initSlider(kpiSlider);
+      if (sliderApi) {
+        const slides = sliderApi.slides;
 
-    function updateProgressBars(index){
-      slides.forEach((slide, slideIndex) => {
-        const progress = slide.querySelector('.kpi-progress');
-        if (!progress) {
-          return;
+        function animateVisibleCounters(index, slidesPerView){
+          const start = index * slidesPerView;
+          const end = start + slidesPerView;
+          for (let i = start; i < end; i += 1) {
+            const slide = slides[i];
+            if (!slide) {
+              continue;
+            }
+            slide.querySelectorAll('.kpi-value').forEach(animateCounter);
+          }
         }
 
-        const bar = progress.querySelector('.kpi-progress-bar');
-        const valueLabel = progress.querySelector('.kpi-progress-value');
-        const rawValue = Number(progress.dataset.progress || 0);
-        const value = Math.max(0, Math.min(100, rawValue));
-        const isActive = slideIndex === index;
+        function updateProgressBars(index, slidesPerView){
+          const start = index * slidesPerView;
+          const end = start + slidesPerView;
+          slides.forEach((slide, slideIndex) => {
+            const progress = slide.querySelector('.kpi-progress');
+            if (!progress) {
+              return;
+            }
 
-        if (bar) {
-          bar.style.setProperty('--progress', isActive ? `${value}%` : '0%');
+            const bar = progress.querySelector('.kpi-progress-bar');
+            const valueLabel = progress.querySelector('.kpi-progress-value');
+            const rawValue = Number(progress.dataset.progress || 0);
+            const value = Math.max(0, Math.min(100, rawValue));
+            const isVisible = slideIndex >= start && slideIndex < end;
+
+            if (bar) {
+              bar.style.setProperty('--progress', isVisible ? `${value}%` : '0%');
+            }
+
+            if (valueLabel) {
+              valueLabel.textContent = `${value}%`;
+            }
+          });
         }
 
-        if (valueLabel) {
-          valueLabel.textContent = `${value}%`;
-        }
-      });
-    }
+        kpiSlider.addEventListener('sliderChange', (event) => {
+          const { index, slidesPerView } = event.detail;
+          animateVisibleCounters(index, slidesPerView);
+          updateProgressBars(index, slidesPerView);
+        });
 
-    function updateDots(){
-      const dots = Array.from(dotsContainer.querySelectorAll('.kpi-dot'));
-      dots.forEach((dot, idx) => {
-        const isActive = idx === activeIndex;
-        dot.classList.toggle('is-active', isActive);
-        dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
-        dot.setAttribute('tabindex', isActive ? '0' : '-1');
-      });
-    }
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const state = sliderApi.getState();
+              animateVisibleCounters(state.index, state.slidesPerView);
+              updateProgressBars(state.index, state.slidesPerView);
+              obs.disconnect();
+            }
+          });
+        }, { threshold: 0.4 });
 
-    function goToSlide(targetIndex, { auto = false } = {}){
-      if (slides.length === 0) {
-        return;
-      }
-      if (targetIndex < 0) {
-        targetIndex = slides.length - 1;
-      }
-      if (targetIndex >= slides.length) {
-        targetIndex = 0;
-      }
-      activeIndex = targetIndex;
-      const offset = -100 * activeIndex;
-      track.style.transform = `translateX(${offset}%)`;
-      animateSlideCounters(activeIndex);
-      updateProgressBars(activeIndex);
-      updateDots();
-
-      if (!auto) {
-        restartAutoRotate();
+        observer.observe(kpiSlider);
       }
     }
 
-    function createDots(){
-      slides.forEach((_, idx) => {
-        const dot = document.createElement('button');
-        dot.type = 'button';
-        dot.className = 'kpi-dot';
-        dot.setAttribute('role', 'tab');
-        dot.setAttribute('aria-label', `Ir para indicador ${idx + 1}`);
-        dot.addEventListener('click', () => goToSlide(idx));
-        dotsContainer.appendChild(dot);
-      });
+    const experienceSlider = document.querySelector('.experience-slider');
+    if (experienceSlider) {
+      initSlider(experienceSlider);
     }
-
-    function bindControls(){
-      if (prevBtn) {
-        prevBtn.addEventListener('click', () => goToSlide(activeIndex - 1));
-      }
-      if (nextBtn) {
-        nextBtn.addEventListener('click', () => goToSlide(activeIndex + 1));
-      }
-      slider.addEventListener('keydown', (event) => {
-        if (event.key === 'ArrowLeft') {
-          event.preventDefault();
-          goToSlide(activeIndex - 1);
-        }
-        if (event.key === 'ArrowRight') {
-          event.preventDefault();
-          goToSlide(activeIndex + 1);
-        }
-      });
-    }
-
-    function stopAutoRotate(){
-      if (autoRotateId) {
-        window.clearInterval(autoRotateId);
-        autoRotateId = null;
-      }
-    }
-
-    function startAutoRotate(){
-      if (prefersReducedMotion || slides.length <= 1) {
-        return;
-      }
-      stopAutoRotate();
-      autoRotateId = window.setInterval(() => {
-        goToSlide(activeIndex + 1, { auto: true });
-      }, autoRotateDelay);
-    }
-
-    function restartAutoRotate(){
-      stopAutoRotate();
-      startAutoRotate();
-    }
-
-    function init(){
-      createDots();
-      updateDots();
-      bindControls();
-      track.style.transform = 'translateX(0)';
-      updateProgressBars(activeIndex);
-    }
-
-    init();
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          animateSlideCounters(activeIndex);
-          updateProgressBars(activeIndex);
-          observer.disconnect();
-        }
-      });
-    }, { threshold: 0.4 });
-
-    observer.observe(slider);
-
-    startAutoRotate();
-
-    slider.addEventListener('mouseenter', stopAutoRotate);
-    slider.addEventListener('mouseleave', startAutoRotate);
-    slider.addEventListener('focusin', stopAutoRotate);
-    slider.addEventListener('focusout', startAutoRotate);
   });
 })();
