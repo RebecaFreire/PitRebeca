@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfólio de Rebeca Freire: projetos, experiências e indicadores focados em tecnologia, dados e impacto social." />
   <title>Portfólio Rebeca Freire</title>
 
   <!-- Google Fonts + Bootstrap -->
@@ -17,16 +16,14 @@
 </head>
 <body>
 
-  <a class="visually-hidden-focusable" href="#conteudo-principal">Ir para o conteúdo principal</a>
-
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" aria-label="Navegação principal">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
     <div class="container">
       <a class="navbar-brand fw-bold text-primary d-flex align-items-center gap-2" href="#topo">
         <span class="brand-icon" aria-hidden="true">✈️</span>
         <span>Rebeca Freire</span>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -35,8 +32,6 @@
           <li class="nav-item"><a class="nav-link" href="#sobre">Sobre mim</a></li>
           <li class="nav-item"><a class="nav-link" href="#experiencias">Experiências</a></li>
           <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-          <li class="nav-item"><a class="nav-link" href="#indicadores">Indicadores</a></li>
-          <li class="nav-item"><a class="nav-link" href="#stack">Stack</a></li>
           <li class="nav-item"><a class="nav-link" href="#valores">Valores</a></li>
           <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
         </ul>
@@ -79,8 +74,6 @@
     </div>
   </header>
 
-  <main id="conteudo-principal">
-
   <!-- SOBRE MIM (COMPACTO) -->
   <section id="sobre" class="section-padding about-compact">
     <div class="container">
@@ -118,7 +111,7 @@
                 </div>
               </li>
               <li class="d-flex gap-3">
-                <span class="icon-badge">🚀</span>
+                <span="icon-badge">🚀</span>
                 <div>
                   <strong>Aprendizado contínuo</strong>
                   <div class="text-muted-90">Sempre explorando novas tecnologias.</div>
@@ -131,7 +124,7 @@
     </div>
   </section>
 
-  <!-- EXPERIÊNCIAS -->
+  <!-- EXPERIÊNCIAS (mantém seus cards) -->
   <section id="experiencias" class="section-padding bg-light section-runway">
     <div class="container">
       <div class="row justify-content-between align-items-center mb-4">
@@ -143,79 +136,74 @@
           <span class="badge rounded-pill text-bg-primary">Destaques recentes</span>
         </div>
       </div>
-      <div class="experience-slider" data-slider="true" data-dot-class="experience-dot" data-loop="true" tabindex="0" role="region" aria-label="Linha do tempo de experiências">
-        <button class="experience-control experience-control--prev" type="button" data-slider-prev aria-label="Experiência anterior">‹</button>
-        <div class="experience-track-wrapper">
-          <div class="experience-track" data-slider-track>
-            <article class="experience-slide">
-              <div class="experience-card">
-                <img src="projetopunesp.jpg" class="experience-img" alt="Projeto UNESP" loading="lazy">
-                <div class="experience-content">
-                  <h3 class="h5">Projeto de pesquisa – UNESP</h3>
-                  <p class="mb-0">Mobilização articular com foco em impacto social e inovação em saúde.</p>
-                </div>
-              </div>
-            </article>
 
-            <article class="experience-slide">
-              <div class="experience-card">
-                <img src="larlongapermanencia.jpg" class="experience-img" alt="Casa de longa permanência" loading="lazy">
-                <div class="experience-content">
-                  <h3 class="h5">Atuação em saúde – UNESP</h3>
-                  <p class="mb-0">Experiência prática em casa de longa permanência com cuidado humanizado.</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="experience-slide">
-              <div class="experience-card">
-                <img src="cicunesp.jpg" class="experience-img" alt="Congresso UNESP" loading="lazy">
-                <div class="experience-content">
-                  <h3 class="h5">Congresso de Iniciação Científica</h3>
-                  <p class="mb-0">Apresentação de resultados e networking acadêmico na UNESP.</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="experience-slide">
-              <div class="experience-card">
-                <img src="fatec1.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
-                <div class="experience-content">
-                  <h3 class="h5">Semana de Tecnologia 2025</h3>
-                  <p class="mb-0">Participação ativa explorando tendências em TI e oficinas práticas.</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="experience-slide">
-              <div class="experience-card">
-                <img src="fatec2.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
-                <div class="experience-content">
-                  <h3 class="h5">Semana de Tecnologia 2025</h3>
-                  <p class="mb-0">Painéis sobre inovação, liderança e transformação digital.</p>
-                </div>
-              </div>
-            </article>
-
-            <article class="experience-slide">
-              <div class="experience-card">
-                <img src="aspire.jpg" class="experience-img experience-img--aspire" alt="Aspire Leaders Program 2025" loading="lazy"
-                     onerror="this.onerror=null; this.src='aspire-leaders-program.svg'; this.classList.remove('experience-img--aspire');"/>
-                <div class="experience-content">
-                  <h3 class="h5">Aspire Leaders Program 2025</h3>
-                  <p class="mb-0">Formação global em liderança, impacto social e desenvolvimento pessoal.</p>
-                </div>
-              </div>
-            </article>
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="projetopunesp.jpg" class="experience-img" alt="Projeto UNESP" loading="lazy">
+            <div class="experience-content">
+              <h3 class="h5">Projeto de pesquisa – UNESP</h3>
+              <p class="mb-0">Mobilização articular com foco em impacto social e inovação em saúde.</p>
+            </div>
           </div>
         </div>
-        <button class="experience-control experience-control--next" type="button" data-slider-next aria-label="Próxima experiência">›</button>
-        <div class="experience-dots" data-slider-dots role="tablist" aria-label="Navegação das experiências"></div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="larlongapermanencia.jpg" class="experience-img" alt="Casa de longa permanência" loading="lazy">
+            <div class="experience-content">
+              <h3 class="h5">Atuação em saúde – UNESP</h3>
+              <p class="mb-0">Experiência prática em casa de longa permanência com cuidado humanizado.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="cicunesp.jpg" class="experience-img" alt="Congresso UNESP" loading="lazy">
+            <div class="experience-content">
+              <h3 class="h5">Congresso de Iniciação Científica</h3>
+              <p class="mb-0">Apresentação de resultados e networking acadêmico na UNESP.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Semana de Tecnologia FATEC (2) -->
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="fatec1.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
+            <div class="experience-content">
+              <h3 class="h5">Semana de Tecnologia 2025</h3>
+              <p class="mb-0">Participação ativa explorando tendências em TI e oficinas práticas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="fatec2.jpg" class="experience-img experience-img--fatec" alt="Semana de Tecnologia FATEC 2025" loading="lazy">
+            <div class="experience-content">
+              <h3 class="h5">Semana de Tecnologia 2025</h3>
+              <p class="mb-0">Painéis sobre inovação, liderança e transformação digital.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aspire Leaders -->
+        <div class="col-md-6 col-xl-4">
+          <div class="experience-card h-100">
+            <img src="aspire.jpg" class="experience-img experience-img--aspire" alt="Aspire Leaders Program 2025" loading="lazy"
+                 onerror="this.onerror=null; this.src='aspire-leaders-program.svg'; this.classList.remove('experience-img--aspire');"/>
+            <div class="experience-content">
+              <h3 class="h5">Aspire Leaders Program 2025</h3>
+              <p class="mb-0">Formação global em liderança, impacto social e desenvolvimento pessoal.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- HABILIDADES -->
+  <!-- HABILIDADES (mantendo formato de chips) -->
   <section id="habilidades" class="section-padding">
     <div class="container text-center">
       <h2 class="section-title mb-2">Minhas habilidades</h2>
@@ -240,9 +228,10 @@
         <span class="skill-hash">#Agile</span>
       </div>
 
+      <!-- Seus 3 projetos (links corrigidos) -->
       <div class="row g-4 justify-content-center mt-4">
         <div class="col-md-6 col-lg-4">
-          <a class="project-card h-100" href="https://github.com/RebecaFreire/sistema-rh" target="_blank" rel="noopener noreferrer">
+          <a class="project-card h-100" href="https://github.com/RebecaFreire/sistema-rh" target="_blank" rel="noopener">
             <div class="project-icon" aria-hidden="true">🧾</div>
             <div class="project-copy">
               <h3 class="h5 mb-2">Sistema RH</h3>
@@ -253,7 +242,7 @@
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <a class="project-card h-100" href="https://github.com/RebecaFreire/Sistema-bancario-atualizado" target="_blank" rel="noopener noreferrer">
+          <a class="project-card h-100" href="https://github.com/RebecaFreire/Sistema-bancario-atualizado" target="_blank" rel="noopener">
             <div class="project-icon" aria-hidden="true">🏦</div>
             <div class="project-copy">
               <h3 class="h5 mb-2">Sistema Bancário</h3>
@@ -264,7 +253,7 @@
         </div>
 
         <div class="col-md-6 col-lg-4">
-          <a class="project-card h-100" href="https://github.com/RebecaFreire/Piscine_42_C_Rebeca" target="_blank" rel="noopener noreferrer">
+          <a class="project-card h-100" href="https://github.com/RebecaFreire/Piscine_42_C_Rebeca" target="_blank" rel="noopener">
             <div class="project-icon" aria-hidden="true">🧠</div>
             <div class="project-copy">
               <h3 class="h5 mb-2">Piscine 42 C</h3>
@@ -291,10 +280,10 @@
         </div>
 
         <div class="col-lg-7">
-          <div class="kpi-slider" data-slider="true" data-autoplay="true" data-interval="8000" data-dot-class="kpi-dot" data-loop="true" tabindex="0" role="region" aria-label="Indicadores dos projetos">
-            <button class="kpi-control kpi-control--prev" type="button" data-slider-prev aria-label="Indicador anterior">‹</button>
+          <div class="kpi-slider" role="region" aria-label="Indicadores dos projetos">
+            <button class="kpi-control kpi-control--prev" type="button" aria-label="Indicador anterior">‹</button>
             <div class="kpi-track-wrapper">
-              <div class="kpi-track" data-slider-track>
+              <div class="kpi-track">
                 <article class="kpi-slide" aria-live="polite">
                   <header class="kpi-slide-header">
                     <span class="kpi-tag">Sistema RH</span>
@@ -362,8 +351,8 @@
                 </article>
               </div>
             </div>
-            <button class="kpi-control kpi-control--next" type="button" data-slider-next aria-label="Próximo indicador">›</button>
-            <div class="kpi-dots" data-slider-dots role="tablist" aria-label="Navegação dos indicadores"></div>
+            <button class="kpi-control kpi-control--next" type="button" aria-label="Próximo indicador">›</button>
+            <div class="kpi-dots" role="tablist" aria-label="Navegação dos indicadores"></div>
           </div>
         </div>
       </div>
@@ -373,114 +362,39 @@
   <!-- STACK EMBRAER READY -->
   <section id="stack" class="section-padding stack-section">
     <div class="container">
-      <div class="stack-infographic" aria-labelledby="stack-title">
-        <div class="stack-infographic__header">
-          <div class="stack-infographic__icon" aria-hidden="true">
-            <span>✈️</span>
-          </div>
-          <div>
-            <h2 id="stack-title" class="section-title mb-2">Stack Embraer-ready</h2>
-            <p class="stack-infographic__subtitle">Tecnologias que já domino e aquelas que estou acelerando para entregar soluções de dados ponta a ponta com a Embraer.</p>
-          </div>
-        </div>
-
-        <div class="stack-infographic__columns">
-          <article class="stack-infographic__column stack-infographic__column--now">
-            <header>
-              <span class="stack-infographic__label">Entregando hoje</span>
-              <h3>Fundamentos em produção</h3>
-            </header>
-            <ul class="stack-infographic__list">
-              <li><span class="stack-infographic__chip">Python</span></li>
-              <li><span class="stack-infographic__chip">Power BI</span></li>
-              <li><span class="stack-infographic__chip">SQL</span></li>
-              <li><span class="stack-infographic__chip">HTML/CSS</span></li>
-              <li><span class="stack-infographic__chip">JavaScript</span></li>
-            </ul>
-          </article>
-
-          <article class="stack-infographic__column stack-infographic__column--growth">
-            <header>
-              <span class="stack-infographic__label">Em evolução</span>
-              <h3>Próximas integrações</h3>
-            </header>
-            <ul class="stack-infographic__list">
-              <li><span class="stack-infographic__chip stack-infographic__chip--soft">Airflow</span></li>
-              <li><span class="stack-infographic__chip stack-infographic__chip--soft">AWS</span></li>
-              <li><span class="stack-infographic__chip stack-infographic__chip--soft">Terraform</span></li>
-              <li><span class="stack-infographic__chip stack-infographic__chip--soft">SAP SAC</span></li>
-            </ul>
-          </article>
-
-          <article class="stack-infographic__column stack-infographic__column--team">
-            <header>
-              <span class="stack-infographic__label">Para colaborar</span>
-              <h3>Ferramentas de squad</h3>
-            </header>
-            <ul class="stack-infographic__list">
-              <li><span class="stack-infographic__chip stack-infographic__chip--outline">Power Apps</span></li>
-              <li><span class="stack-infographic__chip stack-infographic__chip--outline">Power Automate</span></li>
-              <li><span class="stack-infographic__chip stack-infographic__chip--outline">APIs REST</span></li>
-              <li><span class="stack-infographic__chip stack-infographic__chip--outline">Atlassian Suite</span></li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALORES -->
-  <section id="valores" class="section-padding values-section">
-    <div class="container">
-      <h2 class="section-title mb-4">Valores</h2>
-
-      <div class="row g-5 align-items-start">
-        <!-- Coluna esquerda -->
+      <div class="row g-4 align-items-center">
         <div class="col-lg-5">
-          <div class="values-intro">
-            <div class="values-banner--hero">UMA EMBRAER, UM SÓ TIME.</div>
-
-            <ul class="values-bullets">
-              <li><strong>Sempre aja com generosidade.</strong> Faça o que for melhor para a empresa e seus stakeholders.</li>
-              <li><strong>Empodere o time</strong> para que trabalhem com sucesso, delegue com responsabilidade e ofereça apoio.</li>
-              <li><strong>Seja confiável,</strong> coerente em suas ações e confie nas pessoas.</li>
-            </ul>
-
-            <p>Resultados extraordinários nascem quando colaboramos com generosidade, empatia e responsabilidade compartilhada.</p>
-            <p>Da ETEC à FATEC e UNESP, vivi experiências que me mostraram que a cultura da Embraer — de aprender juntos e construir impacto — já faz parte do meu dia a dia.</p>
-          </div>
+          <h2 class="section-title mb-3">Stack Embraer-ready</h2>
+          <p class="mb-0">Tecnologias que já domino e aquelas que estou acelerando para integrar soluções de dados ponta a ponta.</p>
         </div>
-
-        <!-- Coluna direita: os 3 cards -->
         <div class="col-lg-7">
-          <div class="values-grid">
-            <article class="values-card">
-              <div class="values-card-media">
-                <img src="etec.png" alt="Campanhas solidárias na ETEC" loading="lazy">
-              </div>
-              <div class="values-card-body">
-                <h3 class="values-card-title">Colaboração &amp; Impacto Social</h3>
-                <p>Mobilização na ETEC liderando campanhas solidárias que conectam pessoas e ampliam resultados.</p>
-              </div>
-            </article>
-
-            <article class="values-card">
-              <div class="values-card-media">
-                <img src="cafisio.jpeg" alt="Projeto Cafisio UNESP no Instagram" loading="lazy">
-              </div>
-              <div class="values-card-body">
-                <h3 class="values-card-title">Inovação digital &amp; Saúde</h3>
-                <p>Projeto Cafisio UNESP integrando comunicação digital e tecnologia a serviços de cuidado.</p>
+          <div class="stack-grid">
+            <article class="stack-card">
+              <h3>Entregando hoje</h3>
+              <div class="stack-chip-group">
+                <span class="stack-chip">Python</span>
+                <span class="stack-chip">Power BI</span>
+                <span class="stack-chip">SQL</span>
+                <span class="stack-chip">HTML/CSS</span>
+                <span class="stack-chip">JavaScript</span>
               </div>
             </article>
-
-            <article class="values-card">
-              <div class="values-card-media">
-                <img src="42.jpg" alt="Equipe reunida em São Paulo" loading="lazy">
+            <article class="stack-card">
+              <h3>Em evolução</h3>
+              <div class="stack-chip-group">
+                <span class="stack-chip stack-chip--soft">Airflow</span>
+                <span class="stack-chip stack-chip--soft">AWS</span>
+                <span class="stack-chip stack-chip--soft">Terraform</span>
+                <span class="stack-chip stack-chip--soft">SAP SAC</span>
               </div>
-              <div class="values-card-body">
-                <h3 class="values-card-title">Aprendizado contínuo em equipe</h3>
-                <p>Evolução conjunta com times multidisciplinares que aprendem, iteram e decolam juntas.</p>
+            </article>
+            <article class="stack-card">
+              <h3>Para colaborar</h3>
+              <div class="stack-chip-group">
+                <span class="stack-chip stack-chip--outline">Power Apps</span>
+                <span class="stack-chip stack-chip--outline">Power Automate</span>
+                <span class="stack-chip stack-chip--outline">APIs REST</span>
+                <span class="stack-chip stack-chip--outline">Atlassian Suite</span>
               </div>
             </article>
           </div>
@@ -488,6 +402,69 @@
       </div>
     </div>
   </section>
+
+<section id="valores" class="section-padding values-section">
+  <div class="container">
+    <h2 class="section-title mb-4">Valores</h2>
+
+    <div class="row g-5 align-items-start">
+      <!-- Coluna esquerda -->
+      <div class="col-lg-5">
+        <div class="values-intro">
+          <div class="values-banner--hero">UMA EMBRAER, UM SÓ TIME.</div>
+
+          <!-- SUBSTITUA seu UL antigo por este UL com a classe values-bullets -->
+          <ul class="values-bullets">
+            <li><strong>Sempre aja com generosidade.</strong> Faça o que for melhor para a empresa e seus stakeholders.</li>
+            <li><strong>Empodere o time</strong> para que trabalhem com sucesso, delegue com responsabilidade e ofereça apoio.</li>
+            <li><strong>Seja confiável,</strong> coerente em suas ações e confie nas pessoas.</li>
+          </ul>
+
+          <p>Resultados extraordinários nascem quando colaboramos com generosidade, empatia e responsabilidade compartilhada.</p>
+          <p>Da ETEC à FATEC e UNESP, vivi experiências que me mostraram que a cultura da Embraer — de aprender juntos e construir impacto — já faz parte do meu dia a dia.</p>
+        </div>
+      </div>
+
+      <!-- Coluna direita: os 3 cards -->
+      <div class="col-lg-7">
+        <div class="values-grid">
+          <!-- Card 1 -->
+          <article class="values-card">
+            <div class="values-card-media">
+              <img src="etec.png" alt="Campanhas solidárias na ETEC" loading="lazy">
+            </div>
+            <div class="values-card-body">
+              <h3 class="values-card-title">Colaboração &amp; Impacto Social</h3>
+              <p>Mobilização na ETEC liderando campanhas solidárias que conectam pessoas e ampliam resultados.</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="values-card">
+            <div class="values-card-media">
+              <img src="cafisio.jpeg" alt="Projeto Cafisio UNESP no Instagram" loading="lazy">
+            </div>
+            <div class="values-card-body">
+              <h3 class="values-card-title">Inovação digital &amp; Saúde</h3>
+              <p>Projeto Cafisio UNESP integrando comunicação digital e tecnologia a serviços de cuidado.</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="values-card">
+            <div class="values-card-media">
+              <img src="42.jpg" alt="Equipe reunida em São Paulo" loading="lazy">
+            </div>
+            <div class="values-card-body">
+              <h3 class="values-card-title">Aprendizado contínuo em equipe</h3>
+              <p>Evolução conjunta com times multidisciplinares que aprendem, iteram e decolam juntas.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- CONTATO -->
   <section id="contato" class="section-padding bg-light">
@@ -499,7 +476,7 @@
             <p class="mb-4">Estou pronta para colaborar em projetos que unam tecnologia, empatia e resultados. Me envie uma mensagem e vamos criar algo incrível.</p>
             <div class="d-flex justify-content-center gap-3 flex-wrap">
               <a href="mailto:rebecahfreirejh@hotmail.com" class="btn btn-primary">📧 Email</a>
-              <a href="https://www.linkedin.com/in/rebeca-freire" class="btn btn-outline-primary" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+              <a href="https://www.linkedin.com/in/rebeca-freire" class="btn btn-outline-primary" target="_blank" rel="noopener">💼 LinkedIn</a>
             </div>
           </div>
         </div>
@@ -507,16 +484,8 @@
     </div>
   </section>
 
-  </main>
-
-  <footer class="py-4 text-center text-muted small">
-    <div class="container">
-      Portfólio criado por Rebeca Freire • Atualizado em 2025
-    </div>
-  </footer>
-
   <!-- Scripts -->
-  <script src="main.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
