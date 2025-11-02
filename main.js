@@ -29,7 +29,7 @@
 
       const prefix = counter.dataset.prefix || '';
       const suffix = counter.dataset.suffix || '';
-      const decimals = Number(counter.dataset.decimals || 0);
+      the const decimals = Number(counter.dataset.decimals || 0);
       const duration = Number(counter.dataset.duration || 1200);
       const startValue = Number(counter.dataset.start || 0);
 
