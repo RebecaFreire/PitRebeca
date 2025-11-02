@@ -9,12 +9,13 @@
     const slides = Array.from(slider.querySelectorAll('.kpi-slide'));
     const prevBtn = slider.querySelector('.kpi-control--prev');
     const nextBtn = slider.querySelector('.kpi-control--next');
-    const dotsContainer = slider.querySelector('.kpi-dots');
+    let dotsContainer = slider.querySelector('.kpi-dots');
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     let activeIndex = 0;
     let autoRotateId = null;
-    const autoRotateDelay = Number(slider.dataset.interval || 8000);
+    const intervalAttr = slider.getAttribute('data-interval');
+    const autoRotateDelay = intervalAttr ? Number(intervalAttr) : 8000;
 
     function formatValue(value, decimals){
       const factor = Math.pow(10, decimals);
@@ -29,7 +30,7 @@
 
       const prefix = counter.dataset.prefix || '';
       const suffix = counter.dataset.suffix || '';
-      the const decimals = Number(counter.dataset.decimals || 0);
+      const decimals = Number(counter.dataset.decimals || 0);
       const duration = Number(counter.dataset.duration || 1200);
       const startValue = Number(counter.dataset.start || 0);
 
@@ -96,8 +97,23 @@
       });
     }
 
+    function ensureDotsContainer(){
+      if (dotsContainer) {
+        return dotsContainer;
+      }
+      dotsContainer = document.createElement('div');
+      dotsContainer.className = 'kpi-dots';
+      dotsContainer.setAttribute('role', 'tablist');
+      slider.appendChild(dotsContainer);
+      return dotsContainer;
+    }
+
     function updateDots(){
-      const dots = Array.from(dotsContainer.querySelectorAll('.kpi-dot'));
+      const container = ensureDotsContainer();
+      const dots = Array.from(container.querySelectorAll('.kpi-dot'));
+      if (!dots.length) {
+        return;
+      }
       dots.forEach((dot, idx) => {
         const isActive = idx === activeIndex;
         dot.classList.toggle('is-active', isActive);
@@ -129,6 +145,8 @@
     }
 
     function createDots(){
+      const container = ensureDotsContainer();
+      container.innerHTML = '';
       slides.forEach((_, idx) => {
         const dot = document.createElement('button');
         dot.type = 'button';
@@ -136,7 +154,7 @@
         dot.setAttribute('role', 'tab');
         dot.setAttribute('aria-label', `Ir para indicador ${idx + 1}`);
         dot.addEventListener('click', () => goToSlide(idx));
-        dotsContainer.appendChild(dot);
+        container.appendChild(dot);
       });
     }
 
@@ -167,7 +185,7 @@
     }
 
     function startAutoRotate(){
-      if (prefersReducedMotion || slides.length <= 1) {
+      if (prefersReducedMotion || slides.length <= 1 || !Number.isFinite(autoRotateDelay) || autoRotateDelay <= 0) {
         return;
       }
       stopAutoRotate();
@@ -187,6 +205,7 @@
       bindControls();
       track.style.transform = 'translateX(0)';
       updateProgressBars(activeIndex);
+      animateSlideCounters(activeIndex);
     }
 
     init();
