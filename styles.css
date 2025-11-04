@@ -156,16 +156,48 @@ img{ object-fit:cover; border-radius:16px; }
 .experience-img--aspire{ height:auto !important; max-height:340px; object-fit:contain; background:linear-gradient(135deg, rgba(31,111,235,.06), rgba(13,59,102,.02)); padding:clamp(.9rem,1.4vw,1.2rem); }
 
 /* ================== Habilidades ================== */
+.skills-header p{ max-width:680px; margin:0 auto; }
+.skills-stack{ margin-top:2rem; }
+.spotlight-block{
+  background:linear-gradient(180deg,#ffffff 0%,#eef3ff 100%);
+  border-radius:28px;
+  padding:2.4rem;
+  border:1px solid rgba(13,59,102,.08);
+  box-shadow:0 20px 46px rgba(13,59,102,.12);
+}
+.spotlight-title{
+  font-size:clamp(1.4rem,1.2rem + .6vw,1.8rem);
+  font-weight:700;
+  color:#0d3b66;
+}
+.spotlight-text{ color:rgba(13,59,102,.78); }
+.skills-cloud-wrapper{ margin-top:3rem; }
+.skills-subtitle{
+  font-size:1.25rem;
+  font-weight:700;
+  color:#0d3b66;
+  margin-bottom:1.5rem;
+}
 .skills-cloud{ display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
 .skill-chip{
   padding:.55rem 1.1rem; border-radius:999px;
   background:#fff; border:1px dashed rgba(31,111,235,.35); font-weight:600;
   color:#0d3b66; box-shadow:0 4px 14px rgba(13,59,102,.08);
 }
-.skill-hash{
+.skill-hash,
+.project-tag{
   padding:.45rem .9rem; border-radius:999px;
   background:rgba(31,111,235,.08); border:1px solid rgba(31,111,235,.22);
   font-weight:700; color:#1f6feb;
+}
+
+.project-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.45rem;
+  list-style:none;
+  margin:0 0 .5rem 0;
+  padding:0;
 }
 
 /* Projetos */
@@ -191,7 +223,8 @@ img{ object-fit:cover; border-radius:16px; }
 .project-link::after{ content:'\2197'; font-size:.9rem; }
 
 /* ================== Indicadores KPI ================== */
-.kpi-section{ position:relative; }
+.kpi-section,
+.skills-kpi{ position:relative; }
 .kpi-roadmap-card{
   margin-top:1.5rem;
   padding:1.2rem 1.4rem;
@@ -200,7 +233,7 @@ img{ object-fit:cover; border-radius:16px; }
   border:1px solid rgba(13,59,102,.12);
   box-shadow:0 12px 30px rgba(13,59,102,.12);
 }
-.kpi-progress{
+kpi-progress{
   margin-top:1.25rem;
   display:flex;
   flex-direction:column;
@@ -262,7 +295,7 @@ img{ object-fit:cover; border-radius:16px; }
   flex-direction:column;
   gap:1.2rem;
 }
-.kpi-slide-header{
+kpi-slide-header{
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -334,14 +367,14 @@ img{ object-fit:cover; border-radius:16px; }
   cursor:pointer;
   transition:all .25s ease;
 }
-.kpi-control:hover{
+kpi-control:hover{
   background:#1f6feb;
   color:#fff;
   box-shadow:0 10px 26px rgba(31,111,235,.25);
 }
-.kpi-control:focus{ outline:3px solid rgba(31,111,235,.35); outline-offset:2px; }
+kpi-control:focus{ outline:3px solid rgba(31,111,235,.35); outline-offset:2px; }
 
-.kpi-dots{
+kpi-dots{
   position:absolute;
   bottom:1.1rem;
   left:50%;
@@ -373,7 +406,7 @@ img{ object-fit:cover; border-radius:16px; }
 }
 @media (max-width:576px){
   .kpi-slider{ padding:1.4rem 1.2rem 2.4rem; }
-  .kpi-core{ flex-direction:column; align-items:flex-start; }
+  .kpi-core{ flex-direction:column; alignãs:flex-start; }
   .kpi-value{ min-width:auto; }
   .kpi-control{ width:38px; height:38px; font-size:1.4rem; }
 }
